@@ -15,9 +15,9 @@ class m190604_102032_tbl_category extends Migration
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
             'parent_id' => $this->integer(),
-            'title' => $this->string(),
+            'title' => $this->string()->notNull(),
             'sort' => $this->integer(),
-            'status' => $this->boolean()
+            'status' => $this->boolean()->notNull()
         ]);
     }
 
