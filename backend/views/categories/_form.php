@@ -29,7 +29,7 @@ use backend\models\Category;
 
     <?= $form->field($model, 'sort')->textInput() ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'status')->checkBox() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

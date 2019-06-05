@@ -4,6 +4,7 @@ namespace backend\models;
 
 use Yii;
 use backend\traits\listForDropDown;
+use backend\traits\findParent;
 
 /**
  * This is the model class for table "tbl_categories".
@@ -17,6 +18,7 @@ use backend\traits\listForDropDown;
 class Category extends \yii\db\ActiveRecord
 {
     use listForDropDown;
+    use findParent;
     /**
      * {@inheritdoc}
      */
@@ -31,6 +33,7 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['title','sort'],'required'],
             [['parent_id', 'sort', 'status'], 'integer'],
             [['title'], 'string', 'max' => 255],
         ];

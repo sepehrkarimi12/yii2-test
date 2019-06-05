@@ -29,11 +29,22 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'parent_id',
+            // 'id',
             'title',
+            [
+                'attribute' => 'parent_id',
+                'value' => function($data) {
+                    return $data->parent ? $data->parent->title . ' (' . $data->parent_id  . ')' : '-';
+                },
+                'label' => 'Parent',
+            ],
             'sort',
-            'status',
+            [
+                'attribute'=>'status',
+                'value'=>function($data) {
+                    return $data->status ? 'فعال' : 'غیر فعال';
+                }
+            ],
         ],
     ]) ?>
 

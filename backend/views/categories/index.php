@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use backend\models\Category;
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\searchModels\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -27,11 +29,27 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'parent_id',
+            // 'id',
             'title',
+            [
+                'attribute' => 'parent_id',
+                'value' => function($data) {
+                    return $data->parent ? $data->parent->title . ' (' . $data->parent_id  . ')' : '-';
+                },
+                'label' => 'Parent',
+            ],
             'sort',
-            'status',
+            [
+                'attribute' => 'status',
+                'value' => function($data) {
+                    return $data->status ? 'فعال' : 'غیر فعال';
+                },
+                'filter' => [1 => 'فعال', 0 => 'غیر فعال'],
+                'filterInputOptions' => [
+                   'class' => 'form-control',         
+                   'prompt' => 'همه'
+                ],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
