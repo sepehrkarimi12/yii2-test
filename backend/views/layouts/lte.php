@@ -6,6 +6,7 @@
 use backend\assets\LteAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
+use yii\helpers\Url;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
@@ -306,12 +307,12 @@ LteAsset::register($this);
           <ul class="sidebar-menu">
             <li class="header">ناوبری اصلی</li>
             <li class="active treeview">
-              <a href="#">
+              <a href="<?= url::home() ?>">
                 <i class="fa fa-dashboard"></i> <span>پیشخوان</span>
               </a>
             </li>
             <li>
-              <a href="documentation/index.html">
+              <a href="<?= Url::toRoute('categories/index'); ?>">
                 <i class="fa fa-book"></i> <span>دسته بندی ها</span>
               </a>
             </li>

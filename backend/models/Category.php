@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use backend\traits\listForDropDown;
 
 /**
  * This is the model class for table "tbl_categories".
@@ -15,6 +16,7 @@ use Yii;
  */
 class Category extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
