@@ -18,12 +18,12 @@ class m190604_102032_tbl_category extends Migration
             'title' => $this->string()->notNull(),
             'sort' => $this->integer(),
             'status' => $this->boolean()->notNull()
-        ]);
+        ],'ENGINE InnoDB');
     }
 
     public function down()
     {
-        $this->dropeTable($this->table);
+        $this->dropTable($this->table);
     }
     
 }

@@ -316,6 +316,11 @@ LteAsset::register($this);
                 <i class="fa fa-book"></i> <span>دسته بندی ها</span>
               </a>
             </li>
+            <li>
+              <a href="<?= Url::toRoute('menu/index'); ?>">
+                <i class="fa fa-book"></i> <span>منو ها</span>
+              </a>
+            </li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-files-o"></i>
