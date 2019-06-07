@@ -317,6 +317,11 @@ LteAsset::register($this);
               </a>
             </li>
             <li>
+              <a href="<?= Url::toRoute('questions/index'); ?>">
+                <i class="fa fa-book"></i> <span>سوالات متداول</span>
+              </a>
+            </li>
+            <li>
               <a href="<?= Url::toRoute('menu/index'); ?>">
                 <i class="fa fa-book"></i> <span>منو ها</span>
               </a>
