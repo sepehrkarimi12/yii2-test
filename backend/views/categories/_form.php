@@ -25,7 +25,7 @@ use backend\models\Category;
 		]);
 	?>
 	
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true,'autofocus' => 'autofocus',]) ?>
 
     <?= $form->field($model, 'sort')->textInput() ?>
 
