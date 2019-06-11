@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'ثبت آگهی در ' . Yii::$app->name,
+        'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,8 +37,8 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'خانه', 'url' => ['/site/index']],
-        ['label' => 'درباره ما', 'url' => ['/site/about']],
-        ['label' => 'ارتباط ', 'url' => ['/site/contact']],
+        ['label' => 'درباره ما', 'url' => ['/site/about'],],
+        ['label' => 'ارتباط ', 'url' => ['/site/contact'],'options'=>['class'=>'']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'ثبت نام', 'url' => ['/site/signup']];
@@ -78,13 +78,11 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+<center class="navbar-fixed-bottom">
+<a href="" class="btn btn-danger btn-lg">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت آگهی
+</a>
+</center>
 
 <?php $this->endBody() ?>
 </body>
