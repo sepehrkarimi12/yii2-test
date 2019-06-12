@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -79,8 +80,8 @@ AppAsset::register($this);
 </div>
 
 <center class="navbar-fixed-bottom">
-<a href="" class="btn btn-danger btn-lg">
-    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت آگهی
+<a href="<?= Url::to('new')?>" class="btn btn-danger btn-lg bottom-nav">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت آگهی رایگان
 </a>
 </center>
 
