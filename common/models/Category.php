@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use Yii;
-use backend\traits\listForDropDown;
-use backend\traits\findParent;
+use common\traits\listForDropDown;
+use common\traits\findParent;
 
 /**
  * This is the model class for table "tbl_categories".

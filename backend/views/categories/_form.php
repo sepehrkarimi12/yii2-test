@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
-use backend\models\Category;
+use common\models\Category;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Category */
