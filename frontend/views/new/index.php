@@ -8,10 +8,8 @@ $this->title = 'ثبت آگهی جدید';
 </h1>
 
 <div class="new-index">
-	<!-- <pre> -->
 	<?php
-		// print_r($categories);
-		// die;
+	d($categories);
 		foreach ($categories as $mod) {
 			echo($mod->title);
 			echo "<hr/>";
