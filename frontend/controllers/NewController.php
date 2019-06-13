@@ -8,7 +8,11 @@ class NewController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-    	$categories = Category::find()->all();
+    	$categories = Category::find()
+    	->where(['parent_id' => null])
+    	->orderBy('sort')
+    	->all();
+    	
         return $this->render('index', [
             'categories' => $categories,
         ]);

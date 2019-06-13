@@ -36,6 +36,7 @@ class Category extends \yii\db\ActiveRecord
             [['title','sort'],'required'],
             [['parent_id', 'sort', 'status'], 'integer'],
             [['title'], 'string', 'max' => 255],
+            [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['parent_id' => 'id']],
         ];
     }
 
@@ -51,5 +52,21 @@ class Category extends \yii\db\ActiveRecord
             'sort' => 'Sort',
             'status' => 'Status',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getParent()
+    {
+        return $this->hasOne(Category::className(), ['id' => 'parent_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCategories()
+    {
+        return $this->hasMany(Category::className(), ['parent_id' => 'id']);
     }
 }
