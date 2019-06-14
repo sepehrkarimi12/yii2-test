@@ -18,7 +18,8 @@ $this->title = 'ثبت آگهی جدید';
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $catergory->id ?>">
-          <?= $catergory->title ?></a>
+          <?= $catergory->title ?>
+          </a>
         </h4>
       </div>
       <div id="collapse<?= $catergory->id ?>" class="panel-collapse collapse">
@@ -89,55 +90,55 @@ $this->title = 'ثبت آگهی جدید';
                           </div>
                         </div>
                         <?php else : ?>
-                          <div class="panel panel-warning">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" href="<?= Url::home() . 'new'?>">
-                                  <?= $catergory->title ?>
-                                </a>
-                              </h4>
+                          <a href="<?= Url::toRoute(['product/view', 'id' => $catergory->id]) ?>">
+                            <div class="panel panel-warning">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <?= $catergory->title ?>
+                                </h4>
+                              </div>
                             </div>
-                          </div>
+                          </a>
                         <?php endif; ?>
                       <?php endforeach; ?>
                       </div>
                     <?php else : ?>
-                      <div class="panel panel-success">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" href="<?= Url::home() . 'new'?>">
-                              <?= $catergory->title ?>
-                            </a>
-                          </h4>
+                      <a href="<?= Url::toRoute(['product/view', 'id' => $catergory->id]) ?>">
+                        <div class="panel panel-success">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <?= $catergory->title ?>
+                            </h4>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                     <?php endif; ?>
                   </div>
                 </div>
               </div>
               <?php else : ?>
-                <div class="panel panel-info">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" href="<?= Url::home() . 'new'?>">
-                        <?= $catergory->title ?>
-                      </a>
-                    </h4>
+                <a href="<?= Url::toRoute(['product/view', 'id' => $catergory->id]) ?>">
+                  <div class="panel panel-info">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                          <?= $catergory->title ?>
+                      </h4>
+                    </div>
                   </div>
-                </div>
+                </a>
               <?php endif; ?>
             <?php endforeach; ?>
             </div> 
           <?php else : ?>
-            <div class="panel panel-info">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="<?= Url::home() . 'new'?>">
-                    <?= $catergory->title ?>
-                  </a>
-                </h4>
+            <a href="<?= Url::toRoute(['product/view', 'id' => $catergory->id]) ?>">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <?= $catergory->title ?>
+                  </h4>
+                </div>
               </div>
-            </div>
+            </a>
           <?php endif; ?>
         </div>
       </div>
