@@ -40,6 +40,7 @@ AppAsset::register($this);
         ['label' => 'خانه', 'url' => ['/site/index']],
         ['label' => 'درباره ما', 'url' => ['/site/about'],],
         ['label' => 'ارتباط ', 'url' => ['/site/contact'],'options'=>['class'=>'']],
+        ['label' => 'ثبت آگهی جدید', 'url' => ['/new/index'],],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'ثبت نام', 'url' => ['/site/signup']];
