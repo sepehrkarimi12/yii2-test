@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\IranCity;
-use backend\models\searchModels\IranCitySearch;
+use backend\models\City;
+use backend\models\searchModels\City as CitySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * IranCityController implements the CRUD actions for IranCity model.
+ * CityController implements the CRUD actions for City model.
  */
-class IranCityController extends Controller
+class CityController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class IranCityController extends Controller
     }
 
     /**
-     * Lists all IranCity models.
+     * Lists all City models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new IranCitySearch();
+        $searchModel = new CitySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class IranCityController extends Controller
     }
 
     /**
-     * Displays a single IranCity model.
+     * Displays a single City model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +58,13 @@ class IranCityController extends Controller
     }
 
     /**
-     * Creates a new IranCity model.
+     * Creates a new City model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new IranCity();
+        $model = new City();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,7 +76,7 @@ class IranCityController extends Controller
     }
 
     /**
-     * Updates an existing IranCity model.
+     * Updates an existing City model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +96,7 @@ class IranCityController extends Controller
     }
 
     /**
-     * Deletes an existing IranCity model.
+     * Deletes an existing City model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class IranCityController extends Controller
     }
 
     /**
-     * Finds the IranCity model based on its primary key value.
+     * Finds the City model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return IranCity the loaded model
+     * @return City the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = IranCity::findOne($id)) !== null) {
+        if (($model = City::findOne($id)) !== null) {
             return $model;
         }
 

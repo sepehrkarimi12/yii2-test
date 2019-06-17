@@ -4,12 +4,12 @@ namespace backend\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\IranCity;
+use backend\models\City as CityModel;
 
 /**
- * IranCitySearch represents the model behind the search form of `backend\models\IranCity`.
+ * City represents the model behind the search form of `backend\models\City`.
  */
-class IranCitySearch extends IranCity
+class City extends CityModel
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class IranCitySearch extends IranCity
      */
     public function search($params)
     {
-        $query = IranCity::find();
+        $query = CityModel::find();
 
         // add conditions that should always apply here
 

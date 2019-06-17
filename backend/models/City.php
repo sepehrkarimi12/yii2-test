@@ -5,20 +5,20 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "tbl_iran_city".
+ * This is the model class for table "tbl_city".
  *
  * @property int $id
  * @property string $title
  * @property int $sort
  */
-class IranCity extends \yii\db\ActiveRecord
+class City extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'tbl_iran_city';
+        return 'tbl_city';
     }
 
     /**
