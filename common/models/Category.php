@@ -24,7 +24,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'tbl_categories';
+        return 'tbl_category';
     }
 
     /**
