@@ -20,7 +20,7 @@ class NewController extends \yii\web\Controller
 
     public function actionCreate($id)
     {
-
+        d($id);
     }
 
 }
