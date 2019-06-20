@@ -19,7 +19,7 @@ class NewController extends \yii\web\Controller
         ]);
     }
 
-    public function actionCreate($id)
+    public function actionCreate($id = null)
     {
         $geoplugin = new GeoPlugin();
         $geoplugin->locate();
