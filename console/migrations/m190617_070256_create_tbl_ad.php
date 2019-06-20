@@ -14,7 +14,8 @@ class m190617_070256_create_tbl_ad extends Migration
         $this->createTable($this->table,[
            'id' => $this->primaryKey(),
            'category_id' => $this->integer()->notNull(),
-           'city_id' => $this->integer()->notNull(),
+           'city_id' => $this->integer(),
+           'city_range_id' => $this->integer(),
            'title' => $this->string(50)->notNull(),
            'desc' => $this->string()->notNull()->notNull(),
            'price' => $this->string(20)->notNull(),
@@ -49,6 +50,16 @@ class m190617_070256_create_tbl_ad extends Migration
         );
 
         $this->addForeignKey(
+            'fk_to_city_range',
+            $this->table,
+            'city_range_id',
+            'tbl_city_range',
+            'id',
+            'NO ACTION',
+            'NO ACTION'
+        );
+
+        $this->addForeignKey(
             'fk_to_user',
             $this->table,
             'user_id',
@@ -68,6 +79,11 @@ class m190617_070256_create_tbl_ad extends Migration
 
         $this->dropForeignKey(
             'fk_to_city',
+            $this->table
+        );
+
+        $this->dropForeignKey(
+            'fk_to_city_range',
             $this->table
         );
 
