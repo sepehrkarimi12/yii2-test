@@ -13,13 +13,14 @@ class m190617_070256_create_tbl_ad extends Migration
     {
         $this->createTable($this->table,[
            'id' => $this->primaryKey(),
+           'category_id' => $this->integer()->notNull(),
+           'city_id' => $this->integer()->notNull(),
+           'pic_counts' => $this->smallInteger()->defaultValue(0),
            'title' => $this->string(50)->notNull(),
            'desc' => $this->string()->notNull()->notNull(),
            'price' => $this->string(20)->notNull(),
            'latitude' => $this->string(25),
            'longitude' => $this->string(25),
-           'category_id' => $this->integer()->notNull(),
-           'city_id' => $this->integer()->notNull(),
            'user_id' => $this->integer(),
            'published_at' => $this->integer(),
         ],'ENGINE InnoDB');
