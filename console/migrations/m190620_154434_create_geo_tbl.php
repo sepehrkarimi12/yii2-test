@@ -3,22 +3,23 @@
 use yii\db\Migration;
 
 /**
- * Class m190619_134124_create_imgs_tbl
+ * Class m190620_154434_create_geo_tbl
  */
-class m190619_134124_create_imgs_tbl extends Migration
+class m190620_154434_create_geo_tbl extends Migration
 {
-    private $table = 'tbl_image';
+    private $table = 'tbl_geography';
 
     public function up()
     {
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
             'ad_id' => $this->integer(),
-            'address' => $this->string(50)->notNull(),
+            'latitude' => $this->string(25)->notNull(),
+            'longitude' => $this->string(25)->notNull(),
         ],'ENGINE InnoDB');
 
         $this->addForeignKey(
-            'ad_id_img_to_ad_tbl',
+            'ad_id_geo_to_ad_tbl',
             $this->table,
             'ad_id',
             'tbl_ad',
@@ -30,7 +31,7 @@ class m190619_134124_create_imgs_tbl extends Migration
 
     public function down()
     {
-        $this->dropForeignKey('ad_id_img_to_ad_tbl',$this->table);
+        $this->dropForeignKey('ad_id_geo_to_ad_tbl',$this->table);
         $this->dropTable($this->table);
     }
 
