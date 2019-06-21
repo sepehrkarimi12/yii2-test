@@ -10,5 +10,11 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'Room' => [
+            'class' => 'common\components\Room'
+        ],
+        'CreatedYear' => [
+            'class' => 'common\components\CreatedYear'
+        ],
     ],
 ];
