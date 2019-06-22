@@ -2,7 +2,7 @@
 
 namespace backend\modules\ad_type\models;
 
-use Yii;
+use common\traits\listForDropDown;
 
 /**
  * This is the model class for table "tbl_ad_type".
@@ -14,6 +14,7 @@ use Yii;
  */
 class AdType extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
