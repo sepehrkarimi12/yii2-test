@@ -24,6 +24,10 @@ return [
             'class' => 'backend\modules\ad_advertiser\ad_advertiser',
             'defaultRoute' => 'ad-advertiser',
         ],
+        'category_ad_advertiser' => [
+            'class' => 'backend\modules\category_ad_advertiser\category_ad_advertiser',
+            'defaultRoute' => 'category-ad-advertiser',
+        ],
     ],
     'components' => [
         'request' => [

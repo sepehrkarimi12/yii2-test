@@ -2,6 +2,7 @@
 
 namespace backend\modules\ad_advertiser\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -14,6 +15,7 @@ use Yii;
  */
 class AdAdvertiser extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
