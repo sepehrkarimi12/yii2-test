@@ -1,5 +1,8 @@
 <?php
 
+use common\models\Category;
+use backend\modules\ad_type\models\AdType;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,9 +15,27 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'cat_id')->textInput() ?>
+    <?php
+        echo $form->field($model, 'cat_id')->widget(Select2::classname(), [
+            'data' => Category::getLeafsAsDropDown(),
+            'language' => 'en',
+            'options' => ['placeholder' => 'Select a category...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
 
-    <?= $form->field($model, 'ad_type_id')->textInput() ?>
+    <?php
+        echo $form->field($model, 'ad_type_id')->widget(Select2::classname(), [
+            'data' => AdType::getListForDropDown('id', 'title'),
+            'language' => 'en',
+            'options' => ['placeholder' => 'Select a ad type...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
