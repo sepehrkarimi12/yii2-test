@@ -20,6 +20,10 @@ return [
             'class' => 'backend\modules\category_ad_type\category_ad_type',
             'defaultRoute' => 'category-ad-type',
         ],
+        'ad_advertiser' => [
+            'class' => 'backend\modules\ad_advertiser\ad_advertiser',
+            'defaultRoute' => 'ad-advertiser',
+        ],
     ],
     'components' => [
         'request' => [
