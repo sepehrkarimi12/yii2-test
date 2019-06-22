@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use common\traits\listForDropDown;
 use common\traits\findParent;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "tbl_categories".
@@ -69,4 +70,22 @@ class Category extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Category::className(), ['parent_id' => 'id']);
     }
+
+    public static function getLeafs()
+    {
+        $leafs = self::find()->all();
+        foreach ($leafs as $k => $v) {
+            if ($v->childes) {
+                unset($leafs[$k]);
+            }
+        }
+        return $leafs;
+    }
+
+    public static function getLeafsAsDropDown()
+    {
+        return ArrayHelper::map(self::getLeafs(),'id','title');
+    }
+
+
 }
