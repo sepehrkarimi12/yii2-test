@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\modules\ad_type\models\AdType */
+/* @var $model backend\modules\category_ad_type\models\CategoryAdType */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Ad Types', 'url' => ['index']];
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Category Ad Types', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="ad-type-view">
+<div class="category-ad-type-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -30,7 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
+            'cat_id',
+            'ad_type_id',
         ],
     ]) ?>
 

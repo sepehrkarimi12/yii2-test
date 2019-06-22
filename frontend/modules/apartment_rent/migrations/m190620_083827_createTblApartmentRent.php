@@ -13,8 +13,13 @@ class m190620_083827_createTblApartmentRent extends Migration
     {
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
-            'city_id' => $this->integer(),
-            'address' => $this->string(50)->notNull(),
+            'area' => $this->integer(),
+            'ad_type_id' => $this->integer(),
+            'ad_advertiser_id' => $this->integer(),
+            'deposit' => $this->integer(),
+            'rent_value' => $this->integer(),
+            'room_count_id' => $this->integer(),
+            'created_year' => $this->integer(),
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use common\models\Category;
 use common\geoplugin\GeoPlugin;
+use Yii;
 
 class NewController extends \yii\web\Controller
 {
@@ -21,6 +22,7 @@ class NewController extends \yii\web\Controller
 
     public function actionCreate($id = null)
     {
+        d(Yii::$app->CreatedYear->getYears());
         $geoplugin = new GeoPlugin();
         $geoplugin->locate();
         d($geoplugin->latitude);
