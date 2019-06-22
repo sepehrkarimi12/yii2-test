@@ -13,8 +13,8 @@ class m190621_094644_create_tbl_category_ad_type extends Migration
     {
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
-            'cat_id' => $this->integer(),
-            'ad_type_id' => $this->integer(),
+            'cat_id' => $this->integer()->notNull(),
+            'ad_type_id' => $this->integer()->notNull(),
         ],'ENGINE InnoDB');
 
         $this->addForeignKey(
