@@ -14,6 +14,7 @@ return [
     'modules' => [
         'ad_type' => [
             'class' => 'backend\modules\ad_type\ad_type',
+            'defaultRoute' => 'ad-type',
         ],
     ],
     'components' => [
