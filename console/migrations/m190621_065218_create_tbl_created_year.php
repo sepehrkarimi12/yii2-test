@@ -6,6 +6,7 @@ use yii\db\Migration;
  * Class m190621_065218_create_tbl_created_year
  */
 class m190621_065218_create_tbl_created_year extends Migration
+
 {
     private $table = 'tbl_created_year';
 
@@ -13,8 +14,18 @@ class m190621_065218_create_tbl_created_year extends Migration
     {
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
-            'year' => $this->string(15)->notNull(),
+            'title' => $this->integer(),
         ],'ENGINE InnoDB');
+
+        $now = 1398;
+        $difference = 29;
+        $least_year = $now - $difference;
+
+        for ($i = $least_year;$i <= $now;$i++) {
+            $this->insert($this->table, [
+                'title' => $i,
+            ]);
+        }
     }
 
     public function down()
@@ -23,3 +34,4 @@ class m190621_065218_create_tbl_created_year extends Migration
     }
 
 }
+
