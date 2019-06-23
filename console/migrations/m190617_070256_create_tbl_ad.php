@@ -41,15 +41,15 @@ class m190617_070256_create_tbl_ad extends Migration
             'NO ACTION'
         );
 
-        $this->addForeignKey(
-            'fk_to_city',
-            $this->table,
-            'city_id',
-            'tbl_city',
-            'id',
-            'NO ACTION',
-            'NO ACTION'
-        );
+//        $this->addForeignKey(
+//            'fk_to_city',
+//            $this->table,
+//            'city_id',
+//            'tbl_city',
+//            'id',
+//            'NO ACTION',
+//            'NO ACTION'
+//        );
 
         $this->addForeignKey(
             'fk_to_city_range',
@@ -79,10 +79,10 @@ class m190617_070256_create_tbl_ad extends Migration
             $this->table
         );
 
-        $this->dropForeignKey(
-            'fk_to_city',
-            $this->table
-        );
+//        $this->dropForeignKey(
+//            'fk_to_city',
+//            $this->table
+//        );
 
         $this->dropForeignKey(
             'fk_to_city_range',
