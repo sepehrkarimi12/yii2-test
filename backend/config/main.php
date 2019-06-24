@@ -28,6 +28,10 @@ return [
             'class' => 'backend\modules\category_ad_advertiser\category_ad_advertiser',
             'defaultRoute' => 'category-ad-advertiser',
         ],
+        'category_model_address' => [
+            'class' => 'backend\modules\category_model_address\category_model_address',
+            'defaultRoute' => 'category-model-address',
+        ],
     ],
     'components' => [
         'request' => [
