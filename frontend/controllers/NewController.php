@@ -22,10 +22,9 @@ class NewController extends \yii\web\Controller
 
     public function actionCreate($id = null)
     {
-        d(Yii::$app->CreatedYear->getYears());
-        $geoplugin = new GeoPlugin();
-        $geoplugin->locate();
-        d($geoplugin->latitude);
+//        $geo_plugin = new GeoPlugin();
+//        $geo_plugin->locate();
+//        d($geo_plugin->latitude);
         d($id);
     }
 
