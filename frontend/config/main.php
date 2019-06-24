@@ -14,6 +14,7 @@ return [
     'modules' => [
         'apartment_rent' => [
             'class' => 'frontend\modules\apartment_rent\apartment_rent',
+            'defaultRoute' => 'apartment-rent',
         ],
     ],
     'components' => [
