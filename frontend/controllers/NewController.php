@@ -22,6 +22,7 @@ class NewController extends \yii\web\Controller
 
     public function actionCreate($id = null)
     {
+//        d(__CLASS__);
 //        $geo_plugin = new GeoPlugin();
 //        $geo_plugin->locate();
 //        d($geo_plugin->latitude);
