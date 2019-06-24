@@ -27,7 +27,10 @@ class m190617_070256_create_tbl_ad extends Migration
            'immediate' => $this->boolean()->defaultValue(0),
            'chat' => $this->boolean()->defaultValue(0),
            'exchange' => $this->boolean()->defaultValue(0),
+           'expired' => $this->boolean()->defaultValue(0),
            'user_id' => $this->integer(),
+           'created_at' => $this->integer(),
+           'updated_at' => $this->integer(),
            'published_at' => $this->integer(),
         ],'ENGINE InnoDB');
 
@@ -88,6 +91,7 @@ class m190617_070256_create_tbl_ad extends Migration
             'fk_to_city_range',
             $this->table
         );
+
 
         $this->dropForeignKey(
             'fk_to_user',
