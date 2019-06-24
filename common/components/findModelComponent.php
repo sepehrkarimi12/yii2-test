@@ -8,6 +8,6 @@ class findModelComponent extends Component
 {
     public function getAddress($id)
     {
-
+        d($id);
     }
 }

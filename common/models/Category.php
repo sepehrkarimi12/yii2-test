@@ -4,7 +4,6 @@ namespace common\models;
 
 use Yii;
 use common\traits\listForDropDown;
-use common\traits\findModelNameByCategoryId;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -19,7 +18,6 @@ use yii\helpers\ArrayHelper;
 class Category extends \yii\db\ActiveRecord
 {
     use listForDropDown;
-    use findModelNameByCategoryId;
     /**
      * {@inheritdoc}
      */
