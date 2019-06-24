@@ -2,16 +2,18 @@
 
 namespace frontend\modules\apartment_rent\models;
 
-use Yii;
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use backend\modules\ad_type\models\AdType;
 use backend\modules\created_year\models\CreatedYear;
 use backend\modules\room\models\Room;
+use common\models\TblAd;
+use Yii;
 
 /**
  * This is the model class for table "tbl_apartment_rent".
  *
  * @property int $id
+ * @property int $ad_id
  * @property int $area
  * @property int $ad_type_id
  * @property int $ad_advertiser_id
@@ -21,6 +23,7 @@ use backend\modules\room\models\Room;
  * @property int $created_year_id
  *
  * @property TblAdAdvertiser $adAdvertiser
+ * @property TblAd $ad
  * @property TblAdType $adType
  * @property TblCreatedYear $createdYear
  * @property TblRoom $roomCount
@@ -41,9 +44,10 @@ class ApartmentRent extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['ad_id', 'area', 'ad_type_id', 'ad_advertiser_id', 'deposit', 'rent_value', 'room_count_id', 'created_year_id'], 'integer'],
             [['area', 'ad_type_id', 'ad_advertiser_id', 'room_count_id'], 'required'],
-            [['area', 'ad_type_id', 'ad_advertiser_id', 'deposit', 'rent_value', 'room_count_id', 'created_year_id'], 'integer'],
             [['ad_advertiser_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdAdvertiser::className(), 'targetAttribute' => ['ad_advertiser_id' => 'id']],
+            [['ad_id'], 'exist', 'skipOnError' => true, 'targetClass' => TblAd::className(), 'targetAttribute' => ['ad_id' => 'id']],
             [['ad_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdType::className(), 'targetAttribute' => ['ad_type_id' => 'id']],
             [['created_year_id'], 'exist', 'skipOnError' => true, 'targetClass' => CreatedYear::className(), 'targetAttribute' => ['created_year_id' => 'id']],
             [['room_count_id'], 'exist', 'skipOnError' => true, 'targetClass' => Room::className(), 'targetAttribute' => ['room_count_id' => 'id']],
@@ -57,6 +61,7 @@ class ApartmentRent extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'ad_id' => 'Ad ID',
             'area' => 'Area',
             'ad_type_id' => 'Ad Type ID',
             'ad_advertiser_id' => 'Ad Advertiser ID',
@@ -73,6 +78,14 @@ class ApartmentRent extends \yii\db\ActiveRecord
     public function getAdAdvertiser()
     {
         return $this->hasOne(TblAdAdvertiser::className(), ['id' => 'ad_advertiser_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAd()
+    {
+        return $this->hasOne(TblAd::className(), ['id' => 'ad_id']);
     }
 
     /**
