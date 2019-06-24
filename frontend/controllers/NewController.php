@@ -22,6 +22,7 @@ class NewController extends \yii\web\Controller
 
     public function actionCreate($id = null)
     {
+        Yii::$app->findModelComponent->getAddress(12);
 //        d(__CLASS__);
 //        $geo_plugin = new GeoPlugin();
 //        $geo_plugin->locate();

@@ -11,5 +11,8 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'findModelComponent' => [
+            'class' => 'common\components\findModelComponent',
+        ],
     ],
 ];
