@@ -13,6 +13,7 @@ class m190620_083827_createTblApartmentRent extends Migration
     {
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
+            'ad_id' => $this->integer(),
             'area' => $this->integer()->notNull(),
             'ad_type_id' => $this->integer()->notNull(),
             'ad_advertiser_id' => $this->integer()->notNull(),
@@ -21,6 +22,16 @@ class m190620_083827_createTblApartmentRent extends Migration
             'room_count_id' => $this->integer()->notNull(),
             'created_year_id' => $this->integer(),
         ],'ENGINE InnoDB');
+
+        $this->addForeignKey(
+            'ad_id_apartment_rent_to_ad_tbl',
+            $this->table,
+            'ad_id',
+            'tbl_ad',
+            'id',
+            'CASCADE',
+            'CASCADE'
+        );
 
         $this->addForeignKey(
             'ad_type_id_apartment_rent_to_ad_type_tbl',
@@ -83,6 +94,11 @@ class m190620_083827_createTblApartmentRent extends Migration
 
         $this->dropForeignKey(
             'ad_type_id_apartment_rent_to_ad_type_tbl',
+            $this->table
+        );
+
+        $this->dropForeignKey(
+            'ad_id_apartment_rent_to_ad_tbl',
             $this->table
         );
 
