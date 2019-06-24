@@ -1,5 +1,6 @@
 <?php
 return [
+    'language' => 'fa',
     'name'=>'گهیران',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
