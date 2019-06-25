@@ -24,6 +24,14 @@ return [
             'class' => 'backend\modules\city\city',
             'defaultRoute' => 'city',
         ],
+        'menu_group' => [
+            'class' => 'backend\modules\menu_group\menu_group',
+            'defaultRoute' => 'menu-group',
+        ],
+        'menu' => [
+            'class' => 'backend\modules\menu\menu',
+            'defaultRoute' => 'menu',
+        ],
         'ad_type' => [
             'class' => 'backend\modules\ad_type\ad_type',
             'defaultRoute' => 'ad-type',
