@@ -3,10 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use backend\models\Category;
-
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\searchModels\CategorySearch */
+/* @var $searchModel common\models\searchModels\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Categories';
@@ -52,8 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter' => [1 => 'فعال', 0 => 'غیر فعال'],
                 'filterInputOptions' => [
-                   'class' => 'form-control',         
-                   'prompt' => 'همه'
+                    'class' => 'form-control',
+                    'prompt' => 'همه'
                 ],
             ],
 

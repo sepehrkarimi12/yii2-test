@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers;
+namespace backend\modules\category\controllers;
 
 use Yii;
 use common\models\Category;
@@ -10,11 +10,10 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CategoriesController implements the CRUD actions for Category model.
+ * CategoryController implements the CRUD actions for Category model.
  */
-class CategoriesController extends Controller
+class CategoryController extends Controller
 {
-    // public $layout = 'lte';
     /**
      * {@inheritdoc}
      */

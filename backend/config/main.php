@@ -12,6 +12,10 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        'category' => [
+            'class' => 'backend\modules\category\category',
+            'defaultRoute' => 'category',
+        ],
         'ad_type' => [
             'class' => 'backend\modules\ad_type\ad_type',
             'defaultRoute' => 'ad-type',
