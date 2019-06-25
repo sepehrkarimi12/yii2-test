@@ -20,6 +20,10 @@ return [
             'class' => 'backend\modules\question\question',
             'defaultRoute' => 'question',
         ],
+        'city' => [
+            'class' => 'backend\modules\city\city',
+            'defaultRoute' => 'city',
+        ],
         'ad_type' => [
             'class' => 'backend\modules\ad_type\ad_type',
             'defaultRoute' => 'ad-type',

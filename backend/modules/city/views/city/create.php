@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\City */
+/* @var $model backend\modules\city\models\City */
 
 $this->title = 'Create City';
 $this->params['breadcrumbs'][] = ['label' => 'Cities', 'url' => ['index']];

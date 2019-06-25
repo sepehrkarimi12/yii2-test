@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\searchModels\City */
+/* @var $searchModel backend\modules\city\models\searchModels\CitySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Cities';

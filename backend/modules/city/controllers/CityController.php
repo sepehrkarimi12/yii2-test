@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace backend\modules\city\controllers;
 
 use Yii;
-use backend\models\City;
-use backend\models\searchModels\City as CitySearch;
+use backend\modules\city\models\City;
+use backend\modules\city\models\searchModels\CitySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
