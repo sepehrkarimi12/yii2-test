@@ -20,14 +20,9 @@ class NewController extends \yii\web\Controller
         ]);
     }
 
-    public function actionCreate($id = null)
+    public function actionCreate($cat_id = null)
     {
-        Yii::$app->findModelComponent->getAddress($id);
-//        d(__CLASS__);
-//        $geo_plugin = new GeoPlugin();
-//        $geo_plugin->locate();
-//        d($geo_plugin->latitude);
-        d($id);
+        d(Yii::$app->findModelComponent->getAddress($cat_id));
     }
 
 }
