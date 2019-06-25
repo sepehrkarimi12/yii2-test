@@ -1,20 +1,19 @@
 <?php
 
-namespace backend\controllers;
+namespace backend\modules\question\controllers;
 
 use Yii;
-use backend\models\Question;
-use backend\models\searchModels\QuestionSearch;
+use backend\modules\question\models\Question;
+use backend\modules\question\models\searchModels\QuestionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * QuestionsController implements the CRUD actions for Question model.
+ * QuestionController implements the CRUD actions for Question model.
  */
-class QuestionsController extends Controller
+class QuestionController extends Controller
 {
-    // public $layout = 'lte';
     /**
      * {@inheritdoc}
      */

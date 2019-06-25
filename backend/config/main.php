@@ -16,6 +16,10 @@ return [
             'class' => 'backend\modules\category\category',
             'defaultRoute' => 'category',
         ],
+        'question' => [
+            'class' => 'backend\modules\question\question',
+            'defaultRoute' => 'question',
+        ],
         'ad_type' => [
             'class' => 'backend\modules\ad_type\ad_type',
             'defaultRoute' => 'ad-type',
