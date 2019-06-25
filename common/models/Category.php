@@ -73,16 +73,23 @@ class Category extends \yii\db\ActiveRecord
     {
         $leafs = self::find()->all();
         foreach ($leafs as $k => $v) {
-            if ($v->childes) {
+            if ($v->childes || $v->parent_id == null) {
                 unset($leafs[$k]);
             }
         }
+
         return $leafs;
     }
 
     public static function getLeafsAsDropDown()
     {
-        return ArrayHelper::map(self::getLeafs(),'id','title');
+        $leafs = self::getLeafs();
+
+        foreach($leafs as $leaf){
+            $leaf->title = $leaf->parent->title.' -> '.$leaf->title;
+        }
+
+        return ArrayHelper::map($leafs,'id','title');
     }
 
 
