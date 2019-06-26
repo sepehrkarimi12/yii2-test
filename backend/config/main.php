@@ -24,6 +24,10 @@ return [
             'class' => 'backend\modules\city\city',
             'defaultRoute' => 'city',
         ],
+        'city_range' => [
+            'class' => 'backend\modules\city_range\city_range',
+            'defaultRoute' => 'city-range',
+        ],
         'menu_group' => [
             'class' => 'backend\modules\menu_group\menu_group',
             'defaultRoute' => 'menu-group',
