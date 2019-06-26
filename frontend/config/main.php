@@ -12,6 +12,10 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
+        'ad' => [
+            'class' => 'frontend\modules\ad\ad',
+            'defaultRoute' => 'ad',
+        ],
         'apartment_rent' => [
             'class' => 'frontend\modules\apartment_rent\apartment_rent',
             'defaultRoute' => 'apartment-rent',
