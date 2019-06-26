@@ -7,7 +7,6 @@ use backend\modules\ad_type\models\AdType;
 use backend\modules\created_year\models\CreatedYear;
 use backend\modules\room\models\Room;
 use common\models\TblAd;
-use Yii;
 
 /**
  * This is the model class for table "tbl_apartment_rent".
