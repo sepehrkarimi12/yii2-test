@@ -6,6 +6,7 @@ use backend\modules\ad_advertiser\models\AdAdvertiser;
 use backend\modules\ad_type\models\AdType;
 use backend\modules\created_year\models\CreatedYear;
 use backend\modules\room\models\Room;
+use common\models\Ad;
 use common\models\TblAd;
 
 /**
@@ -46,7 +47,7 @@ class ApartmentRent extends \yii\db\ActiveRecord
             [['ad_id', 'area', 'ad_type_id', 'ad_advertiser_id', 'deposit', 'rent_value', 'room_count_id', 'created_year_id'], 'integer'],
             [['area', 'ad_type_id', 'ad_advertiser_id', 'room_count_id'], 'required'],
             [['ad_advertiser_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdAdvertiser::className(), 'targetAttribute' => ['ad_advertiser_id' => 'id']],
-            [['ad_id'], 'exist', 'skipOnError' => true, 'targetClass' => TblAd::className(), 'targetAttribute' => ['ad_id' => 'id']],
+            [['ad_id'], 'exist', 'skipOnError' => true, 'targetClass' => Ad::className(), 'targetAttribute' => ['ad_id' => 'id']],
             [['ad_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdType::className(), 'targetAttribute' => ['ad_type_id' => 'id']],
             [['created_year_id'], 'exist', 'skipOnError' => true, 'targetClass' => CreatedYear::className(), 'targetAttribute' => ['created_year_id' => 'id']],
             [['room_count_id'], 'exist', 'skipOnError' => true, 'targetClass' => Room::className(), 'targetAttribute' => ['room_count_id' => 'id']],
