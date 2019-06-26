@@ -21,7 +21,7 @@ class m190615_110227_tbl_iran_city extends Migration
         $this->createTable($this->tbl_range,[
             'id' => $this->primaryKey(),
             'title' => $this->string(100)->notNull(),
-            'city_id' => $this->integer(),
+            'city_id' => $this->integer()->notNull(),
         ],'ENGINE InnoDB');
 
         $this->addForeignKey(
