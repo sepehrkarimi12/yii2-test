@@ -22,7 +22,7 @@ class NewController extends \yii\web\Controller
 
     public function actionCreate($cat_id = null)
     {
-        d(Yii::$app->findModelComponent->getAddress($cat_id));
+        d(Yii::$app->findModuleComponent->getModuleName($cat_id));
     }
 
 }
