@@ -44,7 +44,12 @@ class findModuleComponent extends Component
         $address = $this->find($cat_id);
         $address = explode("\\",$address->model_address);
         $module_name = $address[2];
-        d($module_name);
+        return $module_name;
+    }
+
+    public function convertModuleToController($module_name)
+    {
+        return str_replace('_','-',$module_name);
     }
 
 }
