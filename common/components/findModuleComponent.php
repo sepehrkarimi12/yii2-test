@@ -42,9 +42,14 @@ class findModuleComponent extends Component
     public function getModuleName($cat_id)
     {
         $address = $this->find($cat_id);
-        $address = explode("\\",$address->model_address);
-        $module_name = $address[2];
-        return $module_name;
+        if ($address) {
+            $address = explode("\\",$address->model_address);
+            $module_name = $address[2];
+            return $module_name;
+        }
+        else {
+            Yii::$app->response->redirect(['new'])->send();
+        }
     }
 
     public function convertModuleToController($module_name)
