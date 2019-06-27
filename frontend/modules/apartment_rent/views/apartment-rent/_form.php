@@ -30,6 +30,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'created_year_id')->textInput() ?>
 
+    <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+
 
 
     <?= $form->field($ad, 'title')->textInput(['maxlength' => true]) ?>

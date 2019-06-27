@@ -7,6 +7,7 @@ use backend\modules\ad_type\models\AdType;
 use backend\modules\created_year\models\CreatedYear;
 use backend\modules\room\models\Room;
 use common\models\Ad;
+use Yii;
 
 /**
  * This is the model class for table "tbl_apartment_rent".
@@ -29,6 +30,7 @@ use common\models\Ad;
  */
 class ApartmentRent extends \yii\db\ActiveRecord
 {
+    public $imageFiles;
     /**
      * {@inheritdoc}
      */
@@ -50,6 +52,7 @@ class ApartmentRent extends \yii\db\ActiveRecord
             [['ad_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdType::className(), 'targetAttribute' => ['ad_type_id' => 'id']],
             [['created_year_id'], 'exist', 'skipOnError' => true, 'targetClass' => CreatedYear::className(), 'targetAttribute' => ['created_year_id' => 'id']],
             [['room_count_id'], 'exist', 'skipOnError' => true, 'targetClass' => Room::className(), 'targetAttribute' => ['room_count_id' => 'id']],
+            [['imageFiles'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxFiles' => 3],
         ];
     }
 
@@ -110,4 +113,26 @@ class ApartmentRent extends \yii\db\ActiveRecord
     {
         return $this->hasOne(TblRoom::className(), ['id' => 'room_count_id']);
     }
+
+    public function upload($ad)
+    {
+        if (!empty($this->imageFiles)) {
+            $transaction = Yii::$app->db->beginTransaction();
+            try {
+                foreach ($this->imageFiles as $file) {
+                    $address = 'uploads/' . $file->baseName . '.' . $file->extension;
+                    $file->saveAs($address);
+                    $ad->org_pic = $address;
+                }
+                $transaction->commit();
+            }
+            catch (\Exception $e) {
+                $transaction->rollBack();
+                throw $e;
+            }
+        } else {
+            return true;
+        }
+    }
+
 }

@@ -9,6 +9,7 @@ use frontend\modules\apartment_rent\models\searchModels\ApartmentRentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * ApartmentRentController implements the CRUD actions for ApartmentRent model.
@@ -74,10 +75,14 @@ class ApartmentRentController extends Controller
         $ad->cat_id = $cat_id;
 
         if ($model->load(Yii::$app->request->post()) &&
-            $ad->load(Yii::$app->request->post()) &&
-            $model->validate() &&
-            $ad->validate() ) {
+            $ad->load(Yii::$app->request->post())
+//            $model->validate() &&
+//            $ad->validate()
+        ) {
 
+            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+            $model->upload($ad);
+                d($ad->org_pic);
                 return $this->redirect(['view', 'id' => $model->id]);
         }
 
