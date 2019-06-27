@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Ad;
 use common\models\Category;
 use common\geoplugin\GeoPlugin;
 use Yii;
@@ -26,9 +27,9 @@ class NewController extends \yii\web\Controller
         $controller_name = Yii::$app->findModuleComponent->convertModuleToController($module_name);
         $address = $module_name . '/' . $controller_name;
 
-        Yii::$app->response->redirect([
+        $this->redirect([
             $address . '/create',
-            'cat_id' => $cat_id
+            'cat_id' => $cat_id,
         ]);
     }
 
