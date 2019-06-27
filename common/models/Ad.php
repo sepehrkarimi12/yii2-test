@@ -9,7 +9,7 @@ use Yii;
  * This is the model class for table "tbl_ad".
  *
  * @property int $id
- * @property int $category_id
+ * @property int $cat_id
  * @property int $city_id
  * @property int $city_range_id
  * @property string $title
@@ -27,7 +27,7 @@ use Yii;
  * @property int $updated_at
  * @property int $published_at
  *
- * @property TblCategory $category
+ * @property TblCategory $cat
  * @property TblCityRange $cityRange
  * @property User $user
  * @property TblApartmentRent[] $tblApartmentRents
@@ -50,14 +50,14 @@ class Ad extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id', 'title', 'desc', 'mobile'], 'required'],
-            [['category_id', 'city_id', 'city_range_id', 'pic_counts', 'immediate', 'chat', 'exchange', 'expired', 'user_id', 'created_at', 'updated_at', 'published_at'], 'integer'],
+            [['cat_id', 'title', 'desc', 'mobile'], 'required'],
+            [['cat_id', 'city_id', 'city_range_id', 'pic_counts', 'immediate', 'chat', 'exchange', 'expired', 'user_id', 'created_at', 'updated_at', 'published_at'], 'integer'],
             [['title'], 'string', 'max' => 50],
             [['desc'], 'string', 'max' => 255],
             [['price'], 'string', 'max' => 20],
             [['mobile'], 'string', 'max' => 11],
             [['org_pic'], 'string', 'max' => 40],
-            [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
+            [['cat_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['cat_id' => 'id']],
             [['city_range_id'], 'exist', 'skipOnError' => true, 'targetClass' => CityRange::className(), 'targetAttribute' => ['city_range_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
@@ -70,7 +70,7 @@ class Ad extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'category_id' => 'Category ID',
+            'cat_id' => 'Cat ID',
             'city_id' => 'City ID',
             'city_range_id' => 'City Range ID',
             'title' => 'Title',
@@ -93,9 +93,9 @@ class Ad extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCategory()
+    public function getCat()
     {
-        return $this->hasOne(TblCategory::className(), ['id' => 'category_id']);
+        return $this->hasOne(TblCategory::className(), ['id' => 'cat_id']);
     }
 
     /**

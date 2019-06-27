@@ -17,7 +17,7 @@ class AdSearch extends Ad
     public function rules()
     {
         return [
-            [['id', 'category_id', 'city_id', 'city_range_id', 'pic_counts', 'immediate', 'chat', 'exchange', 'expired', 'user_id', 'created_at', 'updated_at', 'published_at'], 'integer'],
+            [['id', 'cat_id', 'city_id', 'city_range_id', 'pic_counts', 'immediate', 'chat', 'exchange', 'expired', 'user_id', 'created_at', 'updated_at', 'published_at'], 'integer'],
             [['title', 'desc', 'price', 'mobile', 'org_pic'], 'safe'],
         ];
     }
@@ -59,7 +59,7 @@ class AdSearch extends Ad
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'category_id' => $this->category_id,
+            'cat_id' => $this->cat_id,
             'city_id' => $this->city_id,
             'city_range_id' => $this->city_range_id,
             'pic_counts' => $this->pic_counts,
