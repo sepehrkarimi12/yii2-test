@@ -13,7 +13,7 @@ class m190617_070256_create_tbl_ad extends Migration
     {
         $this->createTable($this->table,[
            'id' => $this->primaryKey(),
-           'category_id' => $this->integer()->notNull(),
+           'cat_id' => $this->integer()->notNull(),
            'city_id' => $this->integer(),
            'city_range_id' => $this->integer(),
            'title' => $this->string(50)->notNull(),
@@ -37,7 +37,7 @@ class m190617_070256_create_tbl_ad extends Migration
         $this->addForeignKey(
             'fk_to_category',
             $this->table,
-            'category_id',
+            'cat_id',
             'tbl_categories',
             'id',
             'NO ACTION',
