@@ -63,14 +63,22 @@ class ApartmentRentController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($cat_id)
+    public function actionCreate($cat_id = null)
     {
+        if ($cat_id == null) {
+            return $this->goBack();
+        }
+
         $model = new ApartmentRent();
         $ad = new Ad();
         $ad->cat_id = $cat_id;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) &&
+            $ad->load(Yii::$app->request->post()) &&
+            $model->validate() &&
+            $ad->validate() ) {
+
+                return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
