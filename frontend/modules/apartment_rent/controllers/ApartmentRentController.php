@@ -2,6 +2,7 @@
 
 namespace frontend\modules\apartment_rent\controllers;
 
+use common\models\Ad;
 use Yii;
 use frontend\modules\apartment_rent\models\ApartmentRent;
 use frontend\modules\apartment_rent\models\searchModels\ApartmentRentSearch;
@@ -62,9 +63,11 @@ class ApartmentRentController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($cat_id)
     {
         $model = new ApartmentRent();
+        $ad = new Ad();
+        $ad->cat_id = $cat_id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,6 +75,7 @@ class ApartmentRentController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'ad' => $ad,
         ]);
     }
 
