@@ -2,6 +2,7 @@
 
 namespace backend\modules\city\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -15,6 +16,7 @@ use Yii;
  */
 class City extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
