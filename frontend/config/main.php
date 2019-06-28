@@ -20,6 +20,10 @@ return [
             'class' => 'frontend\modules\apartment_rent\apartment_rent',
             'defaultRoute' => 'apartment-rent',
         ],
+        'image' => [
+            'class' => 'frontend\modules\image\image',
+            'defaultRoute' => 'image',
+        ],
     ],
     'components' => [
         'request' => [
