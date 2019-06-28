@@ -2,6 +2,7 @@
 
 namespace backend\modules\ad_type\models;
 
+use backend\modules\category_ad_type\models\CategoryAdType;
 use common\traits\listForDropDown;
 
 /**
@@ -50,6 +51,22 @@ class AdType extends \yii\db\ActiveRecord
      */
     public function getTblCategoryAdTypes()
     {
-        return $this->hasMany(TblCategoryAdType::className(), ['ad_type_id' => 'id']);
+        return $this->hasMany(CategoryAdType::className(), ['ad_type_id' => 'id']);
+    }
+
+    public static function getAdTypesByCategory($cat_id)
+    {
+        $types_of_cat = CategoryAdType::find()
+            ->where(['cat_id' => $cat_id])
+            ->all();
+
+        $types = [];
+
+        foreach ($types_of_cat as $type) {
+            $types[$type->adType->id] = $type->adType->title;
+        }
+
+        return $types;
+
     }
 }
