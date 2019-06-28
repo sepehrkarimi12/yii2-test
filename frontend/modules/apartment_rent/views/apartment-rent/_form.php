@@ -30,7 +30,15 @@ use yii\widgets\ActiveForm;
         ]);
     ?>
 
-    <?= $form->field($ad, 'city_range_id')->textInput() ?>
+    <?php
+        echo $form->field($ad, 'city_range_id')->widget(Select2::classname(), [
+            'language' => 'en',
+            'options' => ['placeholder' => 'محدوده ...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
 
     <?= $form->field($model, 'area')->textInput() ?>
 
@@ -94,3 +102,30 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<?php
+$script = <<< JS
+//here you right all your javascript stuff
+$('#ad-city_id').change(function(){
+    var cityId = $(this).val();
+    $.get('../../../../backend/web/city_range/city-range/get-ranges-of-city', { city_id : cityId }, function(data){
+        var data = $.parseJSON(data);
+
+        //remove options of course select
+        var select = $('#ad-city_range_id');
+        $(select)
+            .find('option')
+            .remove()
+            .end()
+        ;
+        
+        (select).append("<option value=''>" + 'محدوده ...' + "</option>");
+        $.each(data, function( k, v ) {
+            (select).append("<option value=" + v['id'] + ">" + v['title'] + "</option>");
+        });
+
+    });
+});
+JS;
+$this->registerJS($script);
+?>
