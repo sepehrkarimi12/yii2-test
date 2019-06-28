@@ -1,9 +1,14 @@
 <?php
 
 use backend\modules\city\models\City;
+use backend\modules\ad_type\models\AdType;
+use backend\modules\room\models\Room;
+use backend\modules\created_year\models\CreatedYear;
+use backend\modules\ad_advertiser\models\AdAdvertiser;
 use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+
 
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_rent\models\ApartmentRent */
@@ -18,7 +23,7 @@ use yii\widgets\ActiveForm;
         echo $form->field($ad, 'city_id')->widget(Select2::classname(), [
             'data' => City::getListForDropDown('id', 'title'),
             'language' => 'en',
-            'options' => ['placeholder' => 'Select a city...'],
+            'options' => ['placeholder' => 'نام شهر ...'],
             'pluginOptions' => [
                 'allowClear' => true
             ],
@@ -29,17 +34,39 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'area')->textInput() ?>
 
-    <?= $form->field($model, 'ad_type_id')->textInput() ?>
+    <?= $form->field($model, 'ad_type_id')
+        ->radioList(AdType::getAdTypesByCategory($ad->cat_id))
+        ->label('نوع آگهی'); ?>
 
-    <?= $form->field($model, 'ad_advertiser_id')->textInput() ?>
+    <?= $form->field($model, 'ad_advertiser_id')
+        ->radioList(AdAdvertiser::getAdAdvertisersByCategory($ad->cat_id))
+        ->label('آگهی دهنده'); ?>
 
     <?= $form->field($model, 'deposit')->textInput() ?>
 
     <?= $form->field($model, 'rent_value')->textInput() ?>
 
-    <?= $form->field($model, 'room_count_id')->textInput() ?>
+    <?php
+        echo $form->field($model, 'room_count_id')->widget(Select2::classname(), [
+            'data' => Room::getListForDropDown('id', 'title'),
+            'language' => 'en',
+            'options' => ['placeholder' => 'تعداد ...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
 
-    <?= $form->field($model, 'created_year_id')->textInput() ?>
+    <?php
+        echo $form->field($model, 'created_year_id')->widget(Select2::classname(), [
+            'data' => CreatedYear::getListForDropDown('id', 'title'),
+            'language' => 'en',
+            'options' => ['placeholder' => 'سال ...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
 
     <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
 
@@ -53,11 +80,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($ad, 'mobile')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($ad, 'immediate')->textInput() ?>
+    <?= $form->field($ad, 'immediate')->checkbox() ?>
 
-    <?= $form->field($ad, 'chat')->textInput() ?>
+    <?= $form->field($ad, 'chat')->checkbox() ?>
 
-    <?= $form->field($ad, 'exchange')->textInput() ?>
+    <?= $form->field($ad, 'exchange')->checkbox() ?>
 
 
     <div class="form-group">
