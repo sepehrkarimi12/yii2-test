@@ -1,5 +1,7 @@
 <?php
 
+use backend\modules\city\models\City;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,7 +14,16 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($ad, 'city_id')->textInput() ?>
+    <?php
+        echo $form->field($ad, 'city_id')->widget(Select2::classname(), [
+            'data' => City::getListForDropDown('id', 'title'),
+            'language' => 'en',
+            'options' => ['placeholder' => 'Select a city...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
 
     <?= $form->field($ad, 'city_range_id')->textInput() ?>
 
