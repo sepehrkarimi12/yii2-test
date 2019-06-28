@@ -2,7 +2,7 @@
 
 namespace backend\modules\created_year\models;
 
-use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "tbl_created_year".
@@ -49,5 +49,11 @@ class CreatedYear extends \yii\db\ActiveRecord
     public function getTblApartmentRents()
     {
         return $this->hasMany(TblApartmentRent::className(), ['created_year_id' => 'id']);
+    }
+
+    public static function getListForDropDown()
+    {
+        $all = self::find()->orderBy('Title DESC')->all();
+        return ArrayHelper::map($all, 'id', 'title');
     }
 }
