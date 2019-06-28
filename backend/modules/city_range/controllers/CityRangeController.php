@@ -5,6 +5,8 @@ namespace backend\modules\city_range\controllers;
 use Yii;
 use backend\modules\city_range\models\CityRange;
 use backend\modules\city_range\models\searchModels\CityRangeSearch;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -123,5 +125,13 @@ class CityRangeController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionGetRangesOfCity($city_id)
+    {
+        $city_ranges = CityRange::find()->where(['city_id' => $city_id])->all();
+//        $city_ranges = ArrayHelper::map($city_ranges, 'id', 'title');
+//        return $city_ranges;
+        echo Json::encode($city_ranges);
     }
 }
