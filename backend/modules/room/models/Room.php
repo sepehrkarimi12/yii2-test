@@ -2,6 +2,7 @@
 
 namespace backend\modules\room\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -14,6 +15,7 @@ use Yii;
  */
 class Room extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
