@@ -2,6 +2,7 @@
 
 namespace backend\modules\ad_advertiser\models;
 
+use backend\modules\category_ad_advertiser\models\CategoryAdAdvertiser;
 use common\traits\listForDropDown;
 use Yii;
 
@@ -52,5 +53,21 @@ class AdAdvertiser extends \yii\db\ActiveRecord
     public function getTblCategoryAdAdvertisers()
     {
         return $this->hasMany(TblCategoryAdAdvertiser::className(), ['ad_advertiser_id' => 'id']);
+    }
+
+    public static function getAdAdvertisersByCategory($cat_id)
+    {
+        $advertisers_of_cat = CategoryAdAdvertiser::find()
+            ->where(['cat_id' => $cat_id])
+            ->all();
+
+        $advertisers = [];
+
+        foreach ($advertisers_of_cat as $advertiser) {
+            $advertisers[$advertiser->adAdvertiser->id] = $advertiser->adAdvertiser->title;
+        }
+
+        return $advertisers;
+
     }
 }

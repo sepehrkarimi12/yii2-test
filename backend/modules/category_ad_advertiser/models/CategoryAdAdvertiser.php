@@ -56,7 +56,7 @@ class CategoryAdAdvertiser extends \yii\db\ActiveRecord
      */
     public function getAdAdvertiser()
     {
-        return $this->hasOne(TblAdAdvertiser::className(), ['id' => 'ad_advertiser_id']);
+        return $this->hasOne(AdAdvertiser::className(), ['id' => 'ad_advertiser_id']);
     }
 
     /**
@@ -64,6 +64,6 @@ class CategoryAdAdvertiser extends \yii\db\ActiveRecord
      */
     public function getCat()
     {
-        return $this->hasOne(TblCategory::className(), ['id' => 'cat_id']);
+        return $this->hasOne(Category::className(), ['id' => 'cat_id']);
     }
 }
