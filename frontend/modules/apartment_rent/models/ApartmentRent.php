@@ -7,9 +7,7 @@ use backend\modules\ad_type\models\AdType;
 use backend\modules\created_year\models\CreatedYear;
 use backend\modules\room\models\Room;
 use common\models\Ad;
-use common\models\Image;
-use Yii;
-use yii\web\UploadedFile;
+use common\traits\uploadMultipleImagesForModules;
 
 /**
  * This is the model class for table "tbl_apartment_rent".
@@ -32,8 +30,7 @@ use yii\web\UploadedFile;
  */
 class ApartmentRent extends \yii\db\ActiveRecord
 {
-    public $imageFiles;
-    public $advertiserModel;
+    use uploadMultipleImagesForModules;
     /**
      * {@inheritdoc}
      */
@@ -55,7 +52,7 @@ class ApartmentRent extends \yii\db\ActiveRecord
             [['ad_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdType::className(), 'targetAttribute' => ['ad_type_id' => 'id']],
             [['created_year_id'], 'exist', 'skipOnError' => true, 'targetClass' => CreatedYear::className(), 'targetAttribute' => ['created_year_id' => 'id']],
             [['room_count_id'], 'exist', 'skipOnError' => true, 'targetClass' => Room::className(), 'targetAttribute' => ['room_count_id' => 'id']],
-            [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 3],
+            [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 10],
         ];
     }
 
@@ -115,47 +112,6 @@ class ApartmentRent extends \yii\db\ActiveRecord
     public function getRoomCount()
     {
         return $this->hasOne(TblRoom::className(), ['id' => 'room_count_id']);
-    }
-
-    public function uploadFiles($ad_id)
-    {
-//        d($ad_id);
-        $transaction = Yii::$app->db->beginTransaction();
-        try {
-            foreach ($this->imageFiles as $file) {
-                $address = 'uploads/' . $ad_id . '_' . time() . '.' . $file->extension;
-                $file->saveAs($address);
-
-                $img_model = new Image();
-                $img_model->ad_id = $ad_id;
-                $img_model->address = $address;
-                $img_model->save();
-            }
-            $transaction->commit();
-        }
-        catch (\Exception $e) {
-            $transaction->rollBack();
-            throw $e;
-        }
-    }
-
-    public function save($runValidation = true, $attributeNames = NULL)
-    {
-        $transaction = Yii::$app->db->beginTransaction();
-        try {
-            $this->advertiserModel->save();
-//            d($this->advertiserModel);
-            $this->ad_id = $this->advertiserModel->id;
-            $this->imageFiles = UploadedFile::getInstances($this, 'imageFiles');
-            if (!empty($this->imageFiles)) {
-                $this->uploadFiles($this->advertiserModel->id);
-            }
-        }
-        catch (\Exception $e) {
-            $transaction->rollBack();
-            throw $e;
-        }
-
     }
 
 }

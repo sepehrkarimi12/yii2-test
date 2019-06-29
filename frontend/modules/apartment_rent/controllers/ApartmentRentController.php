@@ -70,13 +70,14 @@ class ApartmentRentController extends Controller
         }
 
         $model = new ApartmentRent();
-        $ad = new Ad();
-        $ad->cat_id = $cat_id;
+        $advertiser = new Ad();
+        $advertiser->cat_id = $cat_id;
 
-        if ($model->load(Yii::$app->request->post()) && $ad->load(Yii::$app->request->post())
-//            && $model->validate() && $ad->validate()
+        if ($model->load(Yii::$app->request->post()) && $advertiser->load(Yii::$app->request->post())
+            && $model->validate() && $advertiser->validate()
         ) {
-            $model->advertiserModel = $ad;
+            $model->advertiserModel = $advertiser;
+
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -84,7 +85,7 @@ class ApartmentRentController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'ad' => $ad,
+            'ad' => $advertiser,
         ]);
     }
 
