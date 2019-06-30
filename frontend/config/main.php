@@ -24,6 +24,10 @@ return [
             'class' => 'frontend\modules\image\image',
             'defaultRoute' => 'image',
         ],
+        'home_rent' => [
+            'class' => 'frontend\modules\home_rent\home_rent',
+            'defaultRoute' => 'home-rent',
+        ],
     ],
     'components' => [
         'request' => [
