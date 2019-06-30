@@ -1,5 +1,6 @@
 <?php
 
+use backend\modules\city\models\City;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
@@ -27,9 +28,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+//            'id',
             'title',
-            'city_id',
+            [
+                'attribute' => 'city_id',
+                'value' => function ($model) {
+                    return $model->city->title;
+                },
+                'filter' => City::getListForDropDown('id', 'title'),
+                'filterInputOptions' => [
+                    'class' => 'form-control',
+                    'prompt' => 'همه'
+                ],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
