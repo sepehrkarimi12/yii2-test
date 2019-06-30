@@ -1,5 +1,7 @@
 <?php
 
+use backend\modules\ad_type\models\AdType;
+use common\models\Category;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
@@ -27,9 +29,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'cat_id',
-            'ad_type_id',
+//            'id',
+            [
+                'attribute' => 'cat_id',
+                'value' => function ($model) {
+                    return $model->cat->title . ' -> ' . $model->cat->parent->title;
+                },
+                'filter' => Category::getLeafsAsDropDown(),
+                'filterInputOptions' => [
+                    'class' => 'form-control',
+                    'prompt' => 'همه'
+                ],
+            ],
+            [
+                'attribute' => 'ad_type_id',
+                'value' => function ($model) {
+                    return $model->adType->title;
+                },
+                'filter' => AdType::getListForDropDown('id', 'title'),
+                'filterInputOptions' => [
+                    'class' => 'form-control',
+                    'prompt' => 'همه'
+                ],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
