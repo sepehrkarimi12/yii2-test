@@ -53,6 +53,6 @@ class CategoryModelAddress extends \yii\db\ActiveRecord
      */
     public function getCat()
     {
-        return $this->hasOne(TblCategory::className(), ['id' => 'cat_id']);
+        return $this->hasOne(Category::className(), ['id' => 'cat_id']);
     }
 }
