@@ -29,9 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'cat_id',
-            'ad_type_id',
+//            'id',
+            [
+                'attribute' => 'cat_id',
+                'value' => function ($model) {
+                    return $model->cat->title . ' -> ' . $model->cat->parent->title;
+                }
+            ],
+            [
+                'attribute' => 'ad_type_id',
+                'value' => function ($model) {
+                    return $model->adType->title;
+                }
+            ],
         ],
     ]) ?>
 
