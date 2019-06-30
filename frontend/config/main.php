@@ -28,6 +28,10 @@ return [
             'class' => 'frontend\modules\home_rent\home_rent',
             'defaultRoute' => 'home-rent',
         ],
+        'other_rent' => [
+            'class' => 'frontend\modules\other_rent\other_rent',
+            'defaultRoute' => 'other-rent',
+        ],
     ],
     'components' => [
         'request' => [
