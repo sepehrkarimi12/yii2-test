@@ -55,7 +55,7 @@ class CityRange extends \yii\db\ActiveRecord
      */
     public function getTblAds()
     {
-        return $this->hasMany(TblAd::className(), ['city_range_id' => 'id']);
+        return $this->hasMany(Ad::className(), ['city_range_id' => 'id']);
     }
 
     /**
@@ -63,6 +63,6 @@ class CityRange extends \yii\db\ActiveRecord
      */
     public function getCity()
     {
-        return $this->hasOne(TblCity::className(), ['id' => 'city_id']);
+        return $this->hasOne(City::className(), ['id' => 'city_id']);
     }
 }
