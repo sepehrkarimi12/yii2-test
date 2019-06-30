@@ -4,6 +4,8 @@ namespace common\models;
 
 use backend\modules\city_range\models\CityRange;
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "tbl_ad".
@@ -88,6 +90,24 @@ class Ad extends \yii\db\ActiveRecord
             'created_at' => 'زمان ساخت',
             'updated_at' => 'زمان ویرایش',
             'published_at' => 'زمان انتشار',
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+//             [
+//                 'class' => BlameableBehavior::className(),
+//                 'createdByAttribute' => 'user_id',
+//
+//             ],
+             'timestamp' => [
+                 'class' => TimestampBehavior::className(),
+                 'attributes' => [
+                     ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                     ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+                 ],
+             ],
         ];
     }
 
