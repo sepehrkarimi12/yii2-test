@@ -63,12 +63,8 @@ class ApartmentRentController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($cat_id = null)
+    public function actionCreate($cat_id)
     {
-        if ($cat_id == null) {
-            return $this->goBack();
-        }
-
         $model = new ApartmentRent();
         $advertiser = new Ad();
         $advertiser->cat_id = $cat_id;
@@ -77,7 +73,6 @@ class ApartmentRentController extends Controller
             && $model->validate() && $advertiser->validate()
         ) {
             $model->advertiserModel = $advertiser;
-
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -99,13 +94,20 @@ class ApartmentRentController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $advertiser = Ad::findOne($model->ad_id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $advertiser->load(Yii::$app->request->post())
+            && $model->validate() && $advertiser->validate()
+        ) {
+            $model->advertiserModel = $advertiser;
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'ad' => $advertiser,
         ]);
     }
 
