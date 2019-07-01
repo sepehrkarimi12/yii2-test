@@ -61,6 +61,8 @@ class HomeRent extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
+        $model = new Ad();
+        $ad = $model->attributeLabels();
         return [
             'id' => 'شناسه',
             'ad_id' => 'شناشه آگهی',
@@ -72,7 +74,7 @@ class HomeRent extends \yii\db\ActiveRecord
             'room_count_id' => 'تعداد اتاق خواب',
             'created_year_id' => 'سال ساخت',
             'imageFiles' => 'عکس آگهی',
-        ];
+        ] + $ad;
     }
 
     /**

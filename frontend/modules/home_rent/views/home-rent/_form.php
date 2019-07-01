@@ -95,7 +95,7 @@ use yii\widgets\ActiveForm;
 
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('ثبت آگهی', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
@@ -103,28 +103,5 @@ use yii\widgets\ActiveForm;
 </div>
 
 <?php
-$script = <<< JS
-//here you right all your javascript stuff
-$('#ad-city_id').change(function(){
-    var cityId = $(this).val();
-    $.get('../../../../backend/web/city_range/city-range/get-ranges-of-city', { city_id : cityId }, function(data){
-        var data = $.parseJSON(data);
-
-        //remove options of course select
-        var select = $('#ad-city_range_id');
-        $(select)
-            .find('option')
-            .remove()
-            .end()
-        ;
-        
-        (select).append("<option value=''>" + 'محدوده ...' + "</option>");
-        $.each(data, function( k, v ) {
-            (select).append("<option value=" + v['id'] + ">" + v['title'] + "</option>");
-        });
-
-    });
-});
-JS;
-$this->registerJS($script);
+Yii::$app->view->renderFile('@common/city_and_city_range/cityAndCityRangeForForms.php');
 ?>

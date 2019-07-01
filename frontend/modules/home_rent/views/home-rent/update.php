@@ -5,11 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\home_rent\models\HomeRent */
 
-$this->title = 'Update Home Rent: ' . $model->id;
 $this->title = 'اجاره مسکونی (خانه و ویلا) : ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Home Rents', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = ['label' => $this->title];
+$this->params['breadcrumbs'][] = 'ویرایش';
 ?>
 <div class="home-rent-update">
 
@@ -17,6 +15,7 @@ $this->params['breadcrumbs'][] = 'Update';
 
     <?= $this->render('_form', [
         'model' => $model,
+        'ad' => $ad,
     ]) ?>
 
 </div>
