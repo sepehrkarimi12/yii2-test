@@ -18,7 +18,7 @@ class ApartmentSellSearch extends ApartmentSell
     {
         return [
             [['id', 'ad_id', 'area', 'ad_type_id', 'ad_advertiser_id', 'room_count_id', 'created_year_id'], 'integer'],
-            [['national_number'], 'safe'],
+            [['national_code'], 'safe'],
         ];
     }
 
@@ -67,7 +67,7 @@ class ApartmentSellSearch extends ApartmentSell
             'created_year_id' => $this->created_year_id,
         ]);
 
-        $query->andFilterWhere(['like', 'national_number', $this->national_number]);
+        $query->andFilterWhere(['like', 'national_code', $this->national_code]);
 
         return $dataProvider;
     }

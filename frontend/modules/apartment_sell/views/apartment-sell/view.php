@@ -90,9 +90,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
-                'attribute' => 'national_number',
+                'attribute' => 'national_code',
                 'value' => function($model) {
-                    return $model->national_number ? $model->national_number : '-';
+                    return $model->national_code ? $model->national_code : '-';
                 }
             ],
             [

@@ -83,7 +83,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($ad, 'mobile')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'national_number')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'national_code')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($ad, 'immediate')->checkbox() ?>
 

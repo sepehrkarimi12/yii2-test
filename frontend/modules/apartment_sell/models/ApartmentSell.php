@@ -20,7 +20,7 @@ use Yii;
  * @property int $ad_advertiser_id
  * @property int $room_count_id
  * @property int $created_year_id
- * @property string $national_number
+ * @property string $national_code
  *
  * @property TblAdAdvertiser $adAdvertiser
  * @property TblAd $ad
@@ -47,7 +47,7 @@ class ApartmentSell extends \yii\db\ActiveRecord
         return [
             [['ad_id', 'area', 'ad_type_id', 'ad_advertiser_id', 'room_count_id', 'created_year_id'], 'integer'],
             [['area', 'ad_type_id', 'ad_advertiser_id', 'room_count_id'], 'required'],
-            [['national_number'], 'string', 'max' => 10],
+            [['national_code'], 'string', 'max' => 10],
             [['ad_advertiser_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdAdvertiser::className(), 'targetAttribute' => ['ad_advertiser_id' => 'id']],
             [['ad_id'], 'exist', 'skipOnError' => true, 'targetClass' => Ad::className(), 'targetAttribute' => ['ad_id' => 'id']],
             [['ad_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdType::className(), 'targetAttribute' => ['ad_type_id' => 'id']],
@@ -71,7 +71,7 @@ class ApartmentSell extends \yii\db\ActiveRecord
                 'ad_type_id' => 'نوع آگهی',
                 'ad_advertiser_id' => 'آگهی دهنده',
                 'deposit' => 'ودیعه',
-                'national_number' => 'شماره ملی',
+                'national_code' => 'شماره ملی',
                 'rent_value' => 'اجاره',
                 'room_count_id' => 'تعداد اتاق خواب',
                 'created_year_id' => 'سال ساخت',

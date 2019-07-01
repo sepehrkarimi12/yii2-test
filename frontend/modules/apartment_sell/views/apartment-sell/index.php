@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'ad_advertiser_id',
             //'room_count_id',
             //'created_year_id',
-            //'national_number',
+            //'national_code',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
