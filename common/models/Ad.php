@@ -118,7 +118,7 @@ class Ad extends \yii\db\ActiveRecord
      */
     public function getCat()
     {
-        return $this->hasOne(TblCategory::className(), ['id' => 'cat_id']);
+        return $this->hasOne(Category::className(), ['id' => 'cat_id']);
     }
 
     /**
@@ -126,7 +126,7 @@ class Ad extends \yii\db\ActiveRecord
      */
     public function getCityRange()
     {
-        return $this->hasOne(TblCityRange::className(), ['id' => 'city_range_id']);
+        return $this->hasOne(CityRange::className(), ['id' => 'city_range_id']);
     }
 
     /**
@@ -140,24 +140,24 @@ class Ad extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTblApartmentRents()
+    public function getApartmentRents()
     {
-        return $this->hasMany(TblApartmentRent::className(), ['ad_id' => 'id']);
+        return $this->hasMany(ApartmentRent::className(), ['ad_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTblGeographies()
+    public function getGeographies()
     {
-        return $this->hasMany(TblGeography::className(), ['ad_id' => 'id']);
+        return $this->hasMany(Geography::className(), ['ad_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTblImages()
+    public function getImages()
     {
-        return $this->hasMany(TblImage::className(), ['ad_id' => 'id']);
+        return $this->hasMany(Image::className(), ['ad_id' => 'id']);
     }
 }
