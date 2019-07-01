@@ -5,8 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_sell\models\ApartmentSell */
 
-$this->title = 'Create Apartment Sell';
-$this->params['breadcrumbs'][] = ['label' => 'Apartment Sells', 'url' => ['index']];
+$this->title = 'فروش مسکونی (آپارتمان)';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="apartment-sell-create">

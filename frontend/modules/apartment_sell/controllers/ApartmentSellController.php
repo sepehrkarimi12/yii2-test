@@ -53,8 +53,11 @@ class ApartmentSellController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $advertiser = Ad::findOne($model->ad_id);
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'ad' => $advertiser,
         ]);
     }
 
@@ -101,13 +104,20 @@ class ApartmentSellController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $advertiser = Ad::findOne($model->ad_id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $advertiser->load(Yii::$app->request->post())
+            && $model->validate() && $advertiser->validate()
+        ) {
+            $model->advertiserModel = $advertiser;
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'ad' => $advertiser,
         ]);
     }
 

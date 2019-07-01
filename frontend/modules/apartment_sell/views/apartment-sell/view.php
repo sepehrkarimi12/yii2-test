@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_sell\models\ApartmentSell */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Apartment Sells', 'url' => ['index']];
+$this->title = $ad->title;
+$this->params['breadcrumbs'][] = ['label' => 'فروش مسکونی (آپارتمان)'];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,11 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('ویرایش آگهی', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('حذف آگهی', ['../ad/ad/delete', 'id' => $model->ad_id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'مطمئنید کخه میخواهید آگهی را حذف کنید؟',
                 'method' => 'post',
             ],
         ]) ?>
@@ -29,14 +29,90 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'ad_id',
-            'area',
-            'ad_type_id',
-            'ad_advertiser_id',
-            'room_count_id',
-            'created_year_id',
-            'national_number',
+            [
+                'attribute' => 'desc',
+                'value' => function($model) {
+                    return $model->ad_id ? $model->ad->desc : '-';
+                }
+            ],
+            [
+                'attribute' => 'city_id',
+                'value' => function($model) {
+                    return $model->ad_id ? $model->ad->cityRange->city->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'city_range_id',
+                'value' => function($model) {
+                    return $model->ad_id ? $model->ad->cityRange->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'price',
+                'value' => function($model) {
+                    return $model->ad_id ? $model->ad->price . ' تومان' : '-';
+                }
+            ],
+            [
+                'attribute' => 'mobile',
+                'value' => function($model) {
+                    return $model->ad_id ? $model->ad->mobile : '-';
+                }
+            ],
+            [
+                'attribute' => 'area',
+                'value' => function($model) {
+                    return $model->area ? $model->area . ' متر' : '-';
+                }
+            ],
+            [
+                'attribute' => 'ad_type_id',
+                'value' => function($model) {
+                    return $model->ad_type_id ? $model->adType->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'ad_advertiser_id',
+                'value' => function($model) {
+                    return $model->ad_advertiser_id ? $model->adAdvertiser->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'room_count_id',
+                'value' => function($model) {
+                    return $model->room_count_id ? $model->roomCount->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'created_year_id',
+                'value' => function($model) {
+                    return $model->created_year_id ? $model->createdYear->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'national_number',
+                'value' => function($model) {
+                    return $model->national_number ? $model->national_number : '-';
+                }
+            ],
+            [
+                'attribute' => 'immediate',
+                'value' => function($model) {
+                    return $model->ad_id ? 'آگهی فوری است' : 'آگهی فوری نیست';
+                }
+            ],
+            [
+                'attribute' => 'chat',
+                'value' => function($model) {
+                    return $model->ad_id ? 'چت فعال است' : 'چت فعال نیست';
+                }
+            ],
+            [
+                'attribute' => 'immediate',
+                'value' => function($model) {
+                    return $model->ad_id ? 'تمایل به معوضه ندارم' : 'تمایل به معاوضه دارم';
+                }
+            ],
         ],
     ]) ?>
 

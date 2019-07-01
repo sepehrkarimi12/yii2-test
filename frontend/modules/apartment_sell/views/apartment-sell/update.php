@@ -5,10 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_sell\models\ApartmentSell */
 
-$this->title = 'Update Apartment Sell: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Apartment Sells', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'فروش مسکونی (آپارتمان) : ' . $ad->title;
+$this->params['breadcrumbs'][] = ['label' => $this->title];
+$this->params['breadcrumbs'][] = 'ویرایش';
 ?>
 <div class="apartment-sell-update">
 
@@ -16,6 +15,7 @@ $this->params['breadcrumbs'][] = 'Update';
 
     <?= $this->render('_form', [
         'model' => $model,
+        'ad' => $ad,
     ]) ?>
 
 </div>

@@ -62,16 +62,21 @@ class ApartmentSell extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
+        $model = new Ad();
+        $ad = $model->attributeLabels();
         return [
-            'id' => 'ID',
-            'ad_id' => 'Ad ID',
-            'area' => 'Area',
-            'ad_type_id' => 'Ad Type ID',
-            'ad_advertiser_id' => 'Ad Advertiser ID',
-            'room_count_id' => 'Room Count ID',
-            'created_year_id' => 'Created Year ID',
-            'national_number' => 'National Number',
-        ];
+                'id' => 'شناسه',
+                'ad_id' => 'شناشه آگهی',
+                'area' => 'متراژ',
+                'ad_type_id' => 'نوع آگهی',
+                'ad_advertiser_id' => 'آگهی دهنده',
+                'deposit' => 'ودیعه',
+                'national_number' => 'شماره ملی',
+                'rent_value' => 'اجاره',
+                'room_count_id' => 'تعداد اتاق خواب',
+                'created_year_id' => 'سال ساخت',
+                'imageFiles' => 'عکس آگهی',
+            ] + $ad;
     }
 
     /**
@@ -79,7 +84,7 @@ class ApartmentSell extends \yii\db\ActiveRecord
      */
     public function getAdAdvertiser()
     {
-        return $this->hasOne(TblAdAdvertiser::className(), ['id' => 'ad_advertiser_id']);
+        return $this->hasOne(AdAdvertiser::className(), ['id' => 'ad_advertiser_id']);
     }
 
     /**
@@ -87,7 +92,7 @@ class ApartmentSell extends \yii\db\ActiveRecord
      */
     public function getAd()
     {
-        return $this->hasOne(TblAd::className(), ['id' => 'ad_id']);
+        return $this->hasOne(Ad::className(), ['id' => 'ad_id']);
     }
 
     /**
@@ -95,7 +100,7 @@ class ApartmentSell extends \yii\db\ActiveRecord
      */
     public function getAdType()
     {
-        return $this->hasOne(TblAdType::className(), ['id' => 'ad_type_id']);
+        return $this->hasOne(AdType::className(), ['id' => 'ad_type_id']);
     }
 
     /**
@@ -103,7 +108,7 @@ class ApartmentSell extends \yii\db\ActiveRecord
      */
     public function getCreatedYear()
     {
-        return $this->hasOne(TblCreatedYear::className(), ['id' => 'created_year_id']);
+        return $this->hasOne(CreatedYear::className(), ['id' => 'created_year_id']);
     }
 
     /**
@@ -111,6 +116,6 @@ class ApartmentSell extends \yii\db\ActiveRecord
      */
     public function getRoomCount()
     {
-        return $this->hasOne(TblRoom::className(), ['id' => 'room_count_id']);
+        return $this->hasOne(Room::className(), ['id' => 'room_count_id']);
     }
 }
