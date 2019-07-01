@@ -37,6 +37,10 @@ return [
             'defaultRoute' => 'apartment-sell',
 
         ],
+        'home_sell' => [
+            'class' => 'frontend\modules\home_sell\home_sell',
+            'defaultRoute' => 'home-sell',
+        ],
     ],
     'components' => [
         'request' => [
