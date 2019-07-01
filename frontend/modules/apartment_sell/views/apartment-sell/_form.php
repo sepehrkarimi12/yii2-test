@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
 <div class="apartment-sell-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?php
     echo $form->field($ad, 'city_id')->widget(Select2::classname(), [

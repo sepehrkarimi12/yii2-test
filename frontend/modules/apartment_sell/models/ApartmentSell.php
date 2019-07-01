@@ -65,18 +65,18 @@ class ApartmentSell extends \yii\db\ActiveRecord
         $model = new Ad();
         $ad = $model->attributeLabels();
         return [
-                'id' => 'شناسه',
-                'ad_id' => 'شناشه آگهی',
-                'area' => 'متراژ',
-                'ad_type_id' => 'نوع آگهی',
-                'ad_advertiser_id' => 'آگهی دهنده',
-                'deposit' => 'ودیعه',
-                'national_code' => 'شماره ملی',
-                'rent_value' => 'اجاره',
-                'room_count_id' => 'تعداد اتاق خواب',
-                'created_year_id' => 'سال ساخت',
-                'imageFiles' => 'عکس آگهی',
-            ] + $ad;
+            'id' => 'شناسه',
+            'ad_id' => 'شناشه آگهی',
+            'area' => 'متراژ',
+            'ad_type_id' => 'نوع آگهی',
+            'ad_advertiser_id' => 'آگهی دهنده',
+            'deposit' => 'ودیعه',
+            'national_code' => 'شماره ملی',
+            'rent_value' => 'اجاره',
+            'room_count_id' => 'تعداد اتاق خواب',
+            'created_year_id' => 'سال ساخت',
+            'imageFiles' => 'عکس آگهی',
+        ] + $ad;
     }
 
     /**

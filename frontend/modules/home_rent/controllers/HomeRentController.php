@@ -53,11 +53,8 @@ class HomeRentController extends Controller
      */
     public function actionView($id)
     {
-        $model = $this->findModel($id);
-        $advertiser = Ad::findOne($model->ad_id);
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'ad' => $advertiser,
         ]);
     }
 

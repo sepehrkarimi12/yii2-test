@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\other_rent\models\OtherRent */
 
-$this->title = $ad->title;
+$this->title = $model->ad->title;
 $this->params['breadcrumbs'][] = ['label' => 'اجاره مسکونی (متفرقه)'];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
