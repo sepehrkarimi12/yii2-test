@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_rent\models\ApartmentRent */
 
-$this->title = 'Create Apartment Rent';
-$this->params['breadcrumbs'][] = ['label' => 'Apartment Rents', 'url' => ['index']];
+$this->title = 'اجاره مسکونی (آپارتمان)';
+//$this->params['breadcrumbs'][] = ['label' => 'Apartment Rents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="apartment-rent-create">

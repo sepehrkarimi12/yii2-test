@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_rent\models\ApartmentRent */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Apartment Rents', 'url' => ['index']];
+$this->title = $ad->title;
+$this->params['breadcrumbs'][] = ['label' => 'اجاره مسکونی (آپارتمان)'];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('ویرایش', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('حذف', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,14 +29,48 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'area',
-            'ad_type_id',
-            'ad_advertiser_id',
-            'deposit',
-            'rent_value',
-            'room_count_id',
-            'created_year_id',
+            [
+                'attribute' => 'area',
+                'value' => function($model) {
+                    return $model->area ? $model->area . ' متر' : '-';
+                }
+            ],
+            [
+                'attribute' => 'ad_type_id',
+                'value' => function($model) {
+                    return $model->ad_type_id ? $model->adType->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'ad_advertiser_id',
+                'value' => function($model) {
+                    return $model->ad_advertiser_id ? $model->adAdvertiser->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'deposit',
+                'value' => function($model) {
+                    return $model->deposit ? $model->deposit . ' تومان' : '-';
+                }
+            ],
+            [
+                'attribute' => 'rent_value',
+                'value' => function($model) {
+                    return $model->rent_value ? $model->rent_value . ' تومان' : '-';
+                }
+            ],
+            [
+                'attribute' => 'room_count_id',
+                'value' => function($model) {
+                    return $model->room_count_id ? $model->roomCount->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'created_year_id',
+                'value' => function($model) {
+                    return $model->created_year_id ? $model->createdYear->title : '-';
+                }
+            ],
         ],
     ]) ?>
 

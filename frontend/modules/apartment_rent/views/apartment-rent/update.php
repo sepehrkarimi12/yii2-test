@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\apartment_rent\models\ApartmentRent */
 
-$this->title = 'Update Apartment Rent: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Apartment Rents', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'اجاره مسکونی (آپارتمان) : ' . $ad->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Apartment Rents', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $this->title];
+$this->params['breadcrumbs'][] = 'ویرایش';
 ?>
 <div class="apartment-rent-update">
 
