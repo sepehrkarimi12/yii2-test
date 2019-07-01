@@ -32,6 +32,11 @@ return [
             'class' => 'frontend\modules\other_rent\other_rent',
             'defaultRoute' => 'other-rent',
         ],
+        'apartment_sell' => [
+            'class' => 'frontend\modules\apartment_sell\apartment_sell',
+            'defaultRoute' => 'apartment-sell',
+
+        ],
     ],
     'components' => [
         'request' => [
