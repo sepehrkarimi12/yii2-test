@@ -5,8 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\home_rent\models\HomeRent */
 
-$this->title = 'Create Home Rent';
-$this->params['breadcrumbs'][] = ['label' => 'Home Rents', 'url' => ['index']];
+$this->title = 'اجاره مسکونی (خانه و ویلا)';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="home-rent-create">
