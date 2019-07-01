@@ -14,7 +14,7 @@ class m190617_070256_create_tbl_ad extends Migration
         $this->createTable($this->table,[
            'id' => $this->primaryKey(),
            'cat_id' => $this->integer()->notNull(),
-           'city_id' => $this->integer(),
+           'city_id' => $this->integer()->notNull(),
            'city_range_id' => $this->integer(),
            'title' => $this->string(50)->notNull(),
            'desc' => $this->string()->notNull(),
