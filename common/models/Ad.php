@@ -53,7 +53,7 @@ class Ad extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['cat_id', 'title', 'desc', 'mobile', 'city_id'], 'required'],
+            [['cat_id', 'title', 'desc', 'mobile', 'city_id', 'city_range_id'], 'required'],
             [['price'], 'required', 'on' => self::SCENARIO_REQUIRED_PRICE],
             [['cat_id', 'city_id', 'city_range_id', 'pic_counts', 'immediate', 'chat', 'exchange', 'expired', 'user_id', 'created_at', 'updated_at', 'published_at'], 'integer'],
             [['title'], 'string', 'max' => 50],
