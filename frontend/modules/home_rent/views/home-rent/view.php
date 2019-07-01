@@ -17,10 +17,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('ویرایش آگهی', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('حذف آگهی', ['delete', 'id' => $model->id], [
+        <?= Html::a('حذف آگهی', ['../ad/ad/delete', 'id' => $model->ad_id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'مطمئنید کخه میخواهید آگهی را حذف کنید؟',
                 'method' => 'post',
             ],
         ]) ?>
