@@ -101,3 +101,7 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<?php
+Yii::$app->view->renderFile('@common/city_and_city_range/cityAndCityRangeForForms.php');
+?>

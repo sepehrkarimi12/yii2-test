@@ -5,8 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\other_rent\models\OtherRent */
 
-$this->title = 'Create Other Rent';
-$this->params['breadcrumbs'][] = ['label' => 'Other Rents', 'url' => ['index']];
+$this->title = 'اجاره مسکونی (متفرقه)';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="other-rent-create">
