@@ -7,7 +7,7 @@ use backend\modules\ad_type\models\AdType;
 use backend\modules\created_year\models\CreatedYear;
 use backend\modules\room\models\Room;
 use common\models\Ad;
-use common\traits\uploadMultipleImagesForModules;
+use common\traits\uploadMultipleImagesForModule;
 use Yii;
 
 /**
@@ -31,7 +31,7 @@ use Yii;
  */
 class OtherRent extends \yii\db\ActiveRecord
 {
-    use uploadMultipleImagesForModules;
+    use uploadMultipleImagesForModule;
     /**
      * {@inheritdoc}
      */

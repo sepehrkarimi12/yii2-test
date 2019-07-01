@@ -6,7 +6,7 @@ use common\models\Image;
 use Yii;
 use yii\web\UploadedFile;
 
-trait uploadMultipleImagesForModules {
+trait uploadMultipleImagesForModule {
 /**
  * upload images and save as model for modules
  * remember that you have to add this line to your rule method in model of module :
