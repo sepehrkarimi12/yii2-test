@@ -71,7 +71,6 @@ class HomeSellController extends Controller
 
         $model = new HomeSell();
         $advertiser = new Ad();
-        $advertiser->scenario = Ad::SCENARIO_REQUIRED_PRICE;
 
         $advertiser->cat_id = $cat_id;
 

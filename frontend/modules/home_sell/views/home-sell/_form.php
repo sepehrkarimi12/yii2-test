@@ -19,24 +19,24 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?php
-    echo $form->field($ad, 'city_id')->widget(Select2::classname(), [
-        'data' => City::getListForDropDown('id', 'title'),
-        'language' => 'en',
-        'options' => ['placeholder' => 'نام شهر ...'],
-        'pluginOptions' => [
-            'allowClear' => true
-        ],
-    ]);
+        echo $form->field($ad, 'city_id')->widget(Select2::classname(), [
+            'data' => City::getListForDropDown('id', 'title'),
+            'language' => 'en',
+            'options' => ['placeholder' => 'نام شهر ...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
     ?>
 
     <?php
-    echo $form->field($ad, 'city_range_id')->widget(Select2::classname(), [
-        'language' => 'en',
-        'options' => ['placeholder' => 'محدوده ...'],
-        'pluginOptions' => [
-            'allowClear' => true
-        ],
-    ]);
+        echo $form->field($ad, 'city_range_id')->widget(Select2::classname(), [
+            'language' => 'en',
+            'options' => ['placeholder' => 'محدوده ...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
     ?>
 
     <?= $form->field($model, 'area')->textInput() ?>
