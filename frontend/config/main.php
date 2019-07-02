@@ -49,6 +49,10 @@ return [
             'class' => 'frontend\modules\other_sell\other_sell',
             'defaultRoute' => 'other-sell',
         ],
+        'office_sell' => [
+            'class' => 'frontend\modules\office_sell\office_sell',
+            'defaultRoute' => 'office-sell',
+        ],
     ],
     'components' => [
         'request' => [
