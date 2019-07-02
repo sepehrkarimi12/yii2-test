@@ -63,8 +63,12 @@ class ApartmentRentController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($cat_id)
+    public function actionCreate($cat_id = null)
     {
+        if ($cat_id == null) {
+            return $this->goBack();
+        }
+
         $model = new ApartmentRent();
         $advertiser = new Ad();
         $advertiser->cat_id = $cat_id;
@@ -91,8 +95,12 @@ class ApartmentRentController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id = null)
     {
+        if ($id == null) {
+            return $this->goBack();
+        }
+
         $model = $this->findModel($id);
         $advertiser = Ad::findOne($model->ad_id);
 

@@ -98,8 +98,12 @@ class ApartmentSellController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id = null)
     {
+        if ($id == null) {
+            return $this->goBack();
+        }
+
         $model = $this->findModel($id);
         $advertiser = Ad::findOne($model->ad_id);
 
