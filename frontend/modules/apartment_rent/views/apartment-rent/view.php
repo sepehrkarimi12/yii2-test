@@ -96,6 +96,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
+                'attribute' => 'exchange',
+                'value' => function($model) {
+                    return $model->ad->exchange ? 'دارم' : 'ندارم';
+                }
+            ],
+            [
                 'attribute' => 'immediate',
                 'value' => function($model) {
                     return $model->ad->immediate ? 'آگهی فوری است' : 'آگهی فوری نیست';
