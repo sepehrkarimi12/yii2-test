@@ -96,21 +96,47 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
+                'attribute' => 'exchange',
+                'value' => function($model) {
+                    return $model->ad->exchange ? 'دارم' : 'ندارم';
+                }
+            ],
+            [
                 'attribute' => 'immediate',
                 'value' => function($model) {
-                    return $model->ad_id ? 'آگهی فوری است' : 'آگهی فوری نیست';
+                    return $model->ad->immediate ? 'آگهی فوری است' : 'آگهی فوری نیست';
                 }
             ],
             [
                 'attribute' => 'chat',
                 'value' => function($model) {
-                    return $model->ad_id ? 'چت فعال است' : 'چت فعال نیست';
+                    return $model->ad->chat ? 'چت فعال است' : 'چت فعال نیست';
                 }
             ],
             [
-                'attribute' => 'immediate',
+                'attribute' => 'expired',
                 'value' => function($model) {
-                    return $model->ad_id ? 'تمایل به معوضه ندارم' : 'تمایل به معاوضه دارم';
+                    return $model->ad->expired ? 'شده است' : 'نشده است';
+                },
+                'label' => 'آگهی منقضی'
+
+            ],
+            [
+                'attribute' => 'created_at',
+                'value' => function($model) {
+                    return $model->ad->created_at ? Yii::$app->formatter->asDatetime($model->ad->created_at) : '-';
+                }
+            ],
+            [
+                'attribute' => 'updated_at',
+                'value' => function($model) {
+                    return $model->ad->updated_at ? Yii::$app->formatter->asDatetime($model->ad->updated_at) : '-';
+                }
+            ],
+            [
+                'attribute' => 'published_at',
+                'value' => function($model) {
+                    return $model->ad->published_at ? Yii::$app->formatter->asDatetime($model->ad->published_at) : '-';
                 }
             ],
         ],
