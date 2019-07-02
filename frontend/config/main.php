@@ -45,6 +45,10 @@ return [
             'class' => 'frontend\modules\land_sell\land_sell',
             'defaultRoute' => 'land-sell',
         ],
+        'other_sell' => [
+            'class' => 'frontend\modules\other_sell\other_sell',
+            'defaultRoute' => 'other-sell',
+        ],
     ],
     'components' => [
         'request' => [
