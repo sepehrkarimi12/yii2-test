@@ -57,6 +57,10 @@ return [
             'class' => 'frontend\modules\shop_sell\shop_sell',
             'defaultRoute' => 'shop-sell',
         ],
+        'industrial_sell' => [
+            'class' => 'frontend\modules\industrial_sell\industrial_sell',
+            'defaultRoute' => 'industrial-sell',
+        ],
     ],
     'components' => [
         'request' => [
