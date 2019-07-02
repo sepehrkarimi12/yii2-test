@@ -41,6 +41,10 @@ return [
             'class' => 'frontend\modules\home_sell\home_sell',
             'defaultRoute' => 'home-sell',
         ],
+        'land_sell' => [
+            'class' => 'frontend\modules\land_sell\land_sell',
+            'defaultRoute' => 'land-sell',
+        ],
     ],
     'components' => [
         'request' => [
