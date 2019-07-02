@@ -14,5 +14,13 @@ return [
         'findModuleComponent' => [
             'class' => 'common\components\findModuleComponent',
         ],
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'locale' => 'fa_IR@calendar=persian',
+            'calendar' => \IntlDateFormatter::TRADITIONAL,
+            'dateFormat' => 'php:Y-m-d',
+            'datetimeFormat' => 'php:Y/m/d H:i',
+            'timeFormat' => 'php:H:i',
+        ],
     ],
 ];
