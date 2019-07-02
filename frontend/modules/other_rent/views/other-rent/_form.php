@@ -83,15 +83,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($ad, 'desc')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($ad, 'price')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($ad, 'mobile')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($ad, 'immediate')->checkbox() ?>
 
     <?= $form->field($ad, 'chat')->checkbox() ?>
-
-    <?= $form->field($ad, 'exchange')->checkbox() ?>
 
 
     <div class="form-group">
