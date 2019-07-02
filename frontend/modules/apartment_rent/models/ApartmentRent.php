@@ -71,7 +71,7 @@ class ApartmentRent extends \yii\db\ActiveRecord
             'ad_advertiser_id' => 'آگهی دهنده',
             'deposit' => 'ودیعه',
             'rent_value' => 'اجاره',
-            'room_count_id' => 'تعداد اتاق خواب',
+            'room_count_id' => 'تعداد اتاق',
             'created_year_id' => 'سال ساخت',
             'imageFiles' => 'عکس آگهی',
         ] + $ad;
