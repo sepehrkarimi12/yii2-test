@@ -53,6 +53,10 @@ return [
             'class' => 'frontend\modules\office_sell\office_sell',
             'defaultRoute' => 'office-sell',
         ],
+        'shop_sell' => [
+            'class' => 'frontend\modules\shop_sell\shop_sell',
+            'defaultRoute' => 'shop-sell',
+        ],
     ],
     'components' => [
         'request' => [
