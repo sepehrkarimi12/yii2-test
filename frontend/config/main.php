@@ -61,6 +61,10 @@ return [
             'class' => 'frontend\modules\industrial_sell\industrial_sell',
             'defaultRoute' => 'industrial-sell',
         ],
+        'commercial_other_sell' => [
+            'class' => 'frontend\modules\commercial_other_sell\commercial_other_sell',
+            'defaultRoute' => 'commercial-other-sell',
+        ],
     ],
     'components' => [
         'request' => [
