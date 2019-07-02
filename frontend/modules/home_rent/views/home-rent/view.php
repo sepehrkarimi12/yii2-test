@@ -32,25 +32,25 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'desc',
                 'value' => function($model) {
-                    return $model->ad_id ? $model->ad->desc : '-';
+                    return $model->ad->desc ? $model->ad->desc : '-';
                 }
             ],
             [
                 'attribute' => 'city_id',
                 'value' => function($model) {
-                    return $model->ad_id ? $model->ad->cityRange->city->title : '-';
+                    return $model->ad->city_id ? $model->ad->cityRange->city->title : '-';
                 }
             ],
             [
                 'attribute' => 'city_range_id',
                 'value' => function($model) {
-                    return $model->ad_id ? $model->ad->cityRange->title : '-';
+                    return $model->ad->city_range_id ? $model->ad->cityRange->title : '-';
                 }
             ],
             [
                 'attribute' => 'mobile',
                 'value' => function($model) {
-                    return $model->ad_id ? $model->ad->mobile : '-';
+                    return $model->ad->mobile ? $model->ad->mobile : '-';
                 }
             ],
             [
