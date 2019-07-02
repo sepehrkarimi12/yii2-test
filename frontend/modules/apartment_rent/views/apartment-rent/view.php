@@ -118,19 +118,19 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'created_at',
                 'value' => function($model) {
-                    return $model->ad->created_at ? $model->ad->created_at : '-';
+                    return $model->ad->created_at ? Yii::$app->formatter->asDatetime($model->ad->created_at) : '-';
                 }
             ],
             [
                 'attribute' => 'updated_at',
                 'value' => function($model) {
-                    return $model->ad->updated_at ? $model->ad->updated_at : '-';
+                    return $model->ad->updated_at ? Yii::$app->formatter->asDatetime($model->ad->updated_at) : '-';
                 }
             ],
             [
                 'attribute' => 'published_at',
                 'value' => function($model) {
-                    return $model->ad->published_at ? $model->ad->published_at : '-';
+                    return $model->ad->published_at ? Yii::$app->formatter->asDatetime($model->ad->published_at) : '-';
                 }
             ],
 
