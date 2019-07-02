@@ -86,7 +86,7 @@ class Ad extends \yii\db\ActiveRecord
             'pic_counts' => 'تهداد عکس ها',
             'immediate' => 'فوری (غیر رایگان)',
             'chat' => 'چت ' . Yii::$app->name,
-            'exchange' => 'معافضه',
+            'exchange' => 'قصد معافضه',
             'expired' => 'منقضی شده',
             'user_id' => 'کاربر',
             'created_at' => 'زمان ساخت آگهی',
