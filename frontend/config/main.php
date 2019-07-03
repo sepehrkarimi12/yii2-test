@@ -65,6 +65,10 @@ return [
             'class' => 'frontend\modules\commercial_other_sell\commercial_other_sell',
             'defaultRoute' => 'commercial-other-sell',
         ],
+        'commercial_office_rent' => [
+            'class' => 'frontend\modules\commercial_office_rent\commercial_office_rent',
+            'defaultRoute' => 'commercial-office-rent',
+        ]
     ],
     'components' => [
         'request' => [
