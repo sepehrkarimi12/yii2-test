@@ -28,7 +28,7 @@ use common\traits\uploadMultipleImagesForModule;
  * @property TblCreatedYear $createdYear
  * @property TblRoom $roomCount
  */
-class CommercialOfficeSell extends \yii\db\ActiveRecord
+class CommercialOfficeRent extends \yii\db\ActiveRecord
 {
     use uploadMultipleImagesForModule;
     /**

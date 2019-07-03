@@ -3,8 +3,8 @@
 namespace frontend\modules\commercial_office_rent\controllers;
 
 use common\models\Ad;
-use frontend\modules\commercial_office_rent\models\CommercialOfficeSell;
-use frontend\modules\commercial_office_rent\models\searchModels\CommercialOfficeSellSearch;
+use frontend\modules\commercial_office_rent\models\CommercialOfficeRent;
+use frontend\modules\commercial_office_rent\models\searchModels\CommercialOfficeRentSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -36,7 +36,7 @@ class CommercialOfficeRentController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new CommercialOfficeSellSearch();
+        $searchModel = new CommercialOfficeRentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -69,7 +69,7 @@ class CommercialOfficeRentController extends Controller
             return $this->goBack();
         }
 
-        $model = new CommercialOfficeSell();
+        $model = new CommercialOfficeRent();
         $advertiser = new Ad();
         $advertiser->cat_id = $cat_id;
 
@@ -143,7 +143,7 @@ class CommercialOfficeRentController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = CommercialOfficeSell::findOne($id)) !== null) {
+        if (($model = CommercialOfficeRent::findOne($id)) !== null) {
             return $model;
         }
 

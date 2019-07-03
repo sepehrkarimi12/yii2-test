@@ -2,14 +2,14 @@
 
 namespace frontend\modules\commercial_office_rent\models\searchModels;
 
-use frontend\modules\commercial_office_rent\models\CommercialOfficeSell;
+use frontend\modules\commercial_office_rent\models\CommercialOfficeRent;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
  * HomeRentSearch represents the model behind the search form of `frontend\modules\home_rent\models\HomeRent`.
  */
-class CommercialOfficeSellSearch extends CommercialOfficeSell
+class CommercialOfficeRentSearch extends CommercialOfficeRent
 {
     /**
      * {@inheritdoc}
@@ -39,7 +39,7 @@ class CommercialOfficeSellSearch extends CommercialOfficeSell
      */
     public function search($params)
     {
-        $query = CommercialOfficeSell::find();
+        $query = CommercialOfficeRent::find();
 
         // add conditions that should always apply here
 
