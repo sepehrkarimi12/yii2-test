@@ -68,7 +68,11 @@ return [
         'commercial_office_rent' => [
             'class' => 'frontend\modules\commercial_office_rent\commercial_office_rent',
             'defaultRoute' => 'commercial-office-rent',
-        ]
+        ],
+        'commercial_shop_rent' => [
+            'class' => 'frontend\modules\commercial_shop_rent\commercial_shop_rent',
+            'defaultRoute' => 'commercial-shop-rent',
+        ],
     ],
     'components' => [
         'request' => [
