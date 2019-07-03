@@ -71,7 +71,11 @@ return [
         ],
         'commercial_shop_rent' => [
             'class' => 'frontend\modules\commercial_shop_rent\commercial_shop_rent',
-            'defaultRoute' => 'commercial-shop-rent',
+            'defaultRoute' => 'commercial-industrial-rent',
+        ],
+        'commercial_industrial_rent' => [
+            'class' => 'frontend\modules\commercial_industrial_rent\commercial_industrial_rent',
+            'defaultRoute' => 'commercial-industrial-rent',
         ],
     ],
     'components' => [
