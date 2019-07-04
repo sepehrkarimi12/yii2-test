@@ -81,6 +81,10 @@ return [
             'class' => 'frontend\modules\commercial_other_rent\commercial_other_rent',
             'defaultRoute' => 'commercial-other-rent',
         ],
+        'estate_agensy' => [
+            'class' => 'frontend\modules\estate_agensy\estate_agensy',
+            'defaultRoute' => 'state-agency',
+        ],
     ],
     'components' => [
         'request' => [
