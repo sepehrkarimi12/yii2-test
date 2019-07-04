@@ -85,6 +85,10 @@ return [
             'class' => 'frontend\modules\estate_agensy\estate_agensy',
             'defaultRoute' => 'state-agency',
         ],
+        'participation_in_cunstruction' => [
+            'class' => 'frontend\modules\participation_in_cunstruction\participation_in_cunstruction',
+            'defaultRoute' => 'participation-in-cunstruction',
+        ],
     ],
     'components' => [
         'request' => [
