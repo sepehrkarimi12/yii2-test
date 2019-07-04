@@ -89,6 +89,14 @@ return [
             'class' => 'frontend\modules\participation_in_cunstruction\participation_in_cunstruction',
             'defaultRoute' => 'participation-in-cunstruction',
         ],
+        'finance_and_legal' => [
+            'class' => 'frontend\modules\finance_and_legal\finance_and_legal',
+            'defaultRoute' => 'finance-and-legal',
+        ],
+        'presell' => [
+            'class' => 'frontend\modules\presell\presell',
+            'defaultRoute' => 'presell',
+        ],
     ],
     'components' => [
         'request' => [
