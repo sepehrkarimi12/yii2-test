@@ -93,9 +93,9 @@ return [
             'class' => 'frontend\modules\finance_and_legal\finance_and_legal',
             'defaultRoute' => 'finance-and-legal',
         ],
-        'presell' => [
-            'class' => 'frontend\modules\presell\presell',
-            'defaultRoute' => 'presell',
+        'estate_presell' => [
+            'class' => 'frontend\modules\estate_presell\estate_presell',
+            'defaultRoute' => 'estate-presell',
         ],
     ],
     'components' => [

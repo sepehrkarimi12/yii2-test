@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\presell\models;
+namespace frontend\modules\estate_presell\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use common\models\Ad;
@@ -17,7 +17,7 @@ use Yii;
  * @property TblAdAdvertiser $adAdvertiser
  * @property TblAd $ad
  */
-    class Presell extends \yii\db\ActiveRecord
+    class EstatePresell extends \yii\db\ActiveRecord
 {
     use uploadMultipleImagesForModule;
     /**
@@ -25,7 +25,7 @@ use Yii;
      */
     public static function tableName()
     {
-        return 'tbl_presell';
+        return 'tbl_estate_presell';
     }
 
     /**

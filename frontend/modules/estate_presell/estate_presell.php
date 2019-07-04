@@ -1,16 +1,16 @@
 <?php
 
-namespace frontend\modules\presell;
+namespace frontend\modules\estate_presell;
 
 /**
  * estate_agensy module definition class
  */
-class presell extends \yii\base\Module
+class estate_presell extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\presell\controllers';
+    public $controllerNamespace = 'frontend\modules\estate_presell\controllers';
 
     /**
      * {@inheritdoc}

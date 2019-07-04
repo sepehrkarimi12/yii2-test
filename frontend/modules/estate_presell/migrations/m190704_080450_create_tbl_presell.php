@@ -7,7 +7,7 @@ use yii\db\Migration;
  */
 class m190704_080450_create_tbl_presell extends Migration
 {
-    private $table = 'tbl_presell';
+    private $table = 'tbl_estate_presell';
 
     public function up()
     {

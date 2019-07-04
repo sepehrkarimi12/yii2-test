@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\presell\controllers;
+namespace frontend\modules\estate_presell\controllers;
 
 use common\models\Ad;
-use frontend\modules\presell\models\Presell;
-use frontend\modules\presell\models\searchModels\PresellSearch;
+use frontend\modules\estate_presell\models\EstatePresell;
+use frontend\modules\estate_presell\models\searchModels\EstatePresellSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -13,7 +13,7 @@ use yii\filters\VerbFilter;
 /**
  * EstateAgensyController implements the CRUD actions for EstateAgensy model.
  */
-class PresellController extends Controller
+class EstatePresellController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -36,7 +36,7 @@ class PresellController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new PresellSearch();
+        $searchModel = new EstatePresellSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -69,7 +69,7 @@ class PresellController extends Controller
             return $this->goBack();
         }
 
-        $model = new Presell();
+        $model = new EstatePresell();
         $advertiser = new Ad();
 
         $advertiser->cat_id = $cat_id;
@@ -144,7 +144,7 @@ class PresellController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Presell::findOne($id)) !== null) {
+        if (($model = EstatePresell::findOne($id)) !== null) {
             return $model;
         }
 

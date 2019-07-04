@@ -1,15 +1,15 @@
 <?php
 
-namespace frontend\modules\presell\models\searchModels;
+namespace frontend\modules\estate_presell\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\presell\models\Presell;
+use frontend\modules\estate_presell\models\EstatePresell;
 
 /**
- * EstateAgensySearch represents the model behind the search form of `frontend\modules\presell\models\Presell`.
+ * EstateAgensySearch represents the model behind the search form of `frontend\modules\estate_presell\models\Presell`.
  */
-class PresellSearch extends Presell
+class EstatePresellSearch extends EstatePresell
 {
     /**
      * {@inheritdoc}
@@ -39,7 +39,7 @@ class PresellSearch extends Presell
      */
     public function search($params)
     {
-        $query = Presell::find();
+        $query = EstatePresell::find();
 
         // add conditions that should always apply here
 
