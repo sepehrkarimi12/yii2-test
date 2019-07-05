@@ -13,13 +13,25 @@ class m190705_110452_crate_tbl_car_brand extends Migration
     {
         $this->createTable($this->table,[
             'id' => $this->primaryKey(),
-            'title' => $this->string(50)->notNull(),
+            'parent_id' => $this->integer(),
+            'title' => $this->string(70)->notNull(),
         ],'ENGINE InnoDB');
+
+        $this->addForeignKey(
+            'fk_car_brand_parent_id_to_car_brand',
+            'tbl_car_brand',
+            'parent_id',
+            'tbl_car_brand',
+            'id',
+            'NO ACTION',
+            'NO ACTION'
+        );
 
     }
 
     public function down()
     {
+        $this->dropForeignKey('fk_car_brand_parent_id_to_car_brand', 'tbl_car_brand');
         $this->dropTable($this->table);
     }
 }

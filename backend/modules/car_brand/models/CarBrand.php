@@ -9,9 +9,11 @@ use Yii;
  * This is the model class for table "tbl_car_brand".
  *
  * @property int $id
+ * @property int $parent_id
  * @property string $title
  *
- * @property TblCarModel[] $tblCarModels
+ * @property CarBrand $parent
+ * @property CarBrand[] $carBrands
  */
 class CarBrand extends \yii\db\ActiveRecord
 {
@@ -30,8 +32,10 @@ class CarBrand extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['parent_id'], 'integer'],
             [['title'], 'required'],
-            [['title'], 'string', 'max' => 50],
+            [['title'], 'string', 'max' => 70],
+            [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => CarBrand::className(), 'targetAttribute' => ['parent_id' => 'id']],
         ];
     }
 
@@ -42,6 +46,7 @@ class CarBrand extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'parent_id' => 'Parent ID',
             'title' => 'Title',
         ];
     }
@@ -49,8 +54,16 @@ class CarBrand extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTblCarModels()
+    public function getParent()
     {
-        return $this->hasMany(TblCarModel::className(), ['brand_id' => 'id']);
+        return $this->hasOne(CarBrand::className(), ['id' => 'parent_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getChildes()
+    {
+        return $this->hasMany(CarBrand::className(), ['parent_id' => 'id']);
     }
 }

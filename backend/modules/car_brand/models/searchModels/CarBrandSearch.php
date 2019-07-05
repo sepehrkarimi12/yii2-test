@@ -17,7 +17,7 @@ class CarBrandSearch extends CarBrand
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'parent_id'], 'integer'],
             [['title'], 'safe'],
         ];
     }
@@ -59,6 +59,7 @@ class CarBrandSearch extends CarBrand
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'parent_id' => $this->parent_id,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title]);

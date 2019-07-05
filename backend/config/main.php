@@ -60,14 +60,6 @@ return [
             'class' => 'backend\modules\car_brand\car_brand',
             'defaultRoute' => 'car-brand',
         ],
-        'car_model' => [
-            'class' => 'backend\modules\car_model\car_model',
-            'defaultRoute' => 'car-model',
-        ],
-        'car_brigade' => [
-            'class' => 'backend\modules\car_brigade\car_brigade',
-            'defaultRoute' => 'car-brigade',
-        ],
     ],
     'components' => [
         'request' => [
