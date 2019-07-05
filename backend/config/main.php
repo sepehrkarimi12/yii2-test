@@ -60,6 +60,10 @@ return [
             'class' => 'backend\modules\car_brand\car_brand',
             'defaultRoute' => 'car-brand',
         ],
+        'car_model' => [
+            'class' => 'backend\modules\car_model\car_model',
+            'defaultRoute' => 'car-model',
+        ],
     ],
     'components' => [
         'request' => [
