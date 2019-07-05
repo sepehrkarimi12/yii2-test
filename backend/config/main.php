@@ -64,6 +64,10 @@ return [
             'class' => 'backend\modules\car_color\car_color',
             'defaultRoute' => 'car-color',
         ],
+        'car_created_year' => [
+            'class' => 'backend\modules\car_created_year\car_created_year',
+            'defaultRoute' => 'car-created-year',
+        ],
     ],
     'components' => [
         'request' => [
