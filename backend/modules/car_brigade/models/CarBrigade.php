@@ -52,7 +52,7 @@ class CarBrigade extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getModel()
+    public function getCarModel()
     {
         return $this->hasOne(CarModel::className(), ['id' => 'model_id']);
     }

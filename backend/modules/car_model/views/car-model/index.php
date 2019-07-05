@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use backend\modules\car_brand\models\CarBrand;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\modules\car_model\models\searchModels\CarModelSearch */
@@ -29,7 +30,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
-            'brand_id',
+            [
+                'attribute' => 'brand_id',
+                'value' => function ($model) {
+                    return $model->carBrand->title;
+                },
+                'filter' => CarBrand::getListForDropDown('id', 'title'),
+                'filterInputOptions' => [
+                    'class' => 'form-control',
+                    'prompt' => 'همه'
+                ],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

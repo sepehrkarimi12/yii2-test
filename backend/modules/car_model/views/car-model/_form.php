@@ -1,5 +1,7 @@
 <?php
 
+use kartik\select2\Select2;
+use backend\modules\car_brand\models\CarBrand;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -14,8 +16,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'brand_id')->textInput() ?>
-
+    <?php
+        echo $form->field($model, 'brand_id')->widget(Select2::classname(), [
+            'data' => CarBrand::getListForDropDown('id', 'title'),
+            'language' => 'en',
+            'options' => ['placeholder' => 'Select a car brand...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]);
+    ?>
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

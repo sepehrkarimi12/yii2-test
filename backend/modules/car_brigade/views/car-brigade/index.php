@@ -1,5 +1,6 @@
 <?php
 
+use backend\modules\car_model\models\CarModel;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
@@ -29,7 +30,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
-            'model_id',
+            [
+                'attribute' => 'model_id',
+                'value' => function ($model) {
+                    return $model->carModel->title;
+                },
+                'filter' => CarModel::getListForDropDown('id', 'title'),
+                'filterInputOptions' => [
+                    'class' => 'form-control',
+                    'prompt' => 'همه'
+                ],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
