@@ -56,6 +56,10 @@ return [
             'class' => 'backend\modules\category_model_address\category_model_address',
             'defaultRoute' => 'category-model-address',
         ],
+        'car_brand' => [
+            'class' => 'backend\modules\car_brand\car_brand',
+            'defaultRoute' => 'car-brand',
+        ],
     ],
     'components' => [
         'request' => [
