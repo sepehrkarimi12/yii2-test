@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model frontend\modules\estate_agensy\models\EstateAgensy */
 
 $this->title = $model->ad->title;
-$this->params['breadcrumbs'][] = ['label' => 'املاک (متفرقه)'];
+$this->params['breadcrumbs'][] = ['label' => 'خدمات املاک (متفرقه)'];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

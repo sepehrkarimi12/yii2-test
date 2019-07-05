@@ -97,6 +97,10 @@ return [
             'class' => 'frontend\modules\estate_presell\estate_presell',
             'defaultRoute' => 'estate-presell',
         ],
+        'estate_services_other' => [
+            'class' => 'frontend\modules\estate_services_other\estate_services_other',
+            'defaultRoute' => 'estate-services-other',
+        ],
         'estate_other' => [
             'class' => 'frontend\modules\estate_other\estate_other',
             'defaultRoute' => 'estate-other',

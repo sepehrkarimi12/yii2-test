@@ -3,11 +3,12 @@
 use yii\db\Migration;
 
 /**
- * Class m190704_080450_create_tbl_presell
+ * Class m190705_064931_create_tbl_other_estate
  */
-class m190704_080450_create_tbl_presell extends Migration
+class m190705_064931_create_tbl_other_estate extends Migration
 {
-    private $table = 'tbl_estate_presell';
+
+    private $table = 'tbl_estate_other';
 
     public function up()
     {
@@ -18,7 +19,7 @@ class m190704_080450_create_tbl_presell extends Migration
         ],'ENGINE InnoDB');
 
         $this->addForeignKey(
-            'ad_id_presell_to_ad_tbl',
+            'ad_id_estate_other_to_ad_tbl',
             $this->table,
             'ad_id',
             'tbl_ad',
@@ -28,7 +29,7 @@ class m190704_080450_create_tbl_presell extends Migration
         );
 
         $this->addForeignKey(
-            'ad_advertiser_id_presell_to_ad_advertiser',
+            'ad_advertiser_id_estate_other_to_ad_advertiser',
             $this->table,
             'ad_advertiser_id',
             'tbl_ad_advertiser',
@@ -42,16 +43,17 @@ class m190704_080450_create_tbl_presell extends Migration
     public function down()
     {
         $this->dropForeignKey(
-            'ad_advertiser_id_presell_to_ad_advertiser',
+            'ad_advertiser_id_estate_other_to_ad_advertiser',
             $this->table
         );
 
         $this->dropForeignKey(
-            'ad_id_presell_to_ad_tbl',
+            'ad_id_estate_other_to_ad_tbl',
             $this->table
         );
 
         $this->dropTable($this->table);
 
     }
+
 }

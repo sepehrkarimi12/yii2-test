@@ -8,7 +8,7 @@ use yii\db\Migration;
 class m190704_101748_create_tbl_estate_other extends Migration
 {
 
-    private $table = 'tbl_estate_other';
+    private $table = 'tbl_estate_services_other';
 
     public function up()
     {
@@ -19,7 +19,7 @@ class m190704_101748_create_tbl_estate_other extends Migration
         ],'ENGINE InnoDB');
 
         $this->addForeignKey(
-            'ad_id_estate_other_to_ad_tbl',
+            'ad_id_estate_services_other_to_ad_tbl',
             $this->table,
             'ad_id',
             'tbl_ad',
@@ -29,7 +29,7 @@ class m190704_101748_create_tbl_estate_other extends Migration
         );
 
         $this->addForeignKey(
-            'ad_advertiser_id_estate_other_to_ad_advertiser',
+            'ad_advertiser_id_estate_services_other_to_ad_advertiser',
             $this->table,
             'ad_advertiser_id',
             'tbl_ad_advertiser',
@@ -43,12 +43,12 @@ class m190704_101748_create_tbl_estate_other extends Migration
     public function down()
     {
         $this->dropForeignKey(
-            'ad_advertiser_id_estate_other_to_ad_advertiser',
+            'ad_advertiser_id_estate_services_other_to_ad_advertiser',
             $this->table
         );
 
         $this->dropForeignKey(
-            'ad_id_estate_other_to_ad_tbl',
+            'ad_id_estate_services_other_to_ad_tbl',
             $this->table
         );
 

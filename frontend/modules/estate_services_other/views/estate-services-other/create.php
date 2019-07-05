@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\estate_agensy\models\EstateAgensy */
 
-$this->title = 'املاک (متفرقه)';
+$this->title = 'خدمات املاک (متفرقه)';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="estate-agensy-create">
