@@ -2,7 +2,6 @@
 
 namespace backend\modules\car_brand\models;
 
-use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -17,7 +16,6 @@ use Yii;
  */
 class CarBrand extends \yii\db\ActiveRecord
 {
-    use listForDropDown;
     /**
      * {@inheritdoc}
      */
@@ -62,7 +60,7 @@ class CarBrand extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getChildes()
+    public function getCarBrands()
     {
         return $this->hasMany(CarBrand::className(), ['parent_id' => 'id']);
     }
