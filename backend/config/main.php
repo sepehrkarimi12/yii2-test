@@ -64,6 +64,10 @@ return [
             'class' => 'backend\modules\car_model\car_model',
             'defaultRoute' => 'car-model',
         ],
+        'car_brigade' => [
+            'class' => 'backend\modules\car_brigade\car_brigade',
+            'defaultRoute' => 'car-brigade',
+        ],
     ],
     'components' => [
         'request' => [
