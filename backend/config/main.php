@@ -68,6 +68,10 @@ return [
             'class' => 'backend\modules\car_created_year\car_created_year',
             'defaultRoute' => 'car-created-year',
         ],
+        'user_auth_rule' => [
+            'class' => 'backend\modules\user_auth_rule\user_auth_rule',
+            'defaultRoute' => 'user-auth-rule',
+        ],
     ],
     'components' => [
         'request' => [
