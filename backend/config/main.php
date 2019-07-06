@@ -72,6 +72,10 @@ return [
             'class' => 'backend\modules\user_auth_rule\user_auth_rule',
             'defaultRoute' => 'user-auth-rule',
         ],
+        'user_auth_item' => [
+            'class' => 'backend\modules\user_auth_item\user_auth_item',
+            'defaultRoute' => 'user-auth-item',
+        ],
     ],
     'components' => [
         'request' => [
