@@ -311,21 +311,16 @@ LteAsset::register($this);
                 <i class="fa fa-dashboard"></i> <span>پیشخوان</span>
               </a>
             </li>
+            <?php foreach (array_keys(Yii::$app->getModules()) as $module) : ?>
             <li>
-              <a href="<?= Url::toRoute('categories/index'); ?>">
-                <i class="fa fa-book"></i> <span>دسته بندی ها</span>
+              <a href="<?= Url::to($module); ?>">
+                <i class="fa fa-book"></i> <span><?= $module ?></span>
               </a>
             </li>
-            <li>
-              <a href="<?= Url::toRoute('questions/index'); ?>">
-                <i class="fa fa-book"></i> <span>سوالات متداول</span>
-              </a>
-            </li>
-            <li>
-              <a href="<?= Url::toRoute('menu/index'); ?>">
-                <i class="fa fa-book"></i> <span>منو ها</span>
-              </a>
-            </li>
+            <?php endforeach; ?>
+
+              <hr/>
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-files-o"></i>
