@@ -308,7 +308,7 @@ LteAsset::register($this);
             <li class="header">ناوبری اصلی</li>
             <li class="active treeview">
               <a href="<?= url::home() ?>">
-                <i class="fa fa-dashboard"></i> <span>پیشخوان</span>
+                <i class="fa fa-dashboard"></i> <span>Home</span>
               </a>
             </li>
             <?php foreach (array_keys(Yii::$app->getModules()) as $module) : ?>

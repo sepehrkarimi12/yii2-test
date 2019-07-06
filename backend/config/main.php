@@ -68,16 +68,39 @@ return [
             'class' => 'backend\modules\car_created_year\car_created_year',
             'defaultRoute' => 'car-created-year',
         ],
-        'user_auth_rule' => [
-            'class' => 'backend\modules\user_auth_rule\user_auth_rule',
-            'defaultRoute' => 'user-auth-rule',
+        'rbac' => [
+            'class' => 'yii2mod\rbac\Module',
         ],
-        'user_auth_item' => [
-            'class' => 'backend\modules\user_auth_item\user_auth_item',
-            'defaultRoute' => 'user-auth-item',
+        'rbac/route' => [
+            'class' => 'yii2mod\rbac\Module',
+        ],
+        'rbac/permission' => [
+            'class' => 'yii2mod\rbac\Module',
+        ],
+        'rbac/role' => [
+            'class' => 'yii2mod\rbac\Module',
+        ],
+        'rbac/assignment' => [
+            'class' => 'yii2mod\rbac\Module',
         ],
     ],
     'components' => [
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages', // if advanced application, set @frontend/messages
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        //'main' => 'main.php',
+                    ],
+                ],
+            ],
+        ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['guest', 'user'],
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
