@@ -105,6 +105,10 @@ return [
             'class' => 'frontend\modules\estate_other\estate_other',
             'defaultRoute' => 'estate-other',
         ],
+        'vehicle_car_riding' => [
+            'class' => 'frontend\modules\vehicle_car_riding\vehicle_car_riding',
+            'defaultRoute' => 'vehicle-car-riding',
+        ],
     ],
     'components' => [
         'request' => [
