@@ -2,6 +2,7 @@
 
 namespace backend\modules\car_created_year\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -12,6 +13,7 @@ use Yii;
  */
 class CarCreatedYear extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */

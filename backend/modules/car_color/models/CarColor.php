@@ -2,6 +2,7 @@
 
 namespace backend\modules\car_color\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -12,6 +13,7 @@ use Yii;
  */
 class CarColor extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
