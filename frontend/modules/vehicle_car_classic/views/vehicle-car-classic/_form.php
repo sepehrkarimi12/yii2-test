@@ -36,26 +36,29 @@ use yii\widgets\ActiveForm;
     ]);
     ?>
 
+    <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+
+    <?= $form->field($ad, 'price')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($ad, 'exchange')->checkbox() ?>
+
     <?= $form->field($model, 'ad_type_id')
         ->radioList(AdType::getAdTypesByCategory($ad->cat_id))
         ->label('نوع آگهی');
     ?>
 
-    <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+    <?= $form->field($ad, 'mobile')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($ad, 'chat')->checkbox() ?>
 
     <?= $form->field($ad, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($ad, 'desc')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($ad, 'price')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($ad, 'mobile')->textInput(['maxlength' => true]) ?>
-
+    
     <?= $form->field($ad, 'immediate')->checkbox() ?>
 
-    <?= $form->field($ad, 'chat')->checkbox() ?>
 
-    <?= $form->field($ad, 'exchange')->checkbox() ?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
