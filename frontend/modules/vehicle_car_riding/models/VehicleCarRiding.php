@@ -72,6 +72,7 @@ class VehicleCarRiding extends \yii\db\ActiveRecord
             'created_year_id' => 'سال ساخت',
             'miles' => 'کارکرد',
             'national_code' => 'شماره ملی',
+            'imageFiles' => 'عکس آگهی',
         ] + $ad;
     }
 
