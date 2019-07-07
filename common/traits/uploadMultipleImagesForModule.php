@@ -20,7 +20,7 @@ trait uploadMultipleImagesForModule {
         $transaction = Yii::$app->db->beginTransaction();
         try {
             foreach ($this->imageFiles as $index => $file) {
-                $address = 'uploads/' . $ad_id . '_' . $file->basename . '_' . time() . '.' . $file->extension;
+                $address = 'uploads/' . $ad_id . '_' . $index . $file->basename . '_' . time() . '.' . $file->extension;
                 $file->saveAs($address);
 //                save images in image table
                 $img_model = new Image();
