@@ -129,6 +129,10 @@ return [
             'class' => 'frontend\modules\vehicle_car_spare_part\vehicle_car_spare_part',
             'defaultRoute' => 'vehicle-car-spare-part',
         ],
+        'vehicle_motorcycle_and_spare_part' => [
+            'class' => 'frontend\modules\vehicle_motorcycle_and_spare_part\vehicle_motorcycle_and_spare_part',
+            'defaultRoute' => 'vehicle-motorcycle-and-spare-part',
+        ],
     ],
     'components' => [
         'request' => [
