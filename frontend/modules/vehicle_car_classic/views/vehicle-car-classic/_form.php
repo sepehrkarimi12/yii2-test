@@ -54,7 +54,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($ad, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($ad, 'desc')->textInput(['maxlength' => true]) ?>
-    
+
     <?= $form->field($ad, 'immediate')->checkbox() ?>
 
 
