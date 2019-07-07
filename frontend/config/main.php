@@ -109,6 +109,10 @@ return [
             'class' => 'frontend\modules\vehicle_car_riding\vehicle_car_riding',
             'defaultRoute' => 'vehicle-car-riding',
         ],
+        'vehicle_car_rent' => [
+            'class' => 'frontend\modules\vehicle_car_rent\vehicle_car_rent',
+            'defaultRoute' => 'vehicle-car-rent',
+        ],
     ],
     'components' => [
         'request' => [
