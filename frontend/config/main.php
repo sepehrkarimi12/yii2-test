@@ -121,6 +121,10 @@ return [
             'class' => 'frontend\modules\vehicle_car_heavy\vehicle_car_heavy',
             'defaultRoute' => 'vehicle-car-classic',
         ],
+        'vehicle_car_other' => [
+            'class' => 'frontend\modules\vehicle_car_other\vehicle_car_other',
+            'defaultRoute' => 'vehicle-car-classic',
+        ],
     ],
     'components' => [
         'request' => [
