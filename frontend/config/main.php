@@ -125,6 +125,10 @@ return [
             'class' => 'frontend\modules\vehicle_car_other\vehicle_car_other',
             'defaultRoute' => 'vehicle-car-classic',
         ],
+        'vehicle_car_spare_part' => [
+            'class' => 'frontend\modules\vehicle_car_spare_part\vehicle_car_spare_part',
+            'defaultRoute' => 'vehicle-car-spare-part',
+        ],
     ],
     'components' => [
         'request' => [
