@@ -40,6 +40,8 @@ use backend\modules\car_created_year\models\CarCreatedYear;
     ]);
     ?>
 
+    <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+
     <?php
     echo $form->field($model, 'brand_id')->widget(Select2::classname(), [
         'data' => CarBrand::getListForDropDown('id', 'title'),
@@ -51,6 +53,23 @@ use backend\modules\car_created_year\models\CarCreatedYear;
     ]);
     ?>
 
+    <?php
+    echo $form->field($model, 'created_year_id')->widget(Select2::classname(), [
+        'data' => CarCreatedYear::getListForDropDown('id', 'title'),
+        'language' => 'en',
+        'options' => ['placeholder' => 'محدوده ...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
+
+    <?= $form->field($model, 'miles')->textInput() ?>
+    
+    <?= $form->field($ad, 'price')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($ad, 'exchange')->checkbox() ?>
+    
     <?php
     echo $form->field($model, 'color_id')->widget(Select2::classname(), [
         'data' => CarColor::getListForDropDown('id', 'title'),
@@ -67,36 +86,18 @@ use backend\modules\car_created_year\models\CarCreatedYear;
         ->label('نوع آگهی');
     ?>
 
-    <?php
-    echo $form->field($model, 'created_year_id')->widget(Select2::classname(), [
-        'data' => CarCreatedYear::getListForDropDown('id', 'title'),
-        'language' => 'en',
-        'options' => ['placeholder' => 'محدوده ...'],
-        'pluginOptions' => [
-            'allowClear' => true
-        ],
-    ]);
-    ?>
-
-    <?= $form->field($model, 'miles')->textInput() ?>
-
-    <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
-
-    <?= $form->field($ad, 'title')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($ad, 'desc')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($ad, 'price')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($ad, 'mobile')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'national_code')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($ad, 'immediate')->checkbox() ?>
 
     <?= $form->field($ad, 'chat')->checkbox() ?>
 
-    <?= $form->field($ad, 'exchange')->checkbox() ?>
+    <?= $form->field($model, 'national_code')->textInput(['maxlength' => true]) ?>
+
+
+    <?= $form->field($ad, 'title')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($ad, 'desc')->textInput(['maxlength' => true]) ?>   
+
+    <?= $form->field($ad, 'immediate')->checkbox() ?>  
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
