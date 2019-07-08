@@ -68,6 +68,10 @@ return [
             'class' => 'backend\modules\car_created_year\car_created_year',
             'defaultRoute' => 'car-created-year',
         ],
+        'mobile_brand' => [
+            'class' => 'backend\modules\mobile_brand\mobile_brand',
+            'defaultRoute' => 'mobile-brand',
+        ],
         'rbac' => [
             'class' => 'yii2mod\rbac\Module',
         ],
