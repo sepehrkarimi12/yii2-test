@@ -133,6 +133,10 @@ return [
             'class' => 'frontend\modules\vehicle_motorcycle_and_spare_part\vehicle_motorcycle_and_spare_part',
             'defaultRoute' => 'vehicle-motorcycle-and-spare-part',
         ],
+        'vehicle_boat_and_spare_part' => [
+            'class' => 'frontend\modules\vehicle_boat_and_spare_part\vehicle_boat_and_spare_part',
+            'defaultRoute' => 'vehicle-boat-and-spare-part',
+        ],
     ],
     'components' => [
         'request' => [
