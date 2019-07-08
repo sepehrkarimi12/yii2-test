@@ -137,6 +137,10 @@ return [
             'class' => 'frontend\modules\vehicle_boat_and_spare_part\vehicle_boat_and_spare_part',
             'defaultRoute' => 'vehicle-boat-and-spare-part',
         ],
+        'vehicle_other' => [
+            'class' => 'frontend\modules\vehicle_other\vehicle_other',
+            'defaultRoute' => 'vehicle-other',
+        ],
     ],
     'components' => [
         'request' => [
