@@ -2,6 +2,7 @@
 
 namespace backend\modules\sim_card\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -12,6 +13,7 @@ use Yii;
  */
 class SimCard extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */

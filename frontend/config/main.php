@@ -153,6 +153,10 @@ return [
             'class' => 'frontend\modules\mobile_and_tablet_spare_part\mobile_and_tablet_spare_part',
             'defaultRoute' => 'mobile-and-tablet-spare-part',
         ],
+        'mobile_and_tablet_sim_card' => [
+            'class' => 'frontend\modules\mobile_and_tablet_sim_card\mobile_and_tablet_sim_card',
+            'defaultRoute' => 'mobile-and-tablet-sim-card',
+        ],
     ],
     'components' => [
         'request' => [
