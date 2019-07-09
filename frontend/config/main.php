@@ -161,6 +161,10 @@ return [
             'class' => 'frontend\modules\mobile_and_tablet_other\mobile_and_tablet_other',
             'defaultRoute' => 'mobile-and-tablet-other',
         ],
+        'electronic_computer_laptop' => [
+            'class' => 'frontend\modules\electronic_computer_laptop\electronic_computer_laptop',
+            'defaultRoute' => 'electronic-computer-laptop',
+        ],
     ],
     'components' => [
         'request' => [
