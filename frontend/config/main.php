@@ -149,6 +149,10 @@ return [
             'class' => 'frontend\modules\mobile_and_tablet_tablet\mobile_and_tablet_tablet',
             'defaultRoute' => 'mobile-and-tablet-tablet',
         ],
+        'mobile_and_tablet_spare_part' => [
+            'class' => 'frontend\modules\mobile_and_tablet_spare_part\mobile_and_tablet_spare_part',
+            'defaultRoute' => 'mobile-and-tablet-spare-part',
+        ],
     ],
     'components' => [
         'request' => [
