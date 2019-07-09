@@ -169,6 +169,10 @@ return [
             'class' => 'frontend\modules\electronic_computer_desktop_computer\electronic_computer_desktop_computer',
             'defaultRoute' => 'electronic-computer-desktop-computer',
         ],
+        'electronic_computer_spare_part' => [
+            'class' => 'frontend\modules\electronic_computer_spare_part\electronic_computer_spare_part',
+            'defaultRoute' => 'electronic-computer-spare-part',
+        ],
     ],
     'components' => [
         'request' => [
