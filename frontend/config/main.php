@@ -145,6 +145,10 @@ return [
             'class' => 'frontend\modules\mobile_and_tablet_mobile\mobile_and_tablet_mobile',
             'defaultRoute' => 'mobile-and-tablet-mobile',
         ],
+        'mobile_and_tablet_tablet' => [
+            'class' => 'frontend\modules\mobile_and_tablet_tablet\mobile_and_tablet_tablet',
+            'defaultRoute' => 'mobile-and-tablet-tablet',
+        ],
     ],
     'components' => [
         'request' => [
