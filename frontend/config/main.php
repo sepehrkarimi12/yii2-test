@@ -165,6 +165,10 @@ return [
             'class' => 'frontend\modules\electronic_computer_laptop\electronic_computer_laptop',
             'defaultRoute' => 'electronic-computer-laptop',
         ],
+        'electronic_computer_desktop_computer' => [
+            'class' => 'frontend\modules\electronic_computer_desktop_computer\electronic_computer_desktop_computer',
+            'defaultRoute' => 'electronic-computer-desktop-computer',
+        ],
     ],
     'components' => [
         'request' => [

@@ -3,11 +3,11 @@
 use yii\db\Migration;
 
 /**
- * Class m190708_210616_create_tbl_vehicle_other
+ * Class m190709_201256_create_tbl_electronic_computer_desktop_computer
  */
-class m190708_210616_create_tbl_vehicle_other extends Migration
+class m190709_201256_create_tbl_electronic_computer_desktop_computer extends Migration
 {
-    private $table = 'tbl_vehicle_other';
+    private $table = 'tbl_electronic_computer_desktop_computer';
 
     public function up()
     {
@@ -18,7 +18,7 @@ class m190708_210616_create_tbl_vehicle_other extends Migration
         ],'ENGINE InnoDB');
 
         $this->addForeignKey(
-            'ad_id_vehicle_other_to_ad_tbl',
+            'ad_id_electronic_computer_desktop_computer_to_ad_tbl',
             $this->table,
             'ad_id',
             'tbl_ad',
@@ -28,7 +28,7 @@ class m190708_210616_create_tbl_vehicle_other extends Migration
         );
 
         $this->addForeignKey(
-            'ad_type_id_vehicle_other_to_ad_type_tbl',
+            'ad_type_id_electronic_computer_desktop_computer_to_ad_type_tbl',
             $this->table,
             'ad_type_id',
             'tbl_ad_type',
@@ -41,16 +41,17 @@ class m190708_210616_create_tbl_vehicle_other extends Migration
     public function down()
     {
         $this->dropForeignKey(
-            'ad_type_id_vehicle_other_to_ad_type_tbl',
+            'ad_type_id_electronic_computer_desktop_computer_to_ad_type_tbl',
             $this->table
         );
 
         $this->dropForeignKey(
-            'ad_id_vehicle_other_to_ad_tbl',
+            'ad_id_electronic_computer_desktop_computer_to_ad_tbl',
             $this->table
         );
 
         $this->dropTable($this->table);
 
     }
+
 }
