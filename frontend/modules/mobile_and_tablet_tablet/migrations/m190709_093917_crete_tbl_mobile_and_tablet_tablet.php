@@ -33,7 +33,7 @@ class m190709_093917_crete_tbl_mobile_and_tablet_tablet extends Migration
             'brand_id_mobile_and_tablet_tablet_to_mobile_brand',
             $this->table,
             'brand_id',
-            'tbl_mobile_brand',
+            'tbl_mobile_and_computer_brand',
             'id',
             'NO ACTION',
             'NO ACTION'
