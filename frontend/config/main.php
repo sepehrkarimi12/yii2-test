@@ -141,6 +141,10 @@ return [
             'class' => 'frontend\modules\vehicle_other\vehicle_other',
             'defaultRoute' => 'vehicle-other',
         ],
+        'mobile_and_tablet_mobile' => [
+            'class' => 'frontend\modules\mobile_and_tablet_mobile\mobile_and_tablet_mobile',
+            'defaultRoute' => 'mobile-and-tablet-mobile',
+        ],
     ],
     'components' => [
         'request' => [

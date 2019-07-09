@@ -2,6 +2,7 @@
 
 namespace backend\modules\mobile_brand\models;
 
+use common\traits\listForDropDown;
 use Yii;
 
 /**
@@ -12,6 +13,7 @@ use Yii;
  */
 class MobileBrand extends \yii\db\ActiveRecord
 {
+    use listForDropDown;
     /**
      * {@inheritdoc}
      */
