@@ -43,7 +43,7 @@ use backend\modules\mobile_and_computer_brand\models\MobileAndComputerBrand;
     echo $form->field($model, 'brand_id')->widget(Select2::classname(), [
         'data' => MobileAndComputerBrand::getListForDropDown('id', 'title'),
         'language' => 'en',
-        'options' => ['placeholder' => 'نام شهر ...'],
+        'options' => ['placeholder' => 'نام سازنده ...'],
         'pluginOptions' => [
             'allowClear' => true
         ],
