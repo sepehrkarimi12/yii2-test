@@ -157,6 +157,10 @@ return [
             'class' => 'frontend\modules\mobile_and_tablet_sim_card\mobile_and_tablet_sim_card',
             'defaultRoute' => 'mobile-and-tablet-sim-card',
         ],
+        'mobile_and_tablet_other' => [
+            'class' => 'frontend\modules\mobile_and_tablet_other\mobile_and_tablet_other',
+            'defaultRoute' => 'mobile-and-tablet-other',
+        ],
     ],
     'components' => [
         'request' => [
