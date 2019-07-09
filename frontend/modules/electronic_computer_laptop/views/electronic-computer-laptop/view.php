@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model frontend\modules\mobile_and_tablet_mobile\models\MobileAndTabletMobile */
 
 $this->title = $model->ad->title;
-$this->params['breadcrumbs'][] = ['label' => 'موبایل'];
+$this->params['breadcrumbs'][] = ['label' => 'رایانه همراه'];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

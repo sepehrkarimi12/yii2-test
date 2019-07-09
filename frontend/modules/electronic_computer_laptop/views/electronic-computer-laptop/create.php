@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\mobile_and_tablet_mobile\models\MobileAndTabletMobile */
 
-$this->title = 'موبایل';
+$this->title = 'رایانه همراه';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mobile-and-tablet-mobile-create">

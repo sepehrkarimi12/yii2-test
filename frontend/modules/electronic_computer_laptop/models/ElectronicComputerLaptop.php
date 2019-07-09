@@ -55,7 +55,7 @@ class ElectronicComputerLaptop extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'ad_id' => 'Ad ID',
-            'brand_id' => 'برند گوشی',
+            'brand_id' => 'برند رایانه همراه',
             'ad_type_id' => 'نوع آگهی',
             'imageFiles' => 'عکس آگهی',
         ] + $ad;
