@@ -177,6 +177,10 @@ return [
             'class' => 'frontend\modules\electronic_network_spare_part\electronic_network_spare_part',
             'defaultRoute' => 'electronic-network-spare-part',
         ],
+        'electronic_printer_scanner_copy_fax' => [
+            'class' => 'frontend\modules\electronic_printer_scanner_copy_fax\electronic_printer_scanner_copy_fax',
+            'defaultRoute' => 'electronic-printer-scanner-copy-fax',
+        ],
     ],
     'components' => [
         'request' => [
