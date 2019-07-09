@@ -68,9 +68,9 @@ return [
             'class' => 'backend\modules\car_created_year\car_created_year',
             'defaultRoute' => 'car-created-year',
         ],
-        'mobile_brand' => [
-            'class' => 'backend\modules\mobile_brand\mobile_brand',
-            'defaultRoute' => 'mobile-brand',
+        'mobile_and_computer_brand' => [
+            'class' => 'backend\modules\mobile_and_computer_brand\mobile_and_computer_brand',
+            'defaultRoute' => 'mobile-and-computer-brand',
         ],
         'sim_card' => [
             'class' => 'backend\modules\sim_card\sim_card',

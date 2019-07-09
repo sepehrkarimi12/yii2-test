@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\modules\mobile_brand\models\MobileBrand */
+/* @var $model backend\modules\mobile_brand\models\MobileAndComputeBrand */
 
 $this->title = 'Create Mobile Brand';
 $this->params['breadcrumbs'][] = ['label' => 'Mobile Brands', 'url' => ['index']];

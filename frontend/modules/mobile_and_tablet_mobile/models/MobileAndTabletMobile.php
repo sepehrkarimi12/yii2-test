@@ -3,7 +3,7 @@
 namespace frontend\modules\mobile_and_tablet_mobile\models;
 
 use backend\modules\ad_type\models\AdType;
-use backend\modules\mobile_brand\models\MobileBrand;
+use backend\modules\mobile_and_computer_brand\models\MobileAndComputerBrand;
 use common\models\Ad;
 use common\traits\uploadMultipleImagesForModule;
 
@@ -17,7 +17,7 @@ use common\traits\uploadMultipleImagesForModule;
  *
  * @property Ad $ad
  * @property AdType $adType
- * @property MobileBrand $brand
+ * @property MobileAndComputeBrand $brand
  */
 class MobileAndTabletMobile extends \yii\db\ActiveRecord
 {
@@ -40,7 +40,7 @@ class MobileAndTabletMobile extends \yii\db\ActiveRecord
             [['ad_type_id'], 'required'],
             [['ad_id'], 'exist', 'skipOnError' => true, 'targetClass' => Ad::className(), 'targetAttribute' => ['ad_id' => 'id']],
             [['ad_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AdType::className(), 'targetAttribute' => ['ad_type_id' => 'id']],
-            [['brand_id'], 'exist', 'skipOnError' => true, 'targetClass' => MobileBrand::className(), 'targetAttribute' => ['brand_id' => 'id']],
+            [['brand_id'], 'exist', 'skipOnError' => true, 'targetClass' => MobileAndComputerBrand::className(), 'targetAttribute' => ['brand_id' => 'id']],
             [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 10],
         ];
     }
@@ -82,6 +82,6 @@ class MobileAndTabletMobile extends \yii\db\ActiveRecord
      */
     public function getBrand()
     {
-        return $this->hasOne(MobileBrand::className(), ['id' => 'brand_id']);
+        return $this->hasOne(MobileAndComputerBrand::className(), ['id' => 'brand_id']);
     }
 }

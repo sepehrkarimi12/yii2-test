@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\mobile_brand\models;
+namespace backend\modules\mobile_and_computer_brand\models;
 
 use common\traits\listForDropDown;
 use Yii;
@@ -11,7 +11,7 @@ use Yii;
  * @property int $id
  * @property string $title
  */
-class MobileBrand extends \yii\db\ActiveRecord
+class MobileAndComputerBrand extends \yii\db\ActiveRecord
 {
     use listForDropDown;
     /**
@@ -19,7 +19,7 @@ class MobileBrand extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'tbl_mobile_brand';
+        return 'tbl_mobile_and_computer_brand';
     }
 
     /**

@@ -5,7 +5,7 @@ use backend\modules\city\models\City;
 use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use backend\modules\mobile_brand\models\MobileBrand;
+use backend\modules\mobile_and_computer_brand\models\MobileAndComputerBrand;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\mobile_and_tablet_mobile\models\MobileAndTabletMobile */
@@ -41,7 +41,7 @@ use backend\modules\mobile_brand\models\MobileBrand;
 
     <?php
     echo $form->field($model, 'brand_id')->widget(Select2::classname(), [
-        'data' => MobileBrand::getListForDropDown('id', 'title'),
+        'data' => MobileAndComputerBrand::getListForDropDown('id', 'title'),
         'language' => 'en',
         'options' => ['placeholder' => 'نام شهر ...'],
         'pluginOptions' => [

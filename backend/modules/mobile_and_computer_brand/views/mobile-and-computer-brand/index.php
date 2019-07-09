@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel backend\modules\mobile_brand\models\searchModels\MobileBrandSearch */
+/* @var $searchModel backend\modules\mobile_brand\models\searchModels\MobileAndComputeBrandSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Mobile Brands';

@@ -1,15 +1,15 @@
 <?php
 
-namespace backend\modules\mobile_brand\models\searchModels;
+namespace backend\modules\mobile_and_computer_brand\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\modules\mobile_brand\models\MobileBrand;
+use backend\modules\mobile_and_computer_brand\models\MobileAndComputerBrand;
 
 /**
- * MobileBrandSearch represents the model behind the search form of `backend\modules\mobile_brand\models\MobileBrand`.
+ * MobileAndComputerBrandSearch represents the model behind the search form of `backend\modules\mobile_andcomputer_brand\models\MobileAndComputerBrand`.
  */
-class MobileBrandSearch extends MobileBrand
+class MobileAndComputerBrandSearch extends MobileAndComputerBrand
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class MobileBrandSearch extends MobileBrand
      */
     public function search($params)
     {
-        $query = MobileBrand::find();
+        $query = MobileAndComputerBrand::find();
 
         // add conditions that should always apply here
 

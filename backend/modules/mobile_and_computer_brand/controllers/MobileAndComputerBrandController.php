@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\modules\mobile_brand\controllers;
+namespace backend\modules\mobile_and_computer_brand\controllers;
 
 use Yii;
-use backend\modules\mobile_brand\models\MobileBrand;
-use backend\modules\mobile_brand\models\searchModels\MobileBrandSearch;
+use backend\modules\mobile_and_computer_brand\models\MobileAndComputerBrand;
+use backend\modules\mobile_and_computer_brand\models\searchModels\MobileAndComputerBrandSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * MobileBrandController implements the CRUD actions for MobileBrand model.
+ * MobileAndComputeBrandController implements the CRUD actions for MobileAndComputerBrand model.
  */
-class MobileBrandController extends Controller
+class MobileAndComputerBrandController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class MobileBrandController extends Controller
     }
 
     /**
-     * Lists all MobileBrand models.
+     * Lists all MobileAndComputerBrand models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new MobileBrandSearch();
+        $searchModel = new MobileAndComputerBrandSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class MobileBrandController extends Controller
     }
 
     /**
-     * Displays a single MobileBrand model.
+     * Displays a single MobileAndComputerBrand model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +58,13 @@ class MobileBrandController extends Controller
     }
 
     /**
-     * Creates a new MobileBrand model.
+     * Creates a new MobileAndComputerBrand model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new MobileBrand();
+        $model = new MobileAndComputerBrand();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,7 +76,7 @@ class MobileBrandController extends Controller
     }
 
     /**
-     * Updates an existing MobileBrand model.
+     * Updates an existing MobileAndComputerBrand model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +96,7 @@ class MobileBrandController extends Controller
     }
 
     /**
-     * Deletes an existing MobileBrand model.
+     * Deletes an existing MobileAndComputerBrand model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class MobileBrandController extends Controller
     }
 
     /**
-     * Finds the MobileBrand model based on its primary key value.
+     * Finds the MobileAndComputerBrand model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return MobileBrand the loaded model
+     * @return MobileAndComputerBrand the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = MobileBrand::findOne($id)) !== null) {
+        if (($model = MobileAndComputerBrand::findOne($id)) !== null) {
             return $model;
         }
 
