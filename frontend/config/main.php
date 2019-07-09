@@ -173,6 +173,10 @@ return [
             'class' => 'frontend\modules\electronic_computer_spare_part\electronic_computer_spare_part',
             'defaultRoute' => 'electronic-computer-spare-part',
         ],
+        'electronic_network_spare_part' => [
+            'class' => 'frontend\modules\electronic_network_spare_part\electronic_network_spare_part',
+            'defaultRoute' => 'electronic-network-spare-part',
+        ],
     ],
     'components' => [
         'request' => [
