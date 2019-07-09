@@ -72,6 +72,10 @@ return [
             'class' => 'backend\modules\mobile_brand\mobile_brand',
             'defaultRoute' => 'mobile-brand',
         ],
+        'sim_card' => [
+            'class' => 'backend\modules\sim_card\sim_card',
+            'defaultRoute' => 'sim-card',
+        ],
         'rbac' => [
             'class' => 'yii2mod\rbac\Module',
         ],
