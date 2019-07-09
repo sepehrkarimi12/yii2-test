@@ -181,6 +181,10 @@ return [
             'class' => 'frontend\modules\electronic_printer_scanner_copy_fax\electronic_printer_scanner_copy_fax',
             'defaultRoute' => 'electronic-printer-scanner-copy-fax',
         ],
+        'electronic_computer_other' => [
+            'class' => 'frontend\modules\electronic_computer_other\electronic_computer_other',
+            'defaultRoute' => 'electronic-computer-other',
+        ],
     ],
     'components' => [
         'request' => [
