@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\vehicle_motorcycle_and_spare_part\controllers;
+namespace frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\vehicle_motorcycle_and_spare_part\models\VehicleMotorcycleAndSparePart;
-use frontend\modules\vehicle_motorcycle_and_spare_part\models\searchModels\VehicleMotorcycleAndSparePartSearch;
+use frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\models\VehicleMotorcycleAndSparePart;
+use frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\models\searchModels\VehicleMotorcycleAndSparePartSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

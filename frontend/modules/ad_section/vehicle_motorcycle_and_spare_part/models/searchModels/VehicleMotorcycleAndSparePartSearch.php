@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\vehicle_motorcycle_and_spare_part\models\searchModels;
+namespace frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\vehicle_motorcycle_and_spare_part\models\VehicleMotorcycleAndSparePart;
+use frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\models\VehicleMotorcycleAndSparePart;
 
 /**
- * VehicleMotorcycleAndSparePartSearch represents the model behind the search form of `frontend\modules\vehicle_motorcycle_and_spare_part\models\VehicleMotorcycleAndSparePart`.
+ * VehicleMotorcycleAndSparePartSearch represents the model behind the search form of `frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\models\VehicleMotorcycleAndSparePart`.
  */
 class VehicleMotorcycleAndSparePartSearch extends VehicleMotorcycleAndSparePart
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_motorcycle_and_spare_part\models;
+namespace frontend\modules\ad_section\vehicle_motorcycle_and_spare_part\models;
 
 use backend\modules\ad_type\models\AdType;
 use backend\modules\car_created_year\models\CarCreatedYear;
