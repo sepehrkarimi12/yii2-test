@@ -119,7 +119,7 @@ return [
         ],
         'vehicle_car_heavy' => [
             'class' => 'frontend\modules\ad_section\vehicle_car_heavy\vehicle_car_heavy',
-            'defaultRoute' => 'vehicle-car-classic',
+            'defaultRoute' => 'vehicle-car-heavy',
         ],
         'vehicle_car_other' => [
             'class' => 'frontend\modules\ad_section\vehicle_car_other\vehicle_car_other',
