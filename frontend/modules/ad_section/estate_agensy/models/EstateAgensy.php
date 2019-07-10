@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\estate_agensy\models;
+namespace frontend\modules\ad_section\estate_agensy\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use common\models\Ad;

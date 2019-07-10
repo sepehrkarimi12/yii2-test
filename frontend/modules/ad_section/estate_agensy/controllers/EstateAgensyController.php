@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\estate_agensy\controllers;
+namespace frontend\modules\ad_section\estate_agensy\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\estate_agensy\models\EstateAgensy;
-use frontend\modules\estate_agensy\models\searchModels\EstateAgensySearch;
+use frontend\modules\ad_section\estate_agensy\models\EstateAgensy;
+use frontend\modules\ad_section\estate_agensy\models\searchModels\EstateAgensySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

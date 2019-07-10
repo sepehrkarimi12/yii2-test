@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\estate_agensy\models\searchModels;
+namespace frontend\modules\ad_section\estate_agensy\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\estate_agensy\models\EstateAgensy;
+use frontend\modules\ad_section\estate_agensy\models\EstateAgensy;
 
 /**
- * EstateAgensySearch represents the model behind the search form of `frontend\modules\estate_agensy\models\EstateAgensy`.
+ * EstateAgensySearch represents the model behind the search form of `frontend\modules\ad_section\estate_agensy\models\EstateAgensy`.
  */
 class EstateAgensySearch extends EstateAgensy
 {

@@ -83,7 +83,7 @@ return [
         ],
         'estate_agensy' => [
             'class' => 'frontend\modules\ad_section\estate_agensy\estate_agensy',
-            'defaultRoute' => 'state-agency',
+            'defaultRoute' => 'estate-agensy',
         ],
         'participation_in_cunstruction' => [
             'class' => 'frontend\modules\ad_section\participation_in_cunstruction\participation_in_cunstruction',
