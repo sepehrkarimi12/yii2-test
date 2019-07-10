@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\commercial_other_rent\controllers;
+namespace frontend\modules\ad_section\commercial_other_rent\controllers;
 
 use common\models\Ad;
-use frontend\modules\commercial_other_rent\models\CommercialOtherRent;
-use frontend\modules\commercial_other_rent\models\searchModels\CommercialOtherRentSearch;
+use frontend\modules\ad_section\commercial_other_rent\models\CommercialOtherRent;
+use frontend\modules\ad_section\commercial_other_rent\models\searchModels\CommercialOtherRentSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

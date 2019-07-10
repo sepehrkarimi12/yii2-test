@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\commercial_other_rent\models\searchModels;
+namespace frontend\modules\ad_section\commercial_other_rent\models\searchModels;
 
-use frontend\modules\commercial_other_rent\models\CommercialOtherRent;
+use frontend\modules\ad_section\commercial_other_rent\models\CommercialOtherRent;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * HomeRentSearch represents the model behind the search form of `frontend\modules\home_rent\models\HomeRent`.
+ * HomeRentSearch represents the model behind the search form of `frontend\modules\ad_section\home_rent\models\HomeRent`.
  */
 class CommercialOtherRentSearch extends CommercialOtherRent
 {
