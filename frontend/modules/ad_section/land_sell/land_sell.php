@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\land_sell;
+namespace frontend\modules\ad_section\land_sell;
 
 /**
  * land_sell module definition class
@@ -10,7 +10,7 @@ class land_sell extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\land_sell\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\land_sell\controllers';
 
     /**
      * {@inheritdoc}

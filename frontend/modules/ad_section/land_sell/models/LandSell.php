@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\land_sell\models;
+namespace frontend\modules\ad_section\land_sell\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use backend\modules\ad_type\models\AdType;

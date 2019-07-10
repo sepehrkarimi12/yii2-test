@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\land_sell\controllers;
+namespace frontend\modules\ad_section\land_sell\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\land_sell\models\LandSell;
-use frontend\modules\land_sell\models\seachModels\LandSellSearch;
+use frontend\modules\ad_section\land_sell\models\LandSell;
+use frontend\modules\ad_section\land_sell\models\seachModels\LandSellSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

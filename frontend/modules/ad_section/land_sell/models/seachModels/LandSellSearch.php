@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\land_sell\models\seachModels;
+namespace frontend\modules\ad_section\land_sell\models\seachModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\land_sell\models\LandSell;
+use frontend\modules\ad_section\land_sell\models\LandSell;
 
 /**
- * LandSellSearch represents the model behind the search form of `frontend\modules\land_sell\models\LandSell`.
+ * LandSellSearch represents the model behind the search form of `frontend\modules\ad_section\land_sell\models\LandSell`.
  */
 class LandSellSearch extends LandSell
 {
