@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\electronic_computer_desktop_computer\controllers;
+namespace frontend\modules\ad_section\electronic_computer_desktop_computer\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\electronic_computer_desktop_computer\models\ElectronicComputerDesktopComputer;
-use frontend\modules\electronic_computer_desktop_computer\models\searchModels\ElectronicComputerDesktopComputerSearch;
+use frontend\modules\ad_section\electronic_computer_desktop_computer\models\ElectronicComputerDesktopComputer;
+use frontend\modules\ad_section\electronic_computer_desktop_computer\models\searchModels\ElectronicComputerDesktopComputerSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

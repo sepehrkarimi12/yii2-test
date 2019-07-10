@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\electronic_computer_desktop_computer\models\searchModels;
+namespace frontend\modules\ad_section\electronic_computer_desktop_computer\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\electronic_computer_desktop_computer\models\ElectronicComputerDesktopComputer;
+use frontend\modules\ad_section\electronic_computer_desktop_computer\models\ElectronicComputerDesktopComputer;
 
 /**
- * ElectronicComputerDesktopComputerSearch represents the model behind the search form of `frontend\modules\electronic_computer_desktop_computer\models\ElectronicComputerDesktopComputer`.
+ * ElectronicComputerDesktopComputerSearch represents the model behind the search form of `frontend\modules\ad_section\electronic_computer_desktop_computer\models\ElectronicComputerDesktopComputer`.
  */
 class ElectronicComputerDesktopComputerSearch extends ElectronicComputerDesktopComputer
 {
