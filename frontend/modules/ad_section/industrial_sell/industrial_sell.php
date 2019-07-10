@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\industrial_sell;
+namespace frontend\modules\ad_section\industrial_sell;
 
 /**
  * industrial_sell module definition class
@@ -10,7 +10,7 @@ class industrial_sell extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\industrial_sell\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\industrial_sell\controllers';
 
     /**
      * {@inheritdoc}

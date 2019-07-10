@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\industrial_sell\controllers;
+namespace frontend\modules\ad_section\industrial_sell\controllers;
 
 use common\models\Ad;
-use frontend\modules\industrial_sell\models\IndustrialSell;
-use frontend\modules\industrial_sell\models\searchModels\IndustrialSellSearch;
+use frontend\modules\ad_section\industrial_sell\models\IndustrialSell;
+use frontend\modules\ad_section\industrial_sell\models\searchModels\IndustrialSellSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\industrial_sell\models\searchModels;
+namespace frontend\modules\ad_section\industrial_sell\models\searchModels;
 
-use frontend\modules\industrial_sell\models\IndustrialSell;
+use frontend\modules\ad_section\industrial_sell\models\IndustrialSell;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * industrialSellSearch represents the model behind the search form of `frontend\modules\industrial_sell\models\industrialSell`.
+ * industrialSellSearch represents the model behind the search form of `frontend\modules\ad_section\industrial_sell\models\industrialSell`.
  */
 class IndustrialSellSearch extends IndustrialSell
 {
