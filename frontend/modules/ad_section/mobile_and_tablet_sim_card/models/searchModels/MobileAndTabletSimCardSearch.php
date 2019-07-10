@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_sim_card\models\searchModels;
+namespace frontend\modules\ad_section\mobile_and_tablet_sim_card\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\mobile_and_tablet_sim_card\models\MobileAndTabletSimCard;
+use frontend\modules\ad_section\mobile_and_tablet_sim_card\models\MobileAndTabletSimCard;
 
 /**
- * MobileAndTabletSimCardSearch represents the model behind the search form of `frontend\modules\mobile_and_tablet_sim_card\models\MobileAndTabletSimCard`.
+ * MobileAndTabletSimCardSearch represents the model behind the search form of `frontend\modules\ad_section\mobile_and_tablet_sim_card\models\MobileAndTabletSimCard`.
  */
 class MobileAndTabletSimCardSearch extends MobileAndTabletSimCard
 {

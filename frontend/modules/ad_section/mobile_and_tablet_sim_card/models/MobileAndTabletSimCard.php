@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_sim_card\models;
+namespace frontend\modules\ad_section\mobile_and_tablet_sim_card\models;
 
 use backend\modules\ad_type\models\AdType;
 use backend\modules\sim_card\models\SimCard;

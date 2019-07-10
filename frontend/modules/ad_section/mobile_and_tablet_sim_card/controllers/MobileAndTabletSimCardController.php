@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_sim_card\controllers;
+namespace frontend\modules\ad_section\mobile_and_tablet_sim_card\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\mobile_and_tablet_sim_card\models\MobileAndTabletSimCard;
-use frontend\modules\mobile_and_tablet_sim_card\models\searchModels\MobileAndTabletSimCardSearch;
+use frontend\modules\ad_section\mobile_and_tablet_sim_card\models\MobileAndTabletSimCard;
+use frontend\modules\ad_section\mobile_and_tablet_sim_card\models\searchModels\MobileAndTabletSimCardSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
