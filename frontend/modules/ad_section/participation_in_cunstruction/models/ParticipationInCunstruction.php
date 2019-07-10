@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\participation_in_cunstruction\models;
+namespace frontend\modules\ad_section\participation_in_cunstruction\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use common\models\Ad;

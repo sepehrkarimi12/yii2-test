@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\participation_in_cunstruction\models\searchModels;
+namespace frontend\modules\ad_section\participation_in_cunstruction\models\searchModels;
 
-use frontend\modules\participation_in_cunstruction\models\ParticipationInCunstruction;
+use frontend\modules\ad_section\participation_in_cunstruction\models\ParticipationInCunstruction;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * EstateAgensySearch represents the model behind the search form of `frontend\modules\participationinmaking\models\EstateAgensy`.
+ * EstateAgensySearch represents the model behind the search form of `frontend\modules\ad_section\participationinmaking\models\EstateAgensy`.
  */
 class ParticipationInCunstructionSearch extends ParticipationInCunstruction
 {

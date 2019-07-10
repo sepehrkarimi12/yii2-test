@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\participation_in_cunstruction\controllers;
+namespace frontend\modules\ad_section\participation_in_cunstruction\controllers;
 
 use common\models\Ad;
-use frontend\modules\participation_in_cunstruction\models\ParticipationInCunstruction;
-use frontend\modules\participation_in_cunstruction\models\searchModels\ParticipationInCunstructionSearch;
+use frontend\modules\ad_section\participation_in_cunstruction\models\ParticipationInCunstruction;
+use frontend\modules\ad_section\participation_in_cunstruction\models\searchModels\ParticipationInCunstructionSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
