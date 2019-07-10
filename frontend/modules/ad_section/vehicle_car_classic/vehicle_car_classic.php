@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_car_classic;
+namespace frontend\modules\ad_section\vehicle_car_classic;
 
 /**
  * vehicle_car_classic module definition class
@@ -10,7 +10,7 @@ class vehicle_car_classic extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\vehicle_car_classic\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\vehicle_car_classic\controllers';
 
     /**
      * {@inheritdoc}

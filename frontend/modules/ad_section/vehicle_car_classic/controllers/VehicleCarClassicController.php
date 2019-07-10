@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\vehicle_car_classic\controllers;
+namespace frontend\modules\ad_section\vehicle_car_classic\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\vehicle_car_classic\models\VehicleCarClassic;
-use frontend\modules\vehicle_car_classic\models\searchModels\VehicleCarClassicSearch;
+use frontend\modules\ad_section\vehicle_car_classic\models\VehicleCarClassic;
+use frontend\modules\ad_section\vehicle_car_classic\models\searchModels\VehicleCarClassicSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
