@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\estate_services_other\models;
+namespace frontend\modules\ad_section\estate_services_other\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use common\models\Ad;

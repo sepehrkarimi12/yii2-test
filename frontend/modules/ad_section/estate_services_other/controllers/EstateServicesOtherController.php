@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\estate_services_other\controllers;
+namespace frontend\modules\ad_section\estate_services_other\controllers;
 
 use common\models\Ad;
-use frontend\modules\estate_services_other\models\EstateServicesOther;
-use frontend\modules\estate_services_other\models\searchModels\EstateServicesOtherSearch;
+use frontend\modules\ad_section\estate_services_other\models\EstateServicesOther;
+use frontend\modules\ad_section\estate_services_other\models\searchModels\EstateServicesOtherSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
