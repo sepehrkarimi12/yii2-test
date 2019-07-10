@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_other\models;
+namespace frontend\modules\ad_section\vehicle_other\models;
 
 use backend\modules\ad_type\models\AdType;
 use common\models\Ad;
