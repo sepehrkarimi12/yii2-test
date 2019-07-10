@@ -82,9 +82,9 @@ class SiteController extends Controller
         return $this->render('index_i_do');
     }
 
-    public function actionOff()
+    public function actionDiscount()
     {
-        return $this->render('index_off');
+        return $this->render('index_discount');
     }
 
     /**

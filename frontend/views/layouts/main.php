@@ -39,7 +39,7 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'آگهی', 'url' => ['/site/ad']],
         ['label' => 'انجام میدم', 'url' => ['/site/i-do']],
-        ['label' => 'تخفیف', 'url' => ['/site/off']],
+        ['label' => 'تخفیف', 'url' => ['/site/discount']],
         ['label' => 'gii', 'url' => ['/gii'],],
     ];
     if (Yii::$app->user->isGuest) {
@@ -92,8 +92,8 @@ AppAsset::register($this);
         <a href="<?= Url::home() . 'new/i-do'?>" class="btn btn-danger btn-lg bottom-nav">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت انجام میدم رایگان
         </a>
-    <?php elseif (Yii::$app->controller->action->id == 'off') : ?>
-        <a href="<?= Url::home() . 'new/off'?>" class="btn btn-danger btn-lg bottom-nav">
+    <?php elseif (Yii::$app->controller->action->id == 'discount') : ?>
+        <a href="<?= Url::home() . 'new/discount'?>" class="btn btn-danger btn-lg bottom-nav">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت تخفیف رایگان
         </a>
     <?php endif; ?>
