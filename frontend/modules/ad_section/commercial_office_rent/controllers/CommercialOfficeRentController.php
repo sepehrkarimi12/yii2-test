@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\commercial_office_rent\controllers;
+namespace frontend\modules\ad_section\commercial_office_rent\controllers;
 
 use common\models\Ad;
-use frontend\modules\commercial_office_rent\models\CommercialOfficeRent;
-use frontend\modules\commercial_office_rent\models\searchModels\CommercialOfficeRentSearch;
+use frontend\modules\ad_section\commercial_office_rent\models\CommercialOfficeRent;
+use frontend\modules\ad_section\commercial_office_rent\models\searchModels\CommercialOfficeRentSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

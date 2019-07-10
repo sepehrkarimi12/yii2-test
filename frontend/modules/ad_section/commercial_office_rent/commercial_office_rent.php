@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\commercial_office_rent;
+namespace frontend\modules\ad_section\commercial_office_rent;
 
 /**
  * commercial_office_rent module definition class
@@ -10,7 +10,7 @@ class commercial_office_rent extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\commercial_office_rent\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\commercial_office_rent\controllers';
 
     /**
      * {@inheritdoc}
