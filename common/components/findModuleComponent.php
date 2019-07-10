@@ -44,7 +44,7 @@ class findModuleComponent extends Component
         $address = $this->find($cat_id);
         if ($address) {
             $address = explode("\\",$address->model_address);
-            $module_name = $address[2];
+            $module_name = $address[3];
             return $module_name;
         }
         else {
