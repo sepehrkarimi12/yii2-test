@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\shop_sell\models\searchModels;
+namespace frontend\modules\ad_section\shop_sell\models\searchModels;
 
-use frontend\modules\shop_sell\models\ShopSell;
+use frontend\modules\ad_section\shop_sell\models\ShopSell;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * shopSellSearch represents the model behind the search form of `frontend\modules\shop_sell\models\shopSell`.
+ * shopSellSearch represents the model behind the search form of `frontend\modules\ad_section\shop_sell\models\shopSell`.
  */
 class ShopSellSearch extends ShopSell
 {

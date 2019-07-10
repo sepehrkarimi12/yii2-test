@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\shop_sell;
+namespace frontend\modules\ad_section\shop_sell;
 
 /**
  * shop_sell module definition class
@@ -10,7 +10,7 @@ class shop_sell extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\shop_sell\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\shop_sell\controllers';
 
     /**
      * {@inheritdoc}

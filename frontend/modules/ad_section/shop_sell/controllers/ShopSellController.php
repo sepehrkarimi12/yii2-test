@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\shop_sell\controllers;
+namespace frontend\modules\ad_section\shop_sell\controllers;
 
 use common\models\Ad;
-use frontend\modules\shop_sell\models\searchModels\ShopSellSearch;
-use frontend\modules\shop_sell\models\ShopSell;
+use frontend\modules\ad_section\shop_sell\models\searchModels\ShopSellSearch;
+use frontend\modules\ad_section\shop_sell\models\ShopSell;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
