@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\commercial_other_sell\controllers;
+namespace frontend\modules\ad_section\commercial_other_sell\controllers;
 
 use common\models\Ad;
-use frontend\modules\commercial_other_sell\models\CommercialOtherSell;
-use frontend\modules\commercial_other_sell\models\searchModels\CommercialOtherSellSearch;
+use frontend\modules\ad_section\commercial_other_sell\models\CommercialOtherSell;
+use frontend\modules\ad_section\commercial_other_sell\models\searchModels\CommercialOtherSellSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

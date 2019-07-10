@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\commercial_other_sell\models\searchModels;
+namespace frontend\modules\ad_section\commercial_other_sell\models\searchModels;
 
-use frontend\modules\commercial_other_sell\models\CommercialOtherSell;
+use frontend\modules\ad_section\commercial_other_sell\models\CommercialOtherSell;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * commercialSellSearch represents the model behind the search form of `frontend\modules\commercial_sell\models\commercialSell`.
+ * commercialSellSearch represents the model behind the search form of `frontend\modules\ad_section\commercial_sell\models\commercialSell`.
  */
 class CommercialOtherSellSearch extends CommercialOtherSell
 {
