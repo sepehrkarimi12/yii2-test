@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\estate_presell\controllers;
+namespace frontend\modules\ad_section\estate_presell\controllers;
 
 use common\models\Ad;
-use frontend\modules\estate_presell\models\EstatePresell;
-use frontend\modules\estate_presell\models\searchModels\EstatePresellSearch;
+use frontend\modules\ad_section\estate_presell\models\EstatePresell;
+use frontend\modules\ad_section\estate_presell\models\searchModels\EstatePresellSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

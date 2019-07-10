@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\estate_presell\models;
+namespace frontend\modules\ad_section\estate_presell\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use common\models\Ad;
