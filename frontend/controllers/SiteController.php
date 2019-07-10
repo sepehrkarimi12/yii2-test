@@ -72,9 +72,19 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionAd()
     {
-        return $this->render('index');
+        return $this->render('index_ad');
+    }
+
+    public function actionIDo()
+    {
+        return $this->render('index_i_do');
+    }
+
+    public function actionOff()
+    {
+        return $this->render('index_off');
     }
 
     /**

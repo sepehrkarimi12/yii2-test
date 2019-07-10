@@ -37,8 +37,8 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'آگهی', 'url' => ['/site/index']],
-        ['label' => 'انجام میدم', 'url' => ['/site/i_do']],
+        ['label' => 'آگهی', 'url' => ['/site/ad']],
+        ['label' => 'انجام میدم', 'url' => ['/site/i-do']],
         ['label' => 'تخفیف', 'url' => ['/site/off']],
         ['label' => 'gii', 'url' => ['/gii'],],
     ];

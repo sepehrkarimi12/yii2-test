@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'خانه';
+$this->title = 'انجام میدم';
 ?>
 <div class="site-index">
 </div>
