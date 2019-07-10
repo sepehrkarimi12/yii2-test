@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\electronic_printer_scanner_copy_fax;
+namespace frontend\modules\ad_section\electronic_printer_scanner_copy_fax;
 
 /**
  * electronic_printer_scanner_copy_fax module definition class
@@ -10,7 +10,7 @@ class electronic_printer_scanner_copy_fax extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\electronic_printer_scanner_copy_fax\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\electronic_printer_scanner_copy_fax\controllers';
 
     /**
      * {@inheritdoc}

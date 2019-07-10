@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\electronic_printer_scanner_copy_fax\models;
+namespace frontend\modules\ad_section\electronic_printer_scanner_copy_fax\models;
 
 use backend\modules\ad_type\models\AdType;
 use common\models\Ad;

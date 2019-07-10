@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\electronic_printer_scanner_copy_fax\controllers;
+namespace frontend\modules\ad_section\electronic_printer_scanner_copy_fax\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\electronic_printer_scanner_copy_fax\models\ElectronicPrinterScannerCopyFax;
-use frontend\modules\electronic_printer_scanner_copy_fax\models\searchModels\ElectronicPrinterScannerCopyFaxSearch;
+use frontend\modules\ad_section\electronic_printer_scanner_copy_fax\models\ElectronicPrinterScannerCopyFax;
+use frontend\modules\ad_section\electronic_printer_scanner_copy_fax\models\searchModels\ElectronicPrinterScannerCopyFaxSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

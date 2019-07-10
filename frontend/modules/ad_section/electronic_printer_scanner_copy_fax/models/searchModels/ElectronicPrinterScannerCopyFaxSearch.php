@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\electronic_printer_scanner_copy_fax\models\searchModels;
+namespace frontend\modules\ad_section\electronic_printer_scanner_copy_fax\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\electronic_printer_scanner_copy_fax\models\ElectronicPrinterScannerCopyFax;
+use frontend\modules\ad_section\electronic_printer_scanner_copy_fax\models\ElectronicPrinterScannerCopyFax;
 
 /**
- * ElectronicPrinterScannerCopyFaxSearch represents the model behind the search form of `frontend\modules\electronic_printer_scanner_copy_fax\models\ElectronicPrinterScannerCopyFax`.
+ * ElectronicPrinterScannerCopyFaxSearch represents the model behind the search form of `frontend\modules\ad_section\electronic_printer_scanner_copy_fax\models\ElectronicPrinterScannerCopyFax`.
  */
 class ElectronicPrinterScannerCopyFaxSearch extends ElectronicPrinterScannerCopyFax
 {
