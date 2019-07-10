@@ -36,7 +36,6 @@ return [
         'apartment_sell' => [
             'class' => 'frontend\modules\ad_section\apartment_sell\apartment_sell',
             'defaultRoute' => 'apartment-sell',
-
         ],
         'home_sell' => [
             'class' => 'frontend\modules\ad_section\home_sell\home_sell',
