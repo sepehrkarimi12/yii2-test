@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\home_rent\models\searchModels;
+namespace frontend\modules\ad_section\home_rent\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\home_rent\models\HomeRent;
+use frontend\modules\ad_section\home_rent\models\HomeRent;
 
 /**
- * HomeRentSearch represents the model behind the search form of `frontend\modules\home_rent\models\HomeRent`.
+ * HomeRentSearch represents the model behind the search form of `frontend\modules\ad_section\home_rent\models\HomeRent`.
  */
 class HomeRentSearch extends HomeRent
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\home_rent\models;
+namespace frontend\modules\ad_section\home_rent\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use backend\modules\ad_type\models\AdType;

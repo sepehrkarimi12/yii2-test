@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\home_rent;
+namespace frontend\modules\ad_section\home_rent;
 
 /**
  * home_rent module definition class
@@ -10,7 +10,7 @@ class home_rent extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\home_rent\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\home_rent\controllers';
 
     /**
      * {@inheritdoc}

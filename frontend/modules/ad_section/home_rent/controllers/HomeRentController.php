@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\home_rent\controllers;
+namespace frontend\modules\ad_section\home_rent\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\home_rent\models\HomeRent;
-use frontend\modules\home_rent\models\searchModels\HomeRentSearch;
+use frontend\modules\ad_section\home_rent\models\HomeRent;
+use frontend\modules\ad_section\home_rent\models\searchModels\HomeRentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
