@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_spare_part\controllers;
+namespace frontend\modules\ad_section\mobile_and_tablet_spare_part\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\mobile_and_tablet_spare_part\models\MobileAndTabletSparePart;
-use frontend\modules\mobile_and_tablet_spare_part\models\searchModels\MobileAndTabletSparePartSearch;
+use frontend\modules\ad_section\mobile_and_tablet_spare_part\models\MobileAndTabletSparePart;
+use frontend\modules\ad_section\mobile_and_tablet_spare_part\models\searchModels\MobileAndTabletSparePartSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
