@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\commercial_industrial_rent\controllers;
+namespace frontend\modules\ad_section\commercial_industrial_rent\controllers;
 
 use common\models\Ad;
-use frontend\modules\commercial_industrial_rent\models\CommercialIndustrialRent;
-use frontend\modules\commercial_industrial_rent\models\searchModels\CommercialIndustrialRentSearch;
+use frontend\modules\ad_section\commercial_industrial_rent\models\CommercialIndustrialRent;
+use frontend\modules\ad_section\commercial_industrial_rent\models\searchModels\CommercialIndustrialRentSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
