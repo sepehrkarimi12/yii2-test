@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_car_rent\models;
+namespace frontend\modules\ad_section\vehicle_car_rent\models;
 
 use backend\modules\ad_type\models\AdType;
 use common\models\Ad;

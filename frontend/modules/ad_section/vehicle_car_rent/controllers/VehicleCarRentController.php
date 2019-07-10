@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\vehicle_car_rent\controllers;
+namespace frontend\modules\ad_section\vehicle_car_rent\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\vehicle_car_rent\models\VehicleCarRent;
-use frontend\modules\vehicle_car_rent\models\searchModels\VehicleCarRentSearch;
+use frontend\modules\ad_section\vehicle_car_rent\models\VehicleCarRent;
+use frontend\modules\ad_section\vehicle_car_rent\models\searchModels\VehicleCarRentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
