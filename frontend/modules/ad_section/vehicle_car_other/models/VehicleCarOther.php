@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_car_other\models;
+namespace frontend\modules\ad_section\vehicle_car_other\models;
 
 use backend\modules\ad_type\models\AdType;
 use backend\modules\car_created_year\models\CarCreatedYear;

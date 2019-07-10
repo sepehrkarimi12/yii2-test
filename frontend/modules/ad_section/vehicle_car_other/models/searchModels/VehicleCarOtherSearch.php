@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\vehicle_car_other\models\searchModels;
+namespace frontend\modules\ad_section\vehicle_car_other\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\vehicle_car_other\models\VehicleCarOther;
+use frontend\modules\ad_section\vehicle_car_other\models\VehicleCarOther;
 
 /**
- * VehicleCarOtherSearch represents the model behind the search form of `frontend\modules\vehicle_car_other\models\VehicleCarOther`.
+ * VehicleCarOtherSearch represents the model behind the search form of `frontend\modules\ad_section\vehicle_car_other\models\VehicleCarOther`.
  */
 class VehicleCarOtherSearch extends VehicleCarOther
 {

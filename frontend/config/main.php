@@ -123,7 +123,7 @@ return [
         ],
         'vehicle_car_other' => [
             'class' => 'frontend\modules\ad_section\vehicle_car_other\vehicle_car_other',
-            'defaultRoute' => 'vehicle-car-classic',
+            'defaultRoute' => 'vehicle-car-other',
         ],
         'vehicle_car_spare_part' => [
             'class' => 'frontend\modules\ad_section\vehicle_car_spare_part\vehicle_car_spare_part',
