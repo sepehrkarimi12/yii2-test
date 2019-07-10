@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_other\models;
+namespace frontend\modules\ad_section\mobile_and_tablet_other\models;
 
 use backend\modules\ad_type\models\AdType;
 use common\models\Ad;
