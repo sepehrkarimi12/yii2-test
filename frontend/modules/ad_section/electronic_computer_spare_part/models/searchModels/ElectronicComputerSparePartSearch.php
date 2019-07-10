@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\electronic_computer_spare_part\models\searchModels;
+namespace frontend\modules\ad_section\electronic_computer_spare_part\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\electronic_computer_spare_part\models\ElectronicComputerSparePart;
+use frontend\modules\ad_section\electronic_computer_spare_part\models\ElectronicComputerSparePart;
 
 /**
- * ElectronicComputerSparePartSearch represents the model behind the search form of `frontend\modules\electronic_computer_spare_part\models\ElectronicComputerSparePart`.
+ * ElectronicComputerSparePartSearch represents the model behind the search form of `frontend\modules\ad_section\electronic_computer_spare_part\models\ElectronicComputerSparePart`.
  */
 class ElectronicComputerSparePartSearch extends ElectronicComputerSparePart
 {
