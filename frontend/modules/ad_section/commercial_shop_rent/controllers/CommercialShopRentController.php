@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\commercial_shop_rent\controllers;
+namespace frontend\modules\ad_section\commercial_shop_rent\controllers;
 
 use common\models\Ad;
-use frontend\modules\commercial_shop_rent\models\CommercialShopRent;
-use frontend\modules\commercial_shop_rent\models\searchModels\CommercialShopRentSearch;
+use frontend\modules\ad_section\commercial_shop_rent\models\CommercialShopRent;
+use frontend\modules\ad_section\commercial_shop_rent\models\searchModels\CommercialShopRentSearch;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
