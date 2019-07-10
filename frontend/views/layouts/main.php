@@ -30,17 +30,16 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+//        'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'خانه', 'url' => ['/site/index']],
-        ['label' => 'درباره ما', 'url' => ['/site/about'],],
-        ['label' => 'ارتباط ', 'url' => ['/site/contact'],'options'=>['class'=>'']],
-        ['label' => 'ثبت آگهی جدید', 'url' => ['/new/index'],],
+        ['label' => 'آگهی', 'url' => ['/site/index']],
+        ['label' => 'انجام میدم', 'url' => ['/site/i_do']],
+        ['label' => 'تخفیف', 'url' => ['/site/off']],
         ['label' => 'gii', 'url' => ['/gii'],],
     ];
     if (Yii::$app->user->isGuest) {
@@ -59,6 +58,8 @@ AppAsset::register($this);
     $menuItems[] = [
             'label' => 'تهران',
             'items' => [
+                ['label' => 'درباره ما', 'url' => ['/site/about'],],
+                ['label' => 'ارتباط ', 'url' => ['/site/contact'],'options'=>['class'=>'']],
                  ['label' => 'تهران', 'url' => '#'],
                  '<li class="divider"></li>',
                  '<li class="dropdown-header">Dropdown Header</li>',
