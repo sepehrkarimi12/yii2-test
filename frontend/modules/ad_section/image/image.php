@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\image;
+namespace frontend\modules\ad_section\image;
 
 /**
  * image module definition class
@@ -10,7 +10,7 @@ class image extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\image\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\image\controllers';
 
     /**
      * {@inheritdoc}

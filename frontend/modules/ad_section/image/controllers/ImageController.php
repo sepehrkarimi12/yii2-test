@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\image\controllers;
+namespace frontend\modules\ad_section\image\controllers;
 
 use Yii;
 use common\models\Image;
