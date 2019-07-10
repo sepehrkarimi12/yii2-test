@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\ad\controllers;
+namespace frontend\modules\ad_section\ad\controllers;
 
 use Yii;
 use common\models\Ad;
