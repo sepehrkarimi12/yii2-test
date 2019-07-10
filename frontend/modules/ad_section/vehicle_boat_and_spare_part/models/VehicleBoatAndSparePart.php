@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_boat_and_spare_part\models;
+namespace frontend\modules\ad_section\vehicle_boat_and_spare_part\models;
 
 use backend\modules\ad_type\models\AdType;
 use common\models\Ad;
