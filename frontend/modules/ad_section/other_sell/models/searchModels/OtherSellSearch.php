@@ -17,7 +17,7 @@ class OtherSellSearch extends OtherSell
     public function rules()
     {
         return [
-            [['id', 'ad_id', 'area', 'ad_type_id', 'ad_advertiser_id', 'room_count_id'], 'integer'],
+            [['id', 'ad_id', 'area', 'ad_type_id', 'ad_advertiser_id'], 'integer'],
             [['national_code'], 'safe'],
         ];
     }
@@ -63,7 +63,6 @@ class OtherSellSearch extends OtherSell
             'area' => $this->area,
             'ad_type_id' => $this->ad_type_id,
             'ad_advertiser_id' => $this->ad_advertiser_id,
-            'room_count_id' => $this->room_count_id,
         ]);
 
         $query->andFilterWhere(['like', 'national_code', $this->national_code]);
