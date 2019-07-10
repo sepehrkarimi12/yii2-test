@@ -82,21 +82,23 @@ AppAsset::register($this);
     </div>
 </div>
 
-<center class="navbar-fixed-bottom">
-<?php if (Yii::$app->controller->action->id == 'ad') : ?>
-    <a href="<?= Url::home() . 'new/ad'?>" class="btn btn-danger btn-lg bottom-nav">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت آگهی رایگان
-    </a>
-<?php elseif (Yii::$app->controller->action->id == 'i-do') : ?>
-    <a href="<?= Url::home() . 'new/i-do'?>" class="btn btn-danger btn-lg bottom-nav">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت انجام میدم رایگان
-    </a>
-<?php elseif (Yii::$app->controller->action->id == 'off') : ?>
-    <a href="<?= Url::home() . 'new/off'?>" class="btn btn-danger btn-lg bottom-nav">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت تخفیف رایگان
-    </a>
+<?php if (Yii::$app->controller->id == 'site') : ?>
+    <center class="navbar-fixed-bottom">
+    <?php if (Yii::$app->controller->action->id == 'ad') : ?>
+        <a href="<?= Url::home() . 'new/ad'?>" class="btn btn-danger btn-lg bottom-nav">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت آگهی رایگان
+        </a>
+    <?php elseif (Yii::$app->controller->action->id == 'i-do') : ?>
+        <a href="<?= Url::home() . 'new/i-do'?>" class="btn btn-danger btn-lg bottom-nav">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت انجام میدم رایگان
+        </a>
+    <?php elseif (Yii::$app->controller->action->id == 'off') : ?>
+        <a href="<?= Url::home() . 'new/off'?>" class="btn btn-danger btn-lg bottom-nav">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ثبت تخفیف رایگان
+        </a>
+    <?php endif; ?>
+    </center>
 <?php endif; ?>
-</center>
 
 <?php $this->endBody() ?>
 </body>
