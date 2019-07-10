@@ -66,7 +66,7 @@ class IDoCategory extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getOCategories()
+    public function getChildes()
     {
         return $this->hasMany(IDoCategory::className(), ['parent_id' => 'id']);
     }

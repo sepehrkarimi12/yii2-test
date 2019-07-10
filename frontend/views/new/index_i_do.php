@@ -4,9 +4,9 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = 'ثبت آگهی جدید';
+$this->title = 'ثبت انجام میدم جدید';
 ?>
-<h1>انتخاب دسته بندی
+<h1>انتخاب دسته بندی انجام میدم
 </h1>
 
 <div class="new-index">
@@ -90,7 +90,7 @@ $this->title = 'ثبت آگهی جدید';
                           </div>
                         </div>
                         <?php else : ?>
-                          <a href="<?= Url::toRoute(['new/create', 'cat_id' => $catergory->id]) ?>">
+                          <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
                             <div class="panel panel-warning">
                               <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -103,7 +103,7 @@ $this->title = 'ثبت آگهی جدید';
                       <?php endforeach; ?>
                       </div>
                     <?php else : ?>
-                      <a href="<?= Url::toRoute(['new/create', 'cat_id' => $catergory->id]) ?>">
+                      <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
                         <div class="panel panel-success">
                           <div class="panel-heading">
                             <h4 class="panel-title">
@@ -117,7 +117,7 @@ $this->title = 'ثبت آگهی جدید';
                 </div>
               </div>
               <?php else : ?>
-                <a href="<?= Url::toRoute(['new/create', 'cat_id' => $catergory->id]) ?>">
+                <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
                   <div class="panel panel-info">
                     <div class="panel-heading">
                       <h4 class="panel-title">
@@ -130,7 +130,7 @@ $this->title = 'ثبت آگهی جدید';
             <?php endforeach; ?>
             </div> 
           <?php else : ?>
-            <a href="<?= Url::toRoute(['new/create', 'cat_id' => $catergory->id]) ?>">
+            <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
               <div class="panel panel-info">
                 <div class="panel-heading">
                   <h4 class="panel-title">
