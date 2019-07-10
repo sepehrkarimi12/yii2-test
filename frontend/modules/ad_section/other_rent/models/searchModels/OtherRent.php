@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\other_rent\models\searchModels;
+namespace frontend\modules\ad_section\other_rent\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\other_rent\models\OtherRent as OtherRentModel;
+use frontend\modules\ad_section\other_rent\models\OtherRent as OtherRentModel;
 
 /**
- * OtherRent represents the model behind the search form of `frontend\modules\other_rent\models\OtherRent`.
+ * OtherRent represents the model behind the search form of `frontend\modules\ad_section\other_rent\models\OtherRent`.
  */
 class OtherRent extends OtherRentModel
 {

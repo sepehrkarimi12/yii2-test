@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\other_rent;
+namespace frontend\modules\ad_section\other_rent;
 
 /**
  * other_rent module definition class
@@ -10,7 +10,7 @@ class other_rent extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\other_rent\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\other_rent\controllers';
 
     /**
      * {@inheritdoc}

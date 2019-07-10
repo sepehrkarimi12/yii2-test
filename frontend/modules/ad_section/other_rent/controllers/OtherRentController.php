@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\other_rent\controllers;
+namespace frontend\modules\ad_section\other_rent\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\other_rent\models\OtherRent;
-use frontend\modules\other_rent\models\searchModels\OtherRent as OtherRentSearch;
+use frontend\modules\ad_section\other_rent\models\OtherRent;
+use frontend\modules\ad_section\other_rent\models\searchModels\OtherRent as OtherRentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
