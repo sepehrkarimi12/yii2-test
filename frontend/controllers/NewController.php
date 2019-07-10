@@ -9,7 +9,7 @@ use Yii;
 
 class NewController extends \yii\web\Controller
 {
-    public function actionIndex()
+    public function actionAd()
     {
     	$categories = Category::find()
     	->where(['parent_id' => null])
