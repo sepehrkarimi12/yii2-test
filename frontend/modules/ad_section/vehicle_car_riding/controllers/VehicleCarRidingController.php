@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\vehicle_car_riding\controllers;
+namespace frontend\modules\ad_section\vehicle_car_riding\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\vehicle_car_riding\models\VehicleCarRiding;
-use frontend\modules\vehicle_car_riding\models\searchModels\VehicleCarRidingSearch;
+use frontend\modules\ad_section\vehicle_car_riding\models\VehicleCarRiding;
+use frontend\modules\ad_section\vehicle_car_riding\models\searchModels\VehicleCarRidingSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

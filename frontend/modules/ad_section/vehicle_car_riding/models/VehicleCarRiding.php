@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\vehicle_car_riding\models;
+namespace frontend\modules\ad_section\vehicle_car_riding\models;
 
 use backend\modules\ad_type\models\AdType;
 use backend\modules\car_brand\models\CarBrand;
