@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\apartment_rent\controllers;
+namespace frontend\modules\ad_section\apartment_rent\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\apartment_rent\models\ApartmentRent;
-use frontend\modules\apartment_rent\models\searchModels\ApartmentRentSearch;
+use frontend\modules\ad_section\apartment_rent\models\ApartmentRent;
+use frontend\modules\ad_section\apartment_rent\models\searchModels\ApartmentRentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

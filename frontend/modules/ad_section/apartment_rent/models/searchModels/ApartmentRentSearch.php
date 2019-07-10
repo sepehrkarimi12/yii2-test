@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\apartment_rent\models\searchModels;
+namespace frontend\modules\ad_section\ad_section\apartment_rent\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\apartment_rent\models\ApartmentRent;
+use frontend\modules\ad_section\apartment_rent\models\ApartmentRent;
 
 /**
- * ApartmentRentSearch represents the model behind the search form of `frontend\modules\apartment_rent\models\ApartmentRent`.
+ * ApartmentRentSearch represents the model behind the search form of `frontend\modules\ad_section\\apartment_rent\models\ApartmentRent`.
  */
 class ApartmentRentSearch extends ApartmentRent
 {
