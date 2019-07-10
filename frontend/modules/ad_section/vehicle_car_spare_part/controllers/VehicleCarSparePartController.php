@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\vehicle_car_spare_part\controllers;
+namespace frontend\modules\ad_section\vehicle_car_spare_part\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\vehicle_car_spare_part\models\VehicleCarSparePart;
-use frontend\modules\vehicle_car_spare_part\models\searchModels\VehicleCarSparePartSearch;
+use frontend\modules\ad_section\vehicle_car_spare_part\models\VehicleCarSparePart;
+use frontend\modules\ad_section\vehicle_car_spare_part\models\searchModels\VehicleCarSparePartSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
