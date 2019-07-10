@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\office_sell\models\searchModels;
+namespace frontend\modules\ad_section\office_sell\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\office_sell\models\OfficeSell;
+use frontend\modules\ad_section\office_sell\models\OfficeSell;
 
 /**
- * OfficeSellSearch represents the model behind the search form of `frontend\modules\office_sell\models\OfficeSell`.
+ * OfficeSellSearch represents the model behind the search form of `frontend\modules\ad_section\office_sell\models\OfficeSell`.
  */
 class OfficeSellSearch extends OfficeSell
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\office_sell\models;
+namespace frontend\modules\ad_section\office_sell\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use backend\modules\ad_type\models\AdType;

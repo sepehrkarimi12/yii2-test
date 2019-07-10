@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\office_sell;
+namespace frontend\modules\ad_section\office_sell;
 
 /**
  * office_sell module definition class
@@ -10,7 +10,7 @@ class office_sell extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\office_sell\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\office_sell\controllers';
 
     /**
      * {@inheritdoc}
