@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\home_sell\controllers;
+namespace frontend\modules\ad_section\home_sell\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\home_sell\models\HomeSell;
-use frontend\modules\home_sell\models\searchModels\HomeSellSearch;
+use frontend\modules\ad_section\home_sell\models\HomeSell;
+use frontend\modules\ad_section\home_sell\models\searchModels\HomeSellSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
