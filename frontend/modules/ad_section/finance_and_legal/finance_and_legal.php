@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\finance_and_legal;
+namespace frontend\modules\ad_section\finance_and_legal;
 
 /**
  * estate_agensy module definition class
@@ -10,7 +10,7 @@ class finance_and_legal extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\finance_and_legal\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\finance_and_legal\controllers';
 
     /**
      * {@inheritdoc}

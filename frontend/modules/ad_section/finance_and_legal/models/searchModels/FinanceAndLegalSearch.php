@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\finance_and_legal\models\searchModels;
+namespace frontend\modules\ad_section\finance_and_legal\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\finance_and_legal\models\FinanceAndLegal;
+use frontend\modules\ad_section\finance_and_legal\models\FinanceAndLegal;
 
 /**
- * EstateAgensySearch represents the model behind the search form of `frontend\modules\finance_and_legal\models\FinanceAndLegal`.
+ * EstateAgensySearch represents the model behind the search form of `frontend\modules\ad_section\finance_and_legal\models\FinanceAndLegal`.
  */
 class FinanceAndLegalSearch extends FinanceAndLegal
 {

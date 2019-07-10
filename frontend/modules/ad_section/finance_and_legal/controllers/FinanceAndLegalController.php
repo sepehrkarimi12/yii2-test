@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\finance_and_legal\controllers;
+namespace frontend\modules\ad_section\finance_and_legal\controllers;
 
 use common\models\Ad;
-use frontend\modules\finance_and_legal\models\searchModels\FinanceAndLegalSearch;
+use frontend\modules\ad_section\finance_and_legal\models\searchModels\FinanceAndLegalSearch;
 use Yii;
-use frontend\modules\finance_and_legal\models\FinanceAndLegal;
+use frontend\modules\ad_section\finance_and_legal\models\FinanceAndLegal;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

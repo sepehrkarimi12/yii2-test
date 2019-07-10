@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\finance_and_legal\models;
+namespace frontend\modules\ad_section\finance_and_legal\models;
 
 use backend\modules\ad_advertiser\models\AdAdvertiser;
 use common\models\Ad;
