@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\other_sell\controllers;
+namespace frontend\modules\ad_section\other_sell\controllers;
 
 use common\models\Ad;
 use Yii;
-use frontend\modules\other_sell\models\OtherSell;
-use frontend\modules\other_sell\models\searchModels\OtherSellSearch;
+use frontend\modules\ad_section\other_sell\models\OtherSell;
+use frontend\modules\ad_section\other_sell\models\searchModels\OtherSellSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

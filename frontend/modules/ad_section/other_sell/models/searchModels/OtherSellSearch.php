@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\other_sell\models\searchModels;
+namespace frontend\modules\ad_section\other_sell\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\other_sell\models\OtherSell;
+use frontend\modules\ad_section\other_sell\models\OtherSell;
 
 /**
- * OtherSellSearch represents the model behind the search form of `frontend\modules\other_sell\models\OtherSell`.
+ * OtherSellSearch represents the model behind the search form of `frontend\modules\ad_section\other_sell\models\OtherSell`.
  */
 class OtherSellSearch extends OtherSell
 {

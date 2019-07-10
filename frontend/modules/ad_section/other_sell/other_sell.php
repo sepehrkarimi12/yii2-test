@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\other_sell;
+namespace frontend\modules\ad_section\other_sell;
 
 /**
  * other_sell module definition class
@@ -10,7 +10,7 @@ class other_sell extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\other_sell\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\other_sell\controllers';
 
     /**
      * {@inheritdoc}
