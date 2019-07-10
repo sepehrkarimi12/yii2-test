@@ -76,6 +76,14 @@ return [
             'class' => 'backend\modules\sim_card\sim_card',
             'defaultRoute' => 'sim-card',
         ],
+
+        //        i do
+        'i_do_category' => [
+            'class' => 'backend\modules\i_do_section\i_do_category\i_do_category',
+            'defaultRoute' => 'i-do-category',
+        ],
+        //    discount
+
         'rbac' => [
             'class' => 'yii2mod\rbac\Module',
         ],

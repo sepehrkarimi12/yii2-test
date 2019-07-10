@@ -2,7 +2,6 @@
 
 namespace common\models;
 
-use Yii;
 use common\traits\listForDropDown;
 use yii\helpers\ArrayHelper;
 
