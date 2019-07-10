@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_tablet\models\searchModels;
+namespace frontend\modules\ad_section\mobile_and_tablet_tablet\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\modules\mobile_and_tablet_tablet\models\MobileAndTabletTablet;
+use frontend\modules\ad_section\mobile_and_tablet_tablet\models\MobileAndTabletTablet;
 
 /**
- * MobileAndTabletTabletSearch represents the model behind the search form of `frontend\modules\mobile_and_tablet_tablet\models\MobileAndTabletTablet`.
+ * MobileAndTabletTabletSearch represents the model behind the search form of `frontend\modules\ad_section\mobile_and_tablet_tablet\models\MobileAndTabletTablet`.
  */
 class MobileAndTabletTabletSearch extends MobileAndTabletTablet
 {

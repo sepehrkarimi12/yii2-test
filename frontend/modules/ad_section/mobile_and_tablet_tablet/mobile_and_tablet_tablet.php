@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\mobile_and_tablet_tablet;
+namespace frontend\modules\ad_section\mobile_and_tablet_tablet;
 
 /**
  * mobile_and_tablet_tablet module definition class
@@ -10,7 +10,7 @@ class mobile_and_tablet_tablet extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\mobile_and_tablet_tablet\controllers';
+    public $controllerNamespace = 'frontend\modules\ad_section\mobile_and_tablet_tablet\controllers';
 
     /**
      * {@inheritdoc}
