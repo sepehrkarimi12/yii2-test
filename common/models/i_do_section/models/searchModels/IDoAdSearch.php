@@ -7,7 +7,7 @@ use yii\data\ActiveDataProvider;
 use common\models\i_do_section\models\IDoAd;
 
 /**
- * IDoAdSearch represents the model behind the search form of `backend\modules\i_do_section\i_do_ad\models\IDoAd`.
+ * IDoAdSearch represents the model behind the search form of `common\models\i_do_section\models\IDoAd`.
  */
 class IDoAdSearch extends IDoAd
 {

@@ -185,6 +185,11 @@ return [
             'class' => 'frontend\modules\ad_section\electronic_computer_other\electronic_computer_other',
             'defaultRoute' => 'electronic-computer-other',
         ],
+//        i do
+        'i_do_ad' => [
+            'class' => 'frontend\modules\i_do_section\i_do_ad\i_do_ad',
+            'defaultRoute' => 'i-do-ad',
+        ],
     ],
     'components' => [
         'request' => [
