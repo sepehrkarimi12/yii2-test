@@ -11,7 +11,7 @@ use Yii;
  * @property int $i_do_id
  * @property string $address
  *
- * @property TblIDoAd $iDo
+ * @property IDoAd $iDo
  */
 class IDoImage extends \yii\db\ActiveRecord
 {
@@ -32,7 +32,7 @@ class IDoImage extends \yii\db\ActiveRecord
             [['i_do_id'], 'integer'],
             [['address'], 'required'],
             [['address'], 'string', 'max' => 50],
-            [['i_do_id'], 'exist', 'skipOnError' => true, 'targetClass' => TblIDoAd::className(), 'targetAttribute' => ['i_do_id' => 'id']],
+            [['i_do_id'], 'exist', 'skipOnError' => true, 'targetClass' => IDoAd::className(), 'targetAttribute' => ['i_do_id' => 'id']],
         ];
     }
 
@@ -53,6 +53,6 @@ class IDoImage extends \yii\db\ActiveRecord
      */
     public function getIDo()
     {
-        return $this->hasOne(TblIDoAd::className(), ['id' => 'i_do_id']);
+        return $this->hasOne(IDoAd::className(), ['id' => 'i_do_id']);
     }
 }

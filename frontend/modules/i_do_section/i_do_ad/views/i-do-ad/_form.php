@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
 <div class="ido-ad-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?php
     echo $form->field($model, 'city_id')->widget(Select2::classname(), [
@@ -38,6 +38,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'desc')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 

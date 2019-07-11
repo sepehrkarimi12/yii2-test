@@ -8,6 +8,7 @@ use common\models\User;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "tbl_i_do_ad".
@@ -36,6 +37,7 @@ use yii\db\ActiveRecord;
  */
 class IDoAd extends \yii\db\ActiveRecord
 {
+    public $imageFiles;
     /**
      * {@inheritdoc}
      */
@@ -60,6 +62,7 @@ class IDoAd extends \yii\db\ActiveRecord
             [['cat_id'], 'exist', 'skipOnError' => true, 'targetClass' => IDoCategory::className(), 'targetAttribute' => ['cat_id' => 'id']],
             [['city_range_id'], 'exist', 'skipOnError' => true, 'targetClass' => CityRange::className(), 'targetAttribute' => ['city_range_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 10],
 //            [['mobile'], 'match', 'pattern' => '/((\+[0-9]{6})|0)[-]?[0-9]{7}/'],
         ];
     }
@@ -105,7 +108,29 @@ class IDoAd extends \yii\db\ActiveRecord
             'created_at' => 'زمان ساخت آگهی',
             'updated_at' => 'آخرین زمان ویرایش آگهی',
             'published_at' => 'زمان انتشار آگهی',
+            'imageFiles' => 'عکس آگهی',
         ];
+    }
+
+    public function uploadFiles($i_do_ad_id)
+    {
+        foreach ($this->imageFiles as $index => $file) {
+            $address = 'uploads/ad_section/' . $i_do_ad_id . '_' . $index . $file->basename . '_' . time() . '.' . $file->extension;
+            $file->saveAs($address);
+//                save images in image table
+            $img_model = new IDoImage();
+            $img_model->i_do_id = $i_do_ad_id;
+            $img_model->address = $address;
+            $img_model->save();
+//                save the first picture as org_pic of adModel
+            if ($index === array_key_first($this->imageFiles)) {
+                $this->org_pic = $address;
+            }
+        }
+//            save thr count of loaded pictures
+        $this->pic_counts = count($this->imageFiles);
+        $this->imageFiles = null;
+        $this->update();
     }
 
     /**

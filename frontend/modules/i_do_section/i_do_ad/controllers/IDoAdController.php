@@ -8,6 +8,7 @@ use common\models\i_do_section\models\searchModels\IDoAdSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * IDoAdController implements the CRUD actions for IDoAd model.
@@ -71,8 +72,12 @@ class IDoAdController extends Controller
         $model = new IDoAd();
         $model->cat_id = $cat_id;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->save()) {
+                $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+                $model->uploadFiles($model->id);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('create', [
