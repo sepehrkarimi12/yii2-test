@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\i_do_section\models\IDoAd;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -79,7 +80,11 @@ class SiteController extends Controller
 
     public function actionIDo()
     {
-        return $this->render('index_i_do');
+        $posts = IDoAd::find()->all();
+//        d($posts);
+        return $this->render('index_i_do', [
+            'posts' => $posts,
+        ]);
     }
 
     public function actionDiscount()
