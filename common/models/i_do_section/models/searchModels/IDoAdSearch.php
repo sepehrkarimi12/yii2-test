@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\modules\i_do_section\i_do_ad\models\searchModels;
+namespace common\models\i_do_section\models\searchModels;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\modules\i_do_section\i_do_ad\models\IDoAd;
+use common\models\i_do_section\models\IDoAd;
 
 /**
  * IDoAdSearch represents the model behind the search form of `backend\modules\i_do_section\i_do_ad\models\IDoAd`.

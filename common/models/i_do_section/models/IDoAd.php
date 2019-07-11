@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\i_do_section\i_do_ad\models;
+namespace common\models\i_do_section\models;
 
 use backend\modules\city_range\models\CityRange;
 use backend\modules\i_do_section\i_do_category\models\IDoCategory;

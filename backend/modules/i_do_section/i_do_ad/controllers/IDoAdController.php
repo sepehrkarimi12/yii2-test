@@ -3,8 +3,8 @@
 namespace backend\modules\i_do_section\i_do_ad\controllers;
 
 use Yii;
-use backend\modules\i_do_section\i_do_ad\models\IDoAd;
-use backend\modules\i_do_section\i_do_ad\models\searchModels\IDoAdSearch;
+use common\models\i_do_section\models\IDoAd;
+use common\models\i_do_section\models\searchModels\IDoAdSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
