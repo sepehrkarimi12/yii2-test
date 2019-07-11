@@ -7,7 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model common\models\i_do_section\models\IDoAd */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'I Do Ads', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'انجام میدم', 'url' => ['../new/i-do']];
+$this->params['breadcrumbs'][] = ['label' => $model->cat->title];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,8 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('ویرایش', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('حذف', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,23 +30,73 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'cat_id',
-            'city_id',
-            'city_range_id',
-            'title',
-            'desc:ntext',
-            'price',
-            'mobile',
-            'org_pic',
-            'pic_counts',
-            'status',
-            'chat',
-            'expired',
-            'user_id',
-            'created_at',
-            'updated_at',
-            'published_at',
+            [
+                'attribute' => 'desc:ntext',
+                'value' => function($model) {
+                    return $model->desc ? $model->desc : '-';
+                }
+            ],
+            [
+                'attribute' => 'city_id',
+                'value' => function($model) {
+                    return $model->city_id ? $model->cityRange->city->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'city_range_id',
+                'value' => function($model) {
+                    return $model->city_range_id ? $model->cityRange->title : '-';
+                }
+            ],
+            [
+                'attribute' => 'price',
+                'value' => function($model) {
+                    return $model->price ? $model->price . ' تومان' : '-';
+                }
+            ],
+            [
+                'attribute' => 'mobile',
+                'value' => function($model) {
+                    return $model->mobile ? $model->mobile : '-';
+                }
+            ],
+            [
+                'attribute' => 'status',
+                'value' => function($model) {
+                    return $model->status ? 'فعال' : 'غیر فعال';
+                }
+            ],
+            [
+                'attribute' => 'chat',
+                'value' => function($model) {
+                    return $model->chat ? 'چت فعال است' : 'چت فعال نیست';
+                }
+            ],
+            [
+                'attribute' => 'expired',
+                'value' => function($model) {
+                    return $model->expired ? 'شده است' : 'نشده است';
+                },
+                'label' => 'آگهی منقضی'
+            ],
+            [
+                'attribute' => 'created_at',
+                'value' => function($model) {
+                    return $model->created_at ? Yii::$app->formatter->asDatetime($model->created_at) : '-';
+                }
+            ],
+            [
+                'attribute' => 'updated_at',
+                'value' => function($model) {
+                    return $model->updated_at ? Yii::$app->formatter->asDatetime($model->updated_at) : '-';
+                }
+            ],
+            [
+                'attribute' => 'published_at',
+                'value' => function($model) {
+                    return $model->published_at ? Yii::$app->formatter->asDatetime($model->published_at) : '-';
+                }
+            ],
         ],
     ]) ?>
 

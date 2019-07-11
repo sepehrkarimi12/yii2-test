@@ -90,7 +90,7 @@ $this->title = 'ثبت انجام میدم جدید';
                           </div>
                         </div>
                         <?php else : ?>
-                          <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
+                          <a href="<?= Url::toRoute(['i_do_ad/i-do-ad/create', 'cat_id' => $catergory->id]) ?>">
                             <div class="panel panel-warning">
                               <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -103,7 +103,7 @@ $this->title = 'ثبت انجام میدم جدید';
                       <?php endforeach; ?>
                       </div>
                     <?php else : ?>
-                      <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
+                      <a href="<?= Url::toRoute(['i_do_ad/i-do-ad/create', 'cat_id' => $catergory->id]) ?>">
                         <div class="panel panel-success">
                           <div class="panel-heading">
                             <h4 class="panel-title">
@@ -117,7 +117,7 @@ $this->title = 'ثبت انجام میدم جدید';
                 </div>
               </div>
               <?php else : ?>
-                <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
+                <a href="<?= Url::toRoute(['i_do_ad/i-do-ad/create', 'cat_id' => $catergory->id]) ?>">
                   <div class="panel panel-info">
                     <div class="panel-heading">
                       <h4 class="panel-title">
@@ -130,7 +130,7 @@ $this->title = 'ثبت انجام میدم جدید';
             <?php endforeach; ?>
             </div> 
           <?php else : ?>
-            <a href="<?= Url::toRoute(['new/create-i-do', 'cat_id' => $catergory->id]) ?>">
+            <a href="<?= Url::toRoute(['i_do_ad/i-do-ad/create', 'cat_id' => $catergory->id]) ?>">
               <div class="panel panel-info">
                 <div class="panel-heading">
                   <h4 class="panel-title">

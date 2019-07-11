@@ -48,9 +48,4 @@ class NewController extends \yii\web\Controller
         ]);
     }
 
-    public function actionCreateIDo($cat_id = null)
-    {
-        d($cat_id);
-    }
-
 }

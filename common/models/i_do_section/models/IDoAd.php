@@ -6,6 +6,8 @@ use backend\modules\city_range\models\CityRange;
 use backend\modules\i_do_section\i_do_category\models\IDoCategory;
 use common\models\User;
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "tbl_i_do_ad".
@@ -58,6 +60,25 @@ class IDoAd extends \yii\db\ActiveRecord
             [['cat_id'], 'exist', 'skipOnError' => true, 'targetClass' => IDoCategory::className(), 'targetAttribute' => ['cat_id' => 'id']],
             [['city_range_id'], 'exist', 'skipOnError' => true, 'targetClass' => CityRange::className(), 'targetAttribute' => ['city_range_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+//            [['mobile'], 'match', 'pattern' => '/((\+[0-9]{6})|0)[-]?[0-9]{7}/'],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+//             [
+//                 'class' => BlameableBehavior::className(),
+//                 'createdByAttribute' => 'user_id',
+//
+//             ],
+            'timestamp' => [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+                ],
+            ],
         ];
     }
 
@@ -67,23 +88,23 @@ class IDoAd extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'cat_id' => 'Cat ID',
-            'city_id' => 'City ID',
-            'city_range_id' => 'City Range ID',
-            'title' => 'Title',
-            'desc' => 'Desc',
-            'price' => 'Price',
-            'mobile' => 'Mobile',
-            'org_pic' => 'Org Pic',
-            'pic_counts' => 'Pic Counts',
-            'status' => 'Status',
-            'chat' => 'Chat',
-            'expired' => 'Expired',
-            'user_id' => 'User ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'published_at' => 'Published At',
+            'status' => 'وضعیت',
+            'id' => 'شناسه',
+            'cat_id' => 'دسته بندی',
+            'city_id' => 'شهر',
+            'city_range_id' => 'محدوده آگهی',
+            'title' => 'عنوان آگهی',
+            'desc' => 'توضیح آگهی',
+            'price' => 'قیمت',
+            'mobile' => 'شماره موبایل',
+            'org_pic' => 'عکس اصلی',
+            'pic_counts' => 'تهداد عکس ها',
+            'chat' => 'چت ' . Yii::$app->name,
+            'expired' => 'منقضی شده',
+            'user_id' => 'کاربر',
+            'created_at' => 'زمان ساخت آگهی',
+            'updated_at' => 'آخرین زمان ویرایش آگهی',
+            'published_at' => 'زمان انتشار آگهی',
         ];
     }
 

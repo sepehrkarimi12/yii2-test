@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\i_do_section\models\IDoAd */
 
-$this->title = 'Update I Do Ad: ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'I Do Ads', 'url' => ['index']];
+$this->title = 'ویرایش : ' . $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'انجام میدم', 'url' => ['../new/i-do']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'ویرایش';
 ?>
 <div class="ido-ad-update">
 

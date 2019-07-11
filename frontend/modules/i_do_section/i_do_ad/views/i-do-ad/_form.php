@@ -1,5 +1,7 @@
 <?php
 
+use backend\modules\city\models\City;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,11 +14,26 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'cat_id')->textInput() ?>
+    <?php
+    echo $form->field($model, 'city_id')->widget(Select2::classname(), [
+        'data' => City::getListForDropDown('id', 'title'),
+        'language' => 'en',
+        'options' => ['placeholder' => 'نام شهر ...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
 
-    <?= $form->field($model, 'city_id')->textInput() ?>
-
-    <?= $form->field($model, 'city_range_id')->textInput() ?>
+    <?php
+    echo $form->field($model, 'city_range_id')->widget(Select2::classname(), [
+        'language' => 'en',
+        'options' => ['placeholder' => 'محدوده ...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
@@ -26,23 +43,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'mobile')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'org_pic')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'pic_counts')->textInput() ?>
-
-    <?= $form->field($model, 'status')->textInput() ?>
-
-    <?= $form->field($model, 'chat')->textInput() ?>
-
-    <?= $form->field($model, 'expired')->textInput() ?>
-
-    <?= $form->field($model, 'user_id')->textInput() ?>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
-
-    <?= $form->field($model, 'published_at')->textInput() ?>
+    <?= $form->field($model, 'chat')->checkbox() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
@@ -51,3 +52,54 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<?php
+$script = <<< JS
+var cityId = $('#idoad-city_id').val();
+$.get('../../../../backend/web/city_range/city-range/get-ranges-of-city', { city_id : cityId }, function(data){
+    var data = $.parseJSON(data);
+var cityRangeId =$('#idoad-city_range_id').val();
+    //remove options of course select
+    var select = $('#idoad-city_range_id');
+    $(select)
+        .find('option')
+        .remove()
+        .end()
+    ;
+    
+    
+    (select).append("<option value=''>" + 'محدوده ...' + "</option>");
+    $.each(data, function( k, v ) {
+        if (v['id']==cityRangeId) {
+            (select).append("<option value=" + v['id'] + " selected='selected' >" + v['title'] + "</option>");
+        } else {
+            (select).append("<option value=" + v['id'] + ">" + v['title'] + "</option>");
+        }
+    });
+
+});
+//
+    
+$('#idoad-city_id').change(function(){
+    var cityId = $(this).val();
+    $.get('../../../../backend/web/city_range/city-range/get-ranges-of-city', { city_id : cityId }, function(data){
+        var data = $.parseJSON(data);
+
+        //remove options of course select
+        var select = $('#idoad-city_range_id');
+        $(select)
+            .find('option')
+            .remove()
+            .end()
+        ;
+        
+        (select).append("<option value=''>" + 'محدوده ...' + "</option>");
+        $.each(data, function( k, v ) {
+            (select).append("<option value=" + v['id'] + ">" + v['title'] + "</option>");
+        });
+
+    });
+});
+JS;
+$this->registerJS($script);
+?>

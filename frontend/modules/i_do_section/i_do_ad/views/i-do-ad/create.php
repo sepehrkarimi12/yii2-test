@@ -1,12 +1,12 @@
 <?php
 
-use yii\helpers\Html;
+use yii\helpers\Html;use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\i_do_section\models\IDoAd */
 
-$this->title = 'Create I Do Ad';
-$this->params['breadcrumbs'][] = ['label' => 'I Do Ads', 'url' => ['index']];
+$this->title = $model->cat->title;
+$this->params['breadcrumbs'][] = ['label' => 'انجام میدم', 'url' => ['../new/i-do']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ido-ad-create">

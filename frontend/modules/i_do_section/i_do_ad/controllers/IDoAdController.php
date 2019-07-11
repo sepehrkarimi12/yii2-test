@@ -62,9 +62,14 @@ class IDoAdController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($cat_id)
     {
+        if ($cat_id == null) {
+            return $this->goBack();
+        }
+
         $model = new IDoAd();
+        $model->cat_id = $cat_id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
