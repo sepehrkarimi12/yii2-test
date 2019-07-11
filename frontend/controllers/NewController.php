@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use common\models\Ad;
 use common\models\Category;
+use common\models\discount_section\models\DiscountCategory;
 use common\models\i_do_section\models\IDoCategory;
 use common\geoplugin\GeoPlugin;
 use Yii;
@@ -32,6 +33,19 @@ class NewController extends \yii\web\Controller
             ->all();
 
         return $this->render('index_i_do', [
+            'categories' => $categories,
+        ]);
+    }
+
+    public function actionDiscount()
+    {
+        $categories = DiscountCategory::find()
+            ->where(['parent_id' => null])
+            ->andWhere(['status' => 1])
+            ->orderBy('sort')
+            ->all();
+
+        return $this->render('index_discount', [
             'categories' => $categories,
         ]);
     }

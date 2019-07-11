@@ -66,7 +66,7 @@ class DiscountCategory extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDiscountCategories()
+    public function getchildes()
     {
         return $this->hasMany(DiscountCategory::className(), ['parent_id' => 'id']);
     }
