@@ -82,6 +82,10 @@ return [
             'class' => 'backend\modules\i_do_section\i_do_category\i_do_category',
             'defaultRoute' => 'i-do-category',
         ],
+        'i_do_ad' => [
+            'class' => 'backend\modules\i_do_section\i_do_ad\i_do_ad',
+            'defaultRoute' => 'i-do-ad',
+        ],
         //    discount
 
         'rbac' => [
