@@ -3,8 +3,8 @@
 namespace backend\modules\i_do_section\i_do_category\controllers;
 
 use Yii;
-use backend\modules\i_do_section\i_do_category\models\IDoCategory;
-use backend\modules\i_do_section\i_do_category\models\searchModels\IDoCategorySearch;
+use common\models\i_do_section\models\IDoCategory;
+use common\models\i_do_section\models\searchModels\IDoCategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

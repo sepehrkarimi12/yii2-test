@@ -2,9 +2,9 @@
 
 namespace frontend\controllers;
 
-use backend\modules\i_do_section\i_do_category\models\IDoCategory;
 use common\models\Ad;
 use common\models\Category;
+use common\models\i_do_section\models\IDoCategory;
 use common\geoplugin\GeoPlugin;
 use Yii;
 

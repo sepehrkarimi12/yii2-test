@@ -3,7 +3,7 @@
 use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use backend\modules\i_do_section\i_do_category\models\IDoCategory;
+use common\models\i_do_section\models\IDoCategory;
 /* @var $this yii\web\View */
 /* @var $model backend\modules\i_do_section\i_do_category\models\IDoCategory */
 /* @var $form yii\widgets\ActiveForm */

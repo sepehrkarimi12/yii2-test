@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\i_do_section\i_do_category\models;
+namespace common\models\i_do_section\models;
 
 use common\traits\listForDropDown;
 use Yii;

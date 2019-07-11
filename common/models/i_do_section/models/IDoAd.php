@@ -3,12 +3,11 @@
 namespace common\models\i_do_section\models;
 
 use backend\modules\city_range\models\CityRange;
-use backend\modules\i_do_section\i_do_category\models\IDoCategory;
 use common\models\User;
+use common\models\i_do_section\models\IDoCategory;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "tbl_i_do_ad".
