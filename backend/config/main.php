@@ -87,7 +87,11 @@ return [
             'defaultRoute' => 'i-do-ad',
         ],
         //    discount
-
+        'discount_category' => [
+            'class' => 'backend\modules\discount_section\discount_category\discount_category',
+            'defaultRoute' => 'discount-category',
+        ],
+//        rbac
         'rbac' => [
             'class' => 'yii2mod\rbac\Module',
         ],
