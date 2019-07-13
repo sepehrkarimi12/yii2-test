@@ -115,12 +115,12 @@ class IDoAd extends \yii\db\ActiveRecord
         if (Yii::$app->controller->action->id == 'update') {
             $prev_images = IDoImage::findAll(['i_do_id' => $this->id]);
             foreach ($prev_images as $img) {
-                unlink( $img->address);
+                unlink($img->address);
                 $img->delete();
             }
         }
 
-        if ($this->imageFiles) {
+        if (!empty($this->imageFiles)) {
             foreach ($this->imageFiles as $index => $file) {
                 $address = 'uploads/ad_section/' . $i_do_ad_id . '_' . $index . $file->basename . '_' . time() . '.' . $file->extension;
                 $file->saveAs($address);
@@ -138,10 +138,11 @@ class IDoAd extends \yii\db\ActiveRecord
             $this->pic_counts = count($this->imageFiles);
             $this->imageFiles = null;
         } else {
-            $this->loadDefaultValues(false);
+            $this->pic_counts = 0;
+            $this->org_pic = 'images/default.jpg';
         }
 
-        if ($this->update(false)) {
+        if ($this->save(false)) {
             return true;
         }
 

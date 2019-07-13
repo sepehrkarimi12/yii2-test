@@ -120,9 +120,13 @@ class IDoAdController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        $images = $this->findModel($id)->images;
+        if ($this->findModel($id)->delete()) {
+            foreach ($images as $img) {
+                unlink($img->address);
+            }
+            return $this->redirect(['index']);
+        }
     }
 
     /**
