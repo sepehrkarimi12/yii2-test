@@ -75,8 +75,9 @@ class IDoAdController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->save()) {
                 $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
-                $model->uploadFiles($model->id);
-                return $this->redirect(['view', 'id' => $model->id]);
+                if ($model->uploadFiles($model->id)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
             }
         }
 
@@ -96,8 +97,13 @@ class IDoAdController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->save()) {
+                $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+                if ($model->uploadFiles($model->id)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         }
 
         return $this->render('update', [

@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             [
-                'attribute' => 'desc:ntext',
+                'attribute' => 'desc',
                 'value' => function($model) {
                     return $model->desc ? $model->desc : '-';
                 }
