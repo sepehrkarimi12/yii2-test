@@ -2,6 +2,7 @@
 
 namespace frontend\modules\i_do_section\i_do_ad\controllers;
 
+use common\models\i_do_section\models\IDoImage;
 use Yii;
 use common\models\i_do_section\models\IDoAd;
 use common\models\i_do_section\models\searchModels\IDoAdSearch;
@@ -120,13 +121,9 @@ class IDoAdController extends Controller
      */
     public function actionDelete($id)
     {
-        $images = $this->findModel($id)->images;
-        if ($this->findModel($id)->delete()) {
-            foreach ($images as $img) {
-                unlink($img->address);
-            }
-            return $this->redirect(['index']);
-        }
+        IDoImage::deleteByIDoAd($id);
+        $this->findModel($id)->delete();
+        return $this->redirect(['index']);
     }
 
     /**

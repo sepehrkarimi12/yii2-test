@@ -113,11 +113,7 @@ class IDoAd extends \yii\db\ActiveRecord
     public function uploadFiles($i_do_ad_id)
     {
         if (Yii::$app->controller->action->id == 'update') {
-            $prev_images = IDoImage::findAll(['i_do_id' => $this->id]);
-            foreach ($prev_images as $img) {
-                unlink($img->address);
-                $img->delete();
-            }
+            IDoImage::deleteByIDoAd($i_do_ad_id);
         }
 
         if (!empty($this->imageFiles)) {
