@@ -4,7 +4,6 @@ namespace common\models\i_do_section\models;
 
 use backend\modules\city_range\models\CityRange;
 use common\models\User;
-use common\models\i_do_section\models\IDoCategory;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -57,7 +56,7 @@ class IDoAd extends \yii\db\ActiveRecord
             [['title'], 'string', 'max' => 100],
             [['price'], 'string', 'max' => 20],
             [['mobile'], 'string', 'max' => 11],
-            [['org_pic'], 'string', 'max' => 40],
+            [['org_pic'], 'string', 'max' => 255],
             [['cat_id'], 'exist', 'skipOnError' => true, 'targetClass' => IDoCategory::className(), 'targetAttribute' => ['cat_id' => 'id']],
             [['city_range_id'], 'exist', 'skipOnError' => true, 'targetClass' => CityRange::className(), 'targetAttribute' => ['city_range_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
@@ -94,9 +93,9 @@ class IDoAd extends \yii\db\ActiveRecord
             'id' => 'شناسه',
             'cat_id' => 'دسته بندی',
             'city_id' => 'شهر',
-            'city_range_id' => 'محدوده آگهی',
-            'title' => 'عنوان آگهی',
-            'desc' => 'توضیح آگهی',
+            'city_range_id' => 'محدوده',
+            'title' => 'عنوان',
+            'desc' => 'توضیح',
             'price' => 'قیمت',
             'mobile' => 'شماره موبایل',
             'org_pic' => 'عکس اصلی',
@@ -107,29 +106,45 @@ class IDoAd extends \yii\db\ActiveRecord
             'created_at' => 'زمان ساخت آگهی',
             'updated_at' => 'آخرین زمان ویرایش آگهی',
             'published_at' => 'زمان انتشار آگهی',
-            'imageFiles' => 'عکس آگهی',
+            'imageFiles' => 'عکس',
         ];
     }
 
     public function uploadFiles($i_do_ad_id)
     {
-        foreach ($this->imageFiles as $index => $file) {
-            $address = 'uploads/ad_section/' . $i_do_ad_id . '_' . $index . $file->basename . '_' . time() . '.' . $file->extension;
-            $file->saveAs($address);
-//                save images in image table
-            $img_model = new IDoImage();
-            $img_model->i_do_id = $i_do_ad_id;
-            $img_model->address = $address;
-            $img_model->save();
-//                save the first picture as org_pic of adModel
-            if ($index === array_key_first($this->imageFiles)) {
-                $this->org_pic = $address;
+        if (Yii::$app->controller->action->id == 'update') {
+            $prev_images = IDoImage::findAll(['i_do_id' => $this->id]);
+            foreach ($prev_images as $img) {
+                unlink( $img->address);
+                $img->delete();
             }
         }
+
+        if ($this->imageFiles) {
+            foreach ($this->imageFiles as $index => $file) {
+                $address = 'uploads/ad_section/' . $i_do_ad_id . '_' . $index . $file->basename . '_' . time() . '.' . $file->extension;
+                $file->saveAs($address);
+//                save images in image table
+                $img_model = new IDoImage();
+                $img_model->i_do_id = $i_do_ad_id;
+                $img_model->address = $address;
+                $img_model->save();
+//                save the first picture as org_pic of adModel
+                if ($index === array_key_first($this->imageFiles)) {
+                    $this->org_pic = $address;
+                }
+            }
 //            save thr count of loaded pictures
-        $this->pic_counts = count($this->imageFiles);
-        $this->imageFiles = null;
-        $this->update();
+            $this->pic_counts = count($this->imageFiles);
+            $this->imageFiles = null;
+        } else {
+            $this->loadDefaultValues(false);
+        }
+
+        if ($this->update(false)) {
+            return true;
+        }
+
     }
 
     /**
@@ -154,5 +169,10 @@ class IDoAd extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+
+    public function getImages()
+    {
+        return $this->hasMany(IDoImage::className(), ['i_do_id' => 'id']);
     }
 }

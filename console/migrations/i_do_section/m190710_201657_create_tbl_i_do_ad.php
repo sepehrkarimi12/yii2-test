@@ -20,7 +20,7 @@ class m190710_201657_create_tbl_i_do_ad extends Migration
             'desc' => $this->text()->notNull(),
             'price' => $this->string(20),
             'mobile' => $this->string(11)->notNull(),
-            'org_pic' => $this->string(40)->defaultValue('images/default.jpg'),
+            'org_pic' => $this->string()->defaultValue('images/default.jpg'),
             'pic_counts' => $this->smallInteger()->defaultValue(0),
             'status' => $this->boolean()->defaultValue(0),
             'chat' => $this->boolean()->defaultValue(0),
