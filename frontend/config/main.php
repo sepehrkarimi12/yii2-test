@@ -190,6 +190,11 @@ return [
             'class' => 'frontend\modules\i_do_section\i_do_ad\i_do_ad',
             'defaultRoute' => 'i-do-ad',
         ],
+//        discount
+        'discount_ad' => [
+            'class' => 'frontend\modules\discount_section\discount_ad\discount_ad',
+            'defaultRoute' => 'discount-ad',
+        ],
     ],
     'components' => [
         'request' => [
